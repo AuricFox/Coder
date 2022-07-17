@@ -1,0 +1,50 @@
+/* ========== Setup ========== */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ========== Body ========== */
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('../images/sun.jpg');
+    background-size: cover;
+}
+
+/* ========== Nav Bar ========== */
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(100, 100, 100, 0.6);
+}
+
+.nav li {
+    display: inline-flex;
+
+}
+
+li nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#nav-active {
+    background: rgb(255, 102, 0);
+    border-radius: 4px;
+    color: white;
+}
+
+li nav a:hover {
+    background: rgb(255, 102, 0);
+    border-radius: 4px;
+    color: white;
+}
