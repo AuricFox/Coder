@@ -6,20 +6,58 @@
         <link rel="stylesheet" type="text/css" href="../css/home.css">
     </head>
     <body>
-        <div id="navbar">
-            <ul class="nav">
-                <li>
-                    <nav><a id="nav-active" href="Home.html"><b>Home</b></a></nav>
-                </li>
-                <li>
-                    <nav><a href="chemistry.html"><b>Chemistry</b></a></nav>
-                </li>
-                <li>
-                    <nav><a href="engineering.html"><b>Engineering</b></a></nav>
-                </li>
-            </ul>
-        </div>
 
+        <div class="content">
+
+            <!--Welcome Tile-->
+            <div id="welcome-tile">Home</div>
+            <div id="search-tile">
+                <form>
+                    <input type="text" placeholder="Search">
+                    <button type="submit">Search...</button>
+                </form>
+            </div>
+
+            <!--Contains All Content Tiles-->
+            <div class="tiles">
+                <div class="tile" id="bio-tile">
+                    <img class="tile-icon" id="bio-icon" src="../images/dna.png">
+                    <div class="tile-text">Bioinformatics</div>
+                    <div class="sub-tile" id="codons">Counting Codons</div>
+                    <div class="sub-tile" id="align">Sequence Alignment</div>
+                    <div class="sub-tile" id="assembly">Sequence Assembly</div>
+                </div>
+
+                <div class="tile" id="chemistry-tile">
+                    <img class="tile-icon" id="chem-icon" src="../images/flask.png">
+                    <div class="tile-text">Chemistry</div>
+                    <div class="sub-tile" id="atoms">Atoms</div>
+                    <div class="sub-tile" id="bal">Stoichiometry</div>
+                    <div class="sub-tile" id="structure">Structure</div>
+                </div>
+
+                <div class="tile" id="computer-tile">
+                    <img class="tile-icon" id="csci-icon" src="../images/flask.png">
+                    <div class="tile-text">Computer Science</div>
+                    <div class="sub-tile" id="algo">Algorithms</div>
+                    <div class="sub-tile" id="apis">API's</div>
+                    <div class="sub-tile" id="lang">Languages</div>
+                </div>
+
+                <div class="tile" id="engineering-tile">
+                    <img class="tile-icon" id="eng-icon" src="../images/flask.png">
+                    <div class="tile-text">Engineering</div>
+                    <div class="sub-tile" id="energy">Energy Balance</div>
+                    <div class="sub-tile" id="material">Material Science</div>
+                    <div class="sub-tile" id="other">Other</div>
+                </div>
+
+            </div>
+            <div id="footer-tran"></div>
+            <div class="footer" id="foot">
+                stuff
+            </div>
+        </div>
         
     </body>
 </html>
