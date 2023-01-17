@@ -37,7 +37,7 @@ body {
    height: 40vh;
    position: relative;
    background-image: url(../images/future.jpg);
-   background-position: 65% 43%;
+   background-position: center;
    background-size: cover;
 }
 
