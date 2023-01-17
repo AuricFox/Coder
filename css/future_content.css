@@ -30,15 +30,15 @@ body {
     font-weight: bold;
     font-style: italic;
     padding: 10px 0px 10px 5px;
-    background-color: rgba(0, 0, 0, 0.12);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 #nav-tile {
    height: 40vh;
    position: relative;
-   background-image: url(../images/sunset.jpg);
+   background-image: url(../images/future.jpg);
    background-position: 65% 43%;
-   object-fit: cover;
+   background-size: cover;
 }
 
 .nav {
@@ -110,18 +110,18 @@ button[type="submit"]:hover {
     background-color: rgb(247, 7, 7);
 }
 
-/* ========== tiles ========== */
+/* ========== topics ========== */
 
-.tiles {
+.topics {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 2em 0 3em 0;
 }
 
-/* ========== tile ========== */
+/* ========== topic ========== */
 
-.tile {
+.topic {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,7 +133,11 @@ button[type="submit"]:hover {
     margin: 1em;
 }
 
-.tile-text {
+.topic:hover {
+    border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.topic-text {
     background-color: rgba(0, 0, 0, 0.3);
     color:rgb(255, 255, 255);
     font-size: 25px;
@@ -144,102 +148,6 @@ button[type="submit"]:hover {
     padding: 5px;
     width: 100%;
     text-align: center;
-}
-
-.tile-icon {
-    display: none;
-    height: 2em;
-}
-
-#bio-tile {
-    background: linear-gradient(rgba(255, 255, 255, 0.4),
-     rgba(255, 255, 255, 0.4)), url(../images/dna.jpg);
-    background-size: cover;
-}
-
-#bio-tile:hover {
-    background: linear-gradient(rgba(255, 255, 255, 0.7),
-            rgba(255, 255, 255, 0.7)), url(../images/dna.jpg);
-    background-size: cover;
-    cursor: pointer;
-}
-
-#chemistry-tile {
-    background: linear-gradient(rgba(255, 255, 255, 0.4),
-            rgba(255, 255, 255, 0.4)), url(../images/chemistry.jpg);
-    background-size: cover;
-}
-
-#chemistry-tile:hover {
-    background: linear-gradient(rgba(255, 255, 255, 0.7),
-            rgba(255, 255, 255, 0.7)), url(../images/chemistry.jpg);
-    background-size: cover;
-    cursor: pointer;
-}
-
-#computer-tile {
-    background: linear-gradient(rgba(255, 255, 255, 0.4),
-            rgba(255, 255, 255, 0.4)), url(../images/code.jpg);
-    background-size: cover;
-}
-
-#computer-tile:hover {
-    background: linear-gradient(rgba(255, 255, 255, 0.7),
-            rgba(255, 255, 255, 0.7)), url(../images/code.jpg);
-    background-size: cover;
-    cursor: pointer;
-}
-
-#engineering-tile {
-    background: linear-gradient(rgba(255, 255, 255, 0.4),
-            rgba(255, 255, 255, 0.4)), url(../images/engineering.jpg);
-    background-size: cover;
-}
-
-#engineering-tile:hover {
-    background: linear-gradient(rgba(255, 255, 255, 0.7),
-            rgba(255, 255, 255, 0.7)), url(../images/engineering.jpg);
-    background-size: cover;
-    cursor: pointer;
-}
-
-#math-tile {
-    background: linear-gradient(rgba(255, 255, 255, 0.4),
-            rgba(255, 255, 255, 0.4)), url(../images/math.jpg);
-    background-size: cover;
-}
-
-#math-tile:hover {
-    background: linear-gradient(rgba(255, 255, 255, 0.7),
-            rgba(255, 255, 255, 0.7)), url(../images/math.jpg);
-    background-size: cover;
-    cursor: pointer;
-}
-
-#future-tile {
-    background: linear-gradient(rgba(255, 255, 255, 0.4),
-            rgba(255, 255, 255, 0.4)), url(../images/future.jpg);
-    background-size: cover;
-}
-
-#future-tile:hover {
-    background: linear-gradient(rgba(255, 255, 255, 0.7),
-            rgba(255, 255, 255, 0.7)), url(../images/future.jpg);
-    background-size: cover;
-    cursor: pointer;
-}
-
-/* ========== sub-tile ========== */
-
-.sub-tile {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: rgb(255, 255, 255);
-    border-radius: 4px;
-    width: 75%;
-    text-align: center;
-    font-size: large;
-    margin: 5px 0 5px 0;
-    padding: 5px 0 5px 0;
 }
 
 /* ========== footer ========== */

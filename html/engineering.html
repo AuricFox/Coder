@@ -2,22 +2,69 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Energy Balance</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <title>Home</title>
         <link rel="stylesheet" type="text/css" href="../css/engineering.css">
     </head>
     <body>
-        <div id="navbar">
-            <ul class="nav">
-                <li>
-                    <nav><a href="Home.html"><b>Home</b></a></nav>
-                </li>
-                <li>
-                    <nav><a href="chemistry.html"><b>Chemistry</b></a></nav>
-                </li>
-                <li>
-                    <nav><a id="nav-active" href="engineering.html"><b>Engineering</b></a></nav>
-                </li>
-            </ul>
+
+        <div class="content">
+
+            <!--Welcome Tile-->
+            <div id="nav-tile">
+                <div id="nav-bar">
+                    <ul class="nav">
+                        <li><nav><a href="Home.html">Home</a></nav></li>
+                        <li><nav><a href="bioinformatics.html">Bioinformatics</a></nav></li>
+                        <li><nav><a href="chemistry.html">Chemistry</a></nav></li>
+                        <li><nav><a href="computer_science.html">Computer Science</a></nav></li>
+                        <li><nav><a id="nav-active" href="engineering.html">Engineering</a></nav></li>
+                        <li><nav><a href="math.html">Math</a></nav></li>
+                        <li><nav><a href="future_content.html">Future Content</a></nav></li>
+                    </ul>
+                </div>
+                <div id="search-container">
+                    <form id="search-tile">
+                        <input type="text" placeholder="Search...">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+
+            <!--Contains All Content Tiles-->
+            <div class="topics">
+                <div class="topic" id="atoms">
+                    <div class="topic-text">Atoms</div>
+                </div>
+
+                <div class="topic" id="formulas" onclick="location.href='./engineering.html'">
+                    <div class="topic-text">Formulas</div>
+                </div>
+                
+                <div class="topic" id="reactions">
+                    <div class="topic-text">Reactions</div>
+                </div>
+
+                <div class="topic" id="stoichiometry" onclick="location.href='./chemistry.html'">
+                    <div class="topic-text">Stoichiometry</div>
+                </div>
+
+                <div class="topic" id="structure">
+                    <div class="topic-text">structure</div>
+                </div>
+
+                <div class="topic" id="future-topic">
+                    <div class="topic-text">Future Content</div>
+                </div>
+
+            </div>
+            <div id="footer-tran"></div>
+            <div class="footer" id="foot">
+                <div class="info" id="about">About</div>
+                <div class="info" id="contact">Contact</div>
+                <div class="info" id="resources">Resources</div>
+            </div>
         </div>
         
     </body>

@@ -2,6 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
         <title>Home</title>
         <link rel="stylesheet" type="text/css" href="../css/home.css">
     </head>
@@ -10,12 +12,24 @@
         <div class="content">
 
             <!--Welcome Tile-->
-            <div id="welcome-tile">Home</div>
-            <div id="search-tile">
-                <form>
-                    <input type="text" placeholder="Search">
-                    <button type="submit">Search...</button>
-                </form>
+            <div id="nav-tile">
+                <div id="nav-bar">
+                    <ul class="nav">
+                        <li><nav><a id="nav-active" href="Home.html">Home</a></nav></li>
+                        <li><nav><a href="bioinformatics.html">Bioinformatics</a></nav></li>
+                        <li><nav><a href="chemistry.html">Chemistry</a></nav></li>
+                        <li><nav><a href="computer_science.html">Computer Science</a></nav></li>
+                        <li><nav><a href="engineering.html">Engineering</a></nav></li>
+                        <li><nav><a href="math.html">Math</a></nav></li>
+                        <li><nav><a href="future_content.html">Future Content</a></nav></li>
+                    </ul>
+                </div>
+                <div id="search-container">
+                    <form id="search-tile">
+                        <input type="text" placeholder="Search...">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
             </div>
 
             <!--Contains All Content Tiles-->
@@ -28,7 +42,7 @@
                     <div class="sub-tile" id="assembly">Sequence Assembly</div>
                 </div>
 
-                <div class="tile" id="chemistry-tile">
+                <div class="tile" id="chemistry-tile" onclick="location.href='./chemistry.html'">
                     <img class="tile-icon" id="chem-icon" src="../images/flask.png">
                     <div class="tile-text">Chemistry</div>
                     <div class="sub-tile" id="atoms">Atoms</div>
@@ -44,18 +58,36 @@
                     <div class="sub-tile" id="lang">Languages</div>
                 </div>
 
-                <div class="tile" id="engineering-tile">
+                <div class="tile" id="engineering-tile" onclick="location.href='./engineering.html'">
                     <img class="tile-icon" id="eng-icon" src="../images/flask.png">
                     <div class="tile-text">Engineering</div>
                     <div class="sub-tile" id="energy">Energy Balance</div>
                     <div class="sub-tile" id="material">Material Science</div>
-                    <div class="sub-tile" id="other">Other</div>
+                    <div class="sub-tile" id="more">More Topics</div>
+                </div>
+
+                <div class="tile" id="math-tile">
+                    <img class="tile-icon" id="eng-icon" src="../images/flask.png">
+                    <div class="tile-text">Math</div>
+                    <div class="sub-tile" id="calc">Calculus</div>
+                    <div class="sub-tile" id="formulas">Formulas</div>
+                    <div class="sub-tile" id="mmore">More Topics</div>
+                </div>
+
+                <div class="tile" id="future-tile">
+                    <img class="tile-icon" id="eng-icon" src="../images/flask.png">
+                    <div class="tile-text">Future Content</div>
+                    <div class="sub-tile" id="Phylogeny">Phylogeny</div>
+                    <div class="sub-tile" id="ai">Artificial Intelligence</div>
+                    <div class="sub-tile" id="fmore">More Topics</div>
                 </div>
 
             </div>
             <div id="footer-tran"></div>
             <div class="footer" id="foot">
-                stuff
+                <div class="info" id="about">About</div>
+                <div class="info" id="contact">Contact</div>
+                <div class="info" id="resources">Resources</div>
             </div>
         </div>
         

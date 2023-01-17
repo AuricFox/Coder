@@ -1,38 +1,188 @@
+/* ========== Setup ========== */
+
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+/* ========== Body ========== */
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    height: 100%;
+}
+
+/* ========== Content ========== */
+
+.content {
+    display: flex;
+    flex-direction: column;
 }
 
 /* ========== Nav Bar ========== */
+
+#nav-bar {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    padding: 10px 0px 10px 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#nav-tile {
+   height: 40vh;
+   position: relative;
+   background-image: url(../images/chemistry.jpg);
+   background-position: 65% 43%;
+   background-size: cover;
+}
 
 .nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: green;
 }
 
 .nav li {
     display: inline;
     float: left;
-    border-right: 1px solid black;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 li nav a {
     display: block;
-    color: black;
+    color: rgb(255, 255, 255);
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px;
     text-decoration: none;
 }
 
 #nav-active {
-    background: lightgreen;
-    color: black;
+    background: rgb(247, 7, 7);
 }
 
 li nav a:hover {
-    background: lightgreen;
-    color: black;
+    background: rgb(247, 7, 7);
+}
+
+/* ========== Search tile ========== */
+
+#search-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+}
+
+#search-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="text"] {
+    padding: 12px 20px;
+    margin-right: 8px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    width: 10%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(247, 7, 7);
+}
+
+/* ========== topics ========== */
+
+.topics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2em 0 3em 0;
+}
+
+/* ========== topic ========== */
+
+.topic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    padding: 0 0 1em 0;
+    margin: 1em;
+}
+
+.topic:hover {
+    border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.topic-text {
+    background-color: rgba(0, 0, 0, 0.3);
+    color:rgb(255, 255, 255);
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+/* ========== footer ========== */
+
+#footer-tran {
+    height: 1em;
+    background-image: linear-gradient(rgba(255, 255, 255, 1),
+        rgba(254, 124, 2));
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(254, 124, 2);
+    justify-content: center;
+}
+
+.info {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 1em;
+}
+
+.info:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    height: 80%;
+    border-right: 1px solid #ccc;
+}
+
+.info:hover {
+    color: rgb(247, 7, 7);
+    cursor: pointer;
 }
