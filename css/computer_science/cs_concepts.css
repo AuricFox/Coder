@@ -38,7 +38,7 @@ body {
 #nav-tile {
    height: 40vh;
    position: relative;
-   background-image: url(../images/code.jpg);
+   background-image: url(../../images/code.jpg);
    background-position: 65% 43%;
    background-size: cover;
 }
@@ -134,28 +134,23 @@ button[type="submit"]:hover {
     border-radius: 10px;
 }
 
-#prog-con{
+#data-type{
     background-color: rgb(255, 244, 163);
     color: rgb(0, 0, 0);
 }
 
-#tools{
+#data-structure{
     background-color: rgb(150, 212, 212);
     color: rgb(0, 0, 0);
 }
 
-#languages {
+#prog-con {
     background-color: rgb(255, 192, 199);
     color: rgb(0, 0, 0);
 }
 
-#search-algo {
+#test-know {
     background-color: rgb(243, 236, 234);
-    color: rgb(0, 0, 0);
-}
-
-#art-intel {
-    background-color: rgb(255, 244, 163);
     color: rgb(0, 0, 0);
 }
 
@@ -171,33 +166,24 @@ button[type="submit"]:hover {
     text-align: center;
 }
 
-.learn-topic {
-    background-color: rgb(76, 175, 80);
-    color:rgb(255, 255, 255);
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 1rem;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.learn-topic:hover {
-    background-color: rgba(76, 175, 80, 0.6);
-    cursor: pointer;
-}
-
 .sub-topic {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     border-radius: 10px;
     padding: 1rem;
     margin: 1rem;
+    width: 100%;
     font-size: 20px;
 }
 
-.sub-topic:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-    cursor: pointer;
+table{
+    text-align: left;
+}
+
+th, td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    font-size: 16px;
 }
 
 .practice {
@@ -245,7 +231,7 @@ button[type="submit"]:hover {
 .footer {
     display: flex;
     flex-direction: row;
-    background-color: black;
+    background-color: #212121;
     justify-content: center;
 }
 
