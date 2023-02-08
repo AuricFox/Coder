@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta name="description" content="">
         <meta name="keywords" content="">
-        <title>Engineering</title>
-        <link rel="stylesheet" type="text/css" href="../css/engineering.css">
+        <title>Future Content</title>
+        <link rel="stylesheet" type="text/css" href="../../css/useful_tools/taxes.css">
     </head>
     <body>
 
@@ -19,9 +19,9 @@
                         <li><nav><a href="bioinformatics.html">Bioinformatics</a></nav></li>
                         <li><nav><a href="chemistry.html">Chemistry</a></nav></li>
                         <li><nav><a href="computer_science.html">Computer Science</a></nav></li>
-                        <li><nav><a id="nav-active" href="engineering.html">Engineering</a></nav></li>
+                        <li><nav><a href="engineering.html">Engineering</a></nav></li>
                         <li><nav><a href="math.html">Math</a></nav></li>
-                        <li><nav><a href="useful_tools.html">Useful Tools</a></nav></li>
+                        <li><nav><a id="nav-active" href="useful_tools.html">Useful Tools</a></nav></li>
                     </ul>
                 </div>
                 <div id="search-container">
@@ -33,34 +33,17 @@
             </div>
 
             <!--Contains All Content Tiles-->
-            <div class="topics">
-                <div class="topic" id="atoms">
-                    <div class="topic-text">Atoms</div>
-                </div>
 
-                <div class="topic" id="formulas" onclick="location.href='./engineering.html'">
-                    <div class="topic-text">Formulas</div>
-                </div>
-                
-                <div class="topic" id="reactions">
-                    <div class="topic-text">Reactions</div>
-                </div>
-
-                <div class="topic" id="stoichiometry" onclick="location.href='./chemistry.html'">
-                    <div class="topic-text">Stoichiometry</div>
-                </div>
-
-                <div class="topic" id="structure">
-                    <div class="topic-text">structure</div>
-                </div>
-
-                <div class="topic" id="future-topic">
-                    <div class="topic-text">Future Content</div>
-                </div>
+            <div class="form-tile">
+                <div id="form-tile">Calculating Taxes</div>
+                <form method="post" enctype="multipart/form-data" id="tax-info">
+                    <input type="text">
+                    <input type="file" name="files" multiple>
+                    <input type="submit" value="Submit">
+                </form>
             </div>
 
             <div class="footer-tile">
-                <div id="footer-tran"></div>
                 <footer class="footer" id="foot">
                     <div class="info" id="about">About</div>
                     <div class="info" id="contact">Contact</div>
@@ -68,6 +51,6 @@
                 </footer>
             </div>
 
-        </div>        
+        </div>
     </body>
 </html>
