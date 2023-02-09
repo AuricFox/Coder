@@ -5,7 +5,7 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
         <title>Computer Science</title>
-        <link rel="stylesheet" type="text/css" href="../css/computer_science.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/computer_science.css') }}">
     </head>
     <body>
 
@@ -15,13 +15,13 @@
             <div id="nav-tile">
                 <div id="nav-bar">
                     <ul class="nav">
-                        <li><nav><a href="Home.html">Home</a></nav></li>
-                        <li><nav><a href="bioinformatics.html">Bioinformatics</a></nav></li>
-                        <li><nav><a href="chemistry.html">Chemistry</a></nav></li>
-                        <li><nav><a id="nav-active" href="computer_science.html">Computer Science</a></nav></li>
-                        <li><nav><a href="engineering.html">Engineering</a></nav></li>
-                        <li><nav><a href="math.html">Math</a></nav></li>
-                        <li><nav><a href="useful_tools.html">Useful Tools</a></nav></li>
+                        <li><nav><a href="{{  url_for('home')  }}">Home</a></nav></li>
+                        <li><nav><a href="{{  url_for('bioinformatics')  }}">Bioinformatics</a></nav></li>
+                        <li><nav><a href="{{  url_for('chemistry')  }}">Chemistry</a></nav></li>
+                        <li><nav><a id="nav-active" href="{{  url_for('computer_science')  }}">Computer Science</a></nav></li>
+                        <li><nav><a href="{{  url_for('engineering')  }}">Engineering</a></nav></li>
+                        <li><nav><a href="{{  url_for('math')}}">Math</a></nav></li>
+                        <li><nav><a href="{{  url_for('useful_tools')  }}">Useful Tools</a></nav></li>
                     </ul>
                 </div>
                 <div id="search-container">

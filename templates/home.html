@@ -5,7 +5,7 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
         <title>Home</title>
-        <link rel="stylesheet" type="text/css" href="../css/home.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
     </head>
     <body>
 
@@ -15,13 +15,13 @@
             <div id="nav-tile">
                 <div id="nav-bar">
                     <ul class="nav">
-                        <li><nav><a id="nav-active" href="Home.html">Home</a></nav></li>
-                        <li><nav><a href="bioinformatics.html">Bioinformatics</a></nav></li>
-                        <li><nav><a href="chemistry.html">Chemistry</a></nav></li>
-                        <li><nav><a href="computer_science.html">Computer Science</a></nav></li>
-                        <li><nav><a href="engineering.html">Engineering</a></nav></li>
-                        <li><nav><a href="math.html">Math</a></nav></li>
-                        <li><nav><a href="useful_tools.html">Useful Tools</a></nav></li>
+                        <li><nav><a id="nav-active" href="{{  url_for('home')  }}">Home</a></nav></li>
+                        <li><nav><a href="{{  url_for('bioinformatics')  }}">Bioinformatics</a></nav></li>
+                        <li><nav><a href="{{  url_for('chemistry')  }}">Chemistry</a></nav></li>
+                        <li><nav><a href="{{  url_for('computer_science')  }}">Computer Science</a></nav></li>
+                        <li><nav><a href="{{  url_for('engineering')  }}">Engineering</a></nav></li>
+                        <li><nav><a href="{{  url_for('math')}}">Math</a></nav></li>
+                        <li><nav><a href="{{  url_for('useful_tools')  }}">Useful Tools</a></nav></li>
                     </ul>
                 </div>
                 <div id="search-container">
@@ -43,7 +43,7 @@
                             get help assembling sequence fragments into a complete genome.
                         </div> 
                     </div>
-                    <a class="more-tile" href="./bioinformatics.html"><b>Learn More</b></a>
+                    <a class="more-tile" href="{{  url_for('bioinformatics')  }}"><b>Learn More</b></a>
                 </div>
 
                 <div class="tile" id="chemistry-tile">
@@ -54,7 +54,7 @@
                             Lewis structures, and more.
                         </div>
                     </div>
-                    <a class="more-tile" href="./chemistry.html"><b>Learn More</b></a>
+                    <a class="more-tile" href="{{  url_for('chemistry')  }}"><b>Learn More</b></a>
                 </div>
 
                 <div class="tile" id="computer-tile" >
@@ -65,7 +65,7 @@
                             languages used to implement them.
                         </div>
                     </div>
-                    <a class="more-tile" href="./computer_science.html"><b>Learn More</b></a>
+                    <a class="more-tile" href="{{  url_for('computer_science')  }}"><b>Learn More</b></a>
                 </div>
 
                 <div class="tile" id="engineering-tile">
@@ -76,7 +76,7 @@
                             and more.
                         </div>
                     </div>
-                    <a class="more-tile" href="./engineering.html"><b>Learn More</b></a>
+                    <a class="more-tile" href="{{  url_for('engineering')  }}"><b>Learn More</b></a>
                 </div>
 
                 <div class="tile" id="math-tile">
@@ -87,7 +87,7 @@
                             along with formulas used to solve important problems.
                         </div>
                     </div>
-                    <a class="more-tile" href="./math.html"><b>Learn More</b></a>
+                    <a class="more-tile" href="{{  url_for('math')  }}"><b>Learn More</b></a>
                 </div>
 
                 <div class="tile" id="tools-tile">
@@ -98,7 +98,7 @@
                             and editing images.
                         </div>
                     </div>
-                    <a class="more-tile" href="./useful_tools.html"><b>Learn More</b></a>
+                    <a class="more-tile" href="{{  url_for('useful_tools')  }}"><b>Learn More</b></a>
                 </div>
             </div>
 
