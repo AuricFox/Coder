@@ -33,7 +33,7 @@ This is a development server so everything will be running on localhost (possibl
 
 The env needs to be activated to run:  
 ```
-C: env\Scripts\activate.bat     # Windows
+C: env\Scripts\activate     # Windows
 C: source env/bin/activate      # Mac
 ```
 

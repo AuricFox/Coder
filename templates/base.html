@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="title" content="">
+        <meta name="keywords" content="">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}">
+    </head>
+    <body>
+
+        <div class="content">
+
+            <!--Welcome Tile-->
+            <div class="nav-tile" id="{{ nav_id }}">
+                <div id="nav-bar">
+                    <ul class="nav">
+                        <li><nav><a href="{{  url_for('home')  }}" class="{% if nav_id == 'home-page' %}active{% endif %}">Home</a></nav></li>
+                        <li><nav><a href="{{  url_for('bioinformatics')  }}" class="{% if nav_id == 'bio-page' %}active{% endif %}">Bioinformatics</a></nav></li>
+                        <li><nav><a href="{{  url_for('chemistry')  }}" class="{% if nav_id == 'chem-page' %}active{% endif %}">Chemistry</a></nav></li>
+                        <li><nav><a href="{{  url_for('computer_science')  }}" class="{% if nav_id == 'csci-page' %}active{% endif %}">Computer Science</a></nav></li>
+                        <li><nav><a href="{{  url_for('engineering')  }}" class="{% if nav_id == 'eng-page' %}active{% endif %}">Engineering</a></nav></li>
+                        <li><nav><a href="{{  url_for('math')}}" class="{% if nav_id == 'math-page' %}active{% endif %}">Math</a></nav></li>
+                        <li><nav><a href="{{  url_for('useful_tools')  }}" class="{% if nav_id == 'tools-page' %}active{% endif %}">Useful Tools</a></nav></li>
+                    </ul>
+                </div>
+                <div id="search-container">
+                    <form id="search-tile">
+                        <input type="text" placeholder="Search...">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+
+            <!--Contains All Content Tiles-->
+            <div class="topics">
+                {% block content %}{% endblock %}
+            </div>
+
+            <div class="footer-tile">
+                <footer class="footer" id="foot">
+                    <div class="info" id="about">About</div>
+                    <div class="info" id="contact">Contact</div>
+                    <div class="info" id="resources">Resources</div>
+                </footer>
+            </div>
+            
+        </div>
+    </body>
+</html>

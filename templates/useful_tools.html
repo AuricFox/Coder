@@ -5,14 +5,14 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
         <title>Future Content</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/useful_tools.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}">
     </head>
     <body>
 
         <div class="content">
 
             <!--Welcome Tile-->
-            <div id="nav-tile">
+            <div class="nav-tile" id="{{ nav_id }}">
                 <div id="nav-bar">
                     <ul class="nav">
                         <li><nav><a href="{{  url_for('home')  }}">Home</a></nav></li>
@@ -36,45 +36,41 @@
             <div class="topics">
 
                 <div class="topic" id="tax-tile">
-                    <div class="topic-tile" id="irs-topic">
-                        <div class="topic-text">Calculating Taxes</div>
-                        <div class="topic-descript">
-                            Get help calculating your taxes by simply submitting your tax related documents 
-                            (bills, pay stubs, receipts, etc.) via picture, pdf, and/or other digit documents.
-                            A powerful AI then extracts the text within it, makes the necessary calculations,
-                            and returns the new packaged information.
-                        </div>
+                    <div class="title">Calculating Taxes</div>
+                    <div class="description">
+                        Get help calculating your taxes by simply submitting your tax related documents 
+                        (bills, pay stubs, receipts, etc.) via picture, pdf, and/or other digit documents.
+                        A powerful AI then extracts the text within it, makes the necessary calculations,
+                        and returns the new packaged information.
                     </div>
-                    <a class="use-tile" href="useful_tools/taxes.html"><b>TRY TOOL</b></a>
+                    <a class="more" href="{{  url_for('taxes')  }}"><b>TRY TOOL</b></a>
                 </div>
 
                 <div class="topic" id="edit-tile">
-                    <div class="topic-tile" id="edit-topic">
-                        <div class="topic-text">Edit Images</div>
-                        <div class="topic-descript">
-                            Get help calculating your taxes by simply submitting your tax related documents
-                            (bills, pay stubs, receipts, etc.) via picture, pdf, and/or other digit documents.
-                            A powerful AI then extracts the text within it, makes the nessessary calculations,
-                            and returns the new packaged information.
-                        </div>
+                    <div class="title">Edit Images</div>
+                    <div class="description">
+                        Get help calculating your taxes by simply submitting your tax related documents
+                        (bills, pay stubs, receipts, etc.) via picture, pdf, and/or other digit documents.
+                        A powerful AI then extracts the text within it, makes the nessessary calculations,
+                        and returns the new packaged information.
                     </div>
-                    <a class="use-tile" href=""><b>TRY TOOL</b></a>
+                    <a class="more" href=""><b>TRY TOOL</b></a>
                 </div>
                 
                 <div class="topic" id="reactions">
-                    <div class="topic-text">Reactions</div>
+                    <div class="title">Reactions</div>
                 </div>
 
                 <div class="topic" id="stoichiometry">
-                    <div class="topic-text">Stoichiometry</div>
+                    <div class="title">Stoichiometry</div>
                 </div>
 
                 <div class="topic" id="structure">
-                    <div class="topic-text">structure</div>
+                    <div class="title">structure</div>
                 </div>
 
                 <div class="topic" id="future-topic">
-                    <div class="topic-text">Future Content</div>
+                    <div class="title">Future Content</div>
                 </div>
             </div>
 
