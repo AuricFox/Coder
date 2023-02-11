@@ -43,6 +43,15 @@ def useful_tools():
     return render_template('useful_tools.html', nav_id="tools-page")
 
 # ====================================================================
+# Subpages of Bioinformatics
+# ====================================================================
+
+# Accessing counting_codons Page
+@app.route("/counting_codons")
+def counting_codons():
+    return render_template('bioinformatics/counting_codons.html', nav_id='bio-page')
+
+# ====================================================================
 # Subpages of Computer Science
 # ====================================================================
 
@@ -58,7 +67,7 @@ def cs_concepts():
 # Accessing useful_tools Page
 @app.route("/taxes")
 def taxes():
-    return render_template('useful_tools/taxes.html')
+    return render_template('useful_tools/taxes.html', nav_id="tools-page")
 
 # ====================================================================
 # Uploading files sent by user

@@ -1,87 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <title>Future Content</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}">
-    </head>
-    <body>
+{% extends "base.html" %}
 
-        <div class="content">
+{% block title %}Useful Tools{% endblock %}
 
-            <!--Welcome Tile-->
-            <div class="nav-tile" id="{{ nav_id }}">
-                <div id="nav-bar">
-                    <ul class="nav">
-                        <li><nav><a href="{{  url_for('home')  }}">Home</a></nav></li>
-                        <li><nav><a href="{{  url_for('bioinformatics')  }}">Bioinformatics</a></nav></li>
-                        <li><nav><a href="{{  url_for('chemistry')  }}">Chemistry</a></nav></li>
-                        <li><nav><a href="{{  url_for('computer_science')  }}">Computer Science</a></nav></li>
-                        <li><nav><a href="{{  url_for('engineering')  }}">Engineering</a></nav></li>
-                        <li><nav><a href="{{  url_for('math')}}">Math</a></nav></li>
-                        <li><nav><a id="nav-active" href="{{  url_for('useful_tools')  }}">Useful Tools</a></nav></li>
-                    </ul>
-                </div>
-                <div id="search-container">
-                    <form id="search-tile">
-                        <input type="text" placeholder="Search...">
-                        <button type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
+{% block content %}
+<div class="topic" id="tax-tile">
+    <div class="title">Calculating Taxes</div>
+    <div class="description">
+        Get help calculating your taxes by simply submitting your tax related documents
+        (bills, pay stubs, receipts, etc.) via picture, pdf, and/or other digit documents.
+        A powerful AI then extracts the text within it, makes the necessary calculations,
+        and returns the new packaged information.
+    </div>
+    <a class="more" href="{{  url_for('taxes')  }}"><b>TRY TOOL</b></a>
+</div>
 
-            <!--Contains All Content Tiles-->
-            <div class="topics">
+<div class="topic" id="edit-tile">
+    <div class="title">Edit Images</div>
+    <div class="description">
+        Get help calculating your taxes by simply submitting your tax related documents
+        (bills, pay stubs, receipts, etc.) via picture, pdf, and/or other digit documents.
+        A powerful AI then extracts the text within it, makes the nessessary calculations,
+        and returns the new packaged information.
+    </div>
+    <a class="more" href=""><b>TRY TOOL</b></a>
+</div>
 
-                <div class="topic" id="tax-tile">
-                    <div class="title">Calculating Taxes</div>
-                    <div class="description">
-                        Get help calculating your taxes by simply submitting your tax related documents 
-                        (bills, pay stubs, receipts, etc.) via picture, pdf, and/or other digit documents.
-                        A powerful AI then extracts the text within it, makes the necessary calculations,
-                        and returns the new packaged information.
-                    </div>
-                    <a class="more" href="{{  url_for('taxes')  }}"><b>TRY TOOL</b></a>
-                </div>
+<div class="topic" id="reactions">
+    <div class="title">Reactions</div>
+</div>
 
-                <div class="topic" id="edit-tile">
-                    <div class="title">Edit Images</div>
-                    <div class="description">
-                        Get help calculating your taxes by simply submitting your tax related documents
-                        (bills, pay stubs, receipts, etc.) via picture, pdf, and/or other digit documents.
-                        A powerful AI then extracts the text within it, makes the nessessary calculations,
-                        and returns the new packaged information.
-                    </div>
-                    <a class="more" href=""><b>TRY TOOL</b></a>
-                </div>
-                
-                <div class="topic" id="reactions">
-                    <div class="title">Reactions</div>
-                </div>
+<div class="topic" id="stoichiometry">
+    <div class="title">Stoichiometry</div>
+</div>
 
-                <div class="topic" id="stoichiometry">
-                    <div class="title">Stoichiometry</div>
-                </div>
+<div class="topic" id="structure">
+    <div class="title">structure</div>
+</div>
 
-                <div class="topic" id="structure">
-                    <div class="title">structure</div>
-                </div>
-
-                <div class="topic" id="future-topic">
-                    <div class="title">Future Content</div>
-                </div>
-            </div>
-
-            <div class="footer-tile">
-                <footer class="footer" id="foot">
-                    <div class="info" id="about">About</div>
-                    <div class="info" id="contact">Contact</div>
-                    <div class="info" id="resources">Resources</div>
-                </footer>
-            </div>
-
-        </div>
-    </body>
-</html>
+<div class="topic" id="future-topic">
+    <div class="title">Future Content</div>
+</div>
+{% endblock %}

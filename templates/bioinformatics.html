@@ -4,26 +4,43 @@
 
 {% block content %}
 <div class="topic" id="atoms">
-    <div class="title">Atoms</div>
+    <div class="title">Counting Codons</div>
+    <div class="description">
+        Count the number of codon contained within a genetic sequence. Every
+        three characters of a string is a codon. This tool takes in a fna or 
+        fastq file containing genetic sequences and counts the total number 
+        of codons within the file.
+    </div>
+    <a class="more" href="{{  url_for('counting_codons')  }}"><b>Learn More</b></a>
 </div>
 
 <div class="topic" id="formulas">
-    <div class="title">Formulas</div>
+    <div class="title">Sequence Alignment</div>
+    <div class="description">
+        Align two genetic sequences and see how they compare. This tool takes in 
+        a fna or fastq file, aligns the sequence, and scores the alignment.
+    </div>
+    <a class="more" href="{{  url_for('bioinformatics')  }}"><b>Learn More</b></a>
 </div>
 
 <div class="topic" id="reactions">
-    <div class="title">Reactions</div>
+    <div class="title">Phylogeny Trees</div>
+    <div class="description">
+        Create a phylogeny tree with a collection of genetic sequences to see 
+        where the sequences diverged from each other. This tool takes in a fna 
+        or fastq file, compares the sequences, and creates a phylogeny tree.
+    </div>
+    <a class="more" href="{{  url_for('bioinformatics')  }}"><b>Learn More</b></a>
 </div>
 
 <div class="topic" id="stoichiometry">
-    <div class="title">Stoichiometry</div>
-</div>
-
-<div class="topic" id="structure">
-    <div class="title">structure</div>
-</div>
-
-<div class="topic" id="future-topic">
-    <div class="title">Future Content</div>
+    <div class="title">Genetic Assembly</div>
+    <div class="description">
+        Assemble genetic fragments from sequence reads generated from lab results
+        of DNA collection. This tool takes in a fna or fastq file, breaks the reads 
+        into codons, creates a de Bruijn graph to connect the codons, and assembles 
+        them into contigs.
+    </div>
+    <a class="more" href="{{  url_for('bioinformatics')  }}"><b>Learn More</b></a>
 </div>
 {% endblock %}

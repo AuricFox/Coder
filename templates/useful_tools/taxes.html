@@ -1,56 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <title>Future Content</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/useful_tools/taxes.css') }}">
-    </head>
-    <body>
+{% extends "base.html" %}
 
-        <div class="content">
+{% block title %}Useful Tools{% endblock %}
 
-            <!--Welcome Tile-->
-            <div id="nav-tile">
-                <div id="nav-bar">
-                    <ul class="nav">
-                        <li><nav><a href="{{  url_for('home')  }}">Home</a></nav></li>
-                        <li><nav><a href="{{  url_for('bioinformatics')  }}">Bioinformatics</a></nav></li>
-                        <li><nav><a href="{{  url_for('chemistry')  }}">Chemistry</a></nav></li>
-                        <li><nav><a href="{{  url_for('computer_science')  }}">Computer Science</a></nav></li>
-                        <li><nav><a href="{{  url_for('engineering')  }}">Engineering</a></nav></li>
-                        <li><nav><a href="{{  url_for('math')}}">Math</a></nav></li>
-                        <li><nav><a id="nav-active" href="{{  url_for('useful_tools')  }}">Useful Tools</a></nav></li>
-                    </ul>
-                </div>
-                <div id="search-container">
-                    <form id="search-tile">
-                        <input type="text" placeholder="Search...">
-                        <button type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-
-            <!--Contains All Content Tiles-->
-
-            <div class="form-tile">
-                <div id="form-tile">Calculating Taxes</div>
-                <form method="post" enctype="multipart/form-data" id="tax-info">
-                    <input type="text">
-                    <input type="file" name="files" multiple>
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-
-            <div class="footer-tile">
-                <footer class="footer" id="foot">
-                    <div class="info" id="about">About</div>
-                    <div class="info" id="contact">Contact</div>
-                    <div class="info" id="resources">Resources</div>
-                </footer>
-            </div>
-
-        </div>
-    </body>
-</html>
+{% block content %}
+<div class="topic">
+    <div class="title">Calculating Taxes</div>
+    <form method="post" enctype="multipart/form-data" id="tax-info">
+        <input type="text">
+        <input type="file" name="files" multiple>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+{% endblock %}
