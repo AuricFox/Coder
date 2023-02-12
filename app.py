@@ -1,5 +1,7 @@
 from flask import Flask, request, redirect, render_template, url_for
 
+import os
+
 app = Flask(__name__, static_folder='static')
 
 # ====================================================================
@@ -47,9 +49,23 @@ def useful_tools():
 # ====================================================================
 
 # Accessing counting_codons Page
-@app.route("/counting_codons")
+@app.route("/counting_codons", methods=["POST", "GET"])
 def counting_codons():
-    return render_template('bioinformatics/counting_codons.html', nav_id='bio-page')
+    if(request.method == "GET"):
+        return render_template('bioinformatics/counting_codons.html', nav_id='bio-page')
+    else:
+        file = request.files["file"]
+        path = os.path.join(os.path.dirname(__file__), "src/temp")
+
+        if not os.path.exists(path):
+            os.makedirs(path)
+        
+        file.save(os.path.join(path, file.filename))
+        return redirect(url_for("codon_results"))
+
+@app.route("/codon_results")
+def codon_results():
+    return "File saved"
 
 # ====================================================================
 # Subpages of Computer Science

@@ -209,7 +209,7 @@ button[type="submit"]:hover {
 
 /* ========== form ========== */
 
-#count-codons {
+#form-data {
     display: flex;
     flex-direction: column;
 }
