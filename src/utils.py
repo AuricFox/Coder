@@ -28,7 +28,7 @@ def get_data(filename):
         print("Reading FASTQ file: ", filename)
 
         with open(filename) as f:
-            for head, seq, p, score in zip(f,f,f,f):        # Get four line at a time (Header, sequence, plus thingy, score)
+            for head, seq, p, score in zip(f,f,f,f):        # Get four lines at a time (Header, sequence, plus thingy, score)
                 head, seq = head.strip(), seq.strip()       # Strip header and sequece data of newline chars
                 header_data.append(head[1:])                # Add to header list
                 seq_data.append(seq)                        # Add to sequence list

@@ -45,21 +45,23 @@ class sequence:
         self.sequence = seq         # Character string of bases
         self.header = header        # Character string for header info
 
+        self.add_to_count()
+
     # ----------------------------------------------------------------------------------------------------------------------
     # Converts a Codon sequence to an amino acid sequence and returns it
-    def codon_to_amino(self):
+    def codon_to_amino(self, start = "", stop = ""):
         amino_str = ""
 
-        start = self.sequence.find("ATG")                                                               # Find index of first start codon
-        if(start < 0):                                                                                  # No start codon found, start at beginning
+        start = self.sequence.find("")                              # Find index of first start codon
+        if(start < 0):                                              # No start codon found, start at beginning
             start = 0
 
         #print("I: ", start, " J: ", stop)
-        for i in range(start, len(self.sequence), 3):                                                                 # Convert selected codons to amino acid sequences
+        for i in range(start, len(self.sequence), 3):               # Convert selected codons to amino acid sequences
             codon = self.sequence[i:(i+3)]
             amino = self.codon[codon]["amino_acid"]
 
-            if(amino == "Stp"):                                                                         # Stop codon reached (TAA, TAG, TGA)
+            if(stop != "" and amino == "Stp"):                      # Stop codon reached (TAA, TAG, TGA)
                 amino_str += self.amino_acid[amino]["letter"]
                 break
 
@@ -71,7 +73,7 @@ class sequence:
     # Parses the codon string into individual characters, maps them to the matching codon, and incriments the count of the codon
     def add_codon(self, codon):
 
-        if (len(codon) != 3):                                               # String can only have 3 bases
+        if (len(codon) != 3 or codon not in self.codon):                                               # String can only have 3 bases
             print("ERROR: NOT A CODON!")
             return
 
@@ -80,43 +82,38 @@ class sequence:
         self.amino_acid[self.codon[codon]["amino_acid"]]["count"] += 1      # Add codon to amino acid
 
     # ----------------------------------------------------------------------------------------------------------------------
-    # Adds codon or sequence strings to self.sequence
-    def add_header(self, head):
-        self.header = head
-
-    # ----------------------------------------------------------------------------------------------------------------------
-    # Adds codon or sequence strings to self.sequence
-    def add_to_sequence(self, seq):
-        self.sequence += seq
-
-    # ----------------------------------------------------------------------------------------------------------------------
     # Parses the genome sequence string into individual codon sub-strings and adds them to the count
-    def add_to_count(self, seq):
-        end = len(seq) - len(seq) % 3   # Ignore any trailing characters
+    def add_to_count(self):
+        end = len(self.sequence) - (len(self.sequence) % 3)   # Ignore any trailing characters
 
-        for i in range(0, end, 3):      # Iterate thru each 3 chars in the string
-            codon = seq[i:(i+3)]
-            self.add_codon(codon)       # Add codon to count
+        for i in range(0, end, 3):                          # Iterate thru each 3 chars in the string
+            codon = self.sequence[i:(i+3)]
+            self.add_codon(codon)                           # Add codon to count
 
     # ----------------------------------------------------------------------------------------------------------------------
     # Returns the totals of all codons as a list [codon, count]
     def get_codon_count(self):
-        data = []
+        data = {}
         
-        for i in self.codon.keys():
-            data.append([i, self.codon[i]["count"]])        # [codon, count]
+        for key in self.codon.keys():
+            data[key] = self.codon[key]["count"]        # {codon: count}
     
         return data
 
     # ----------------------------------------------------------------------------------------------------------------------
     # Returns the totals of all amino acids as a list [codon, count]
     def get_amino_count(self):
-        amino_acid = []
+        data = {}
 
         for key in self.amino_acid.keys():
-            amino_acid.append([key, self.amino_acid[key]["count"]])
+            data[key] = self.amino_acid[key]["count"]   # {amino acid: count}
 
-        return amino_acid
+        return data
+
+    # ----------------------------------------------------------------------------------------------------------------------
+    # Get both the amino acid data and codon data
+    def get_data(self):
+        return {"codons": self.get_codon_count(), "amino acids": self.get_amino_count()}
 
     # ----------------------------------------------------------------------------------------------------------------------
     # Testing if elements are being populated properly
@@ -130,22 +127,8 @@ class sequence:
 # ==========================================================================================================================
 def main():
 
-    test = sequence()
-    codons = [ # list of all 64 possible DNA codon combinations
-        "AAA", "ACA", "AGA", "ATA", "AAC", "ACC", "AGC", "ATC", "AAG", "ACG", "AGG", "ATG", "AAT", "ACT", "AGT", "ATT",
-        "CAA", "CCA", "CGA", "CTA", "CAC", "CCC", "CGC", "CTC", "CAG", "CCG", "CGG", "CTG", "CAT", "CCT", "CGT", "CTT",
-        "GAA", "GCA", "GGA", "GTA", "GAC", "GCC", "GGC", "GTC", "GAG", "GCG", "GGG", "GTG", "GAT", "GCT", "GGT", "GTT",
-        "TAA", "TCA", "TGA", "TTA", "TAC", "TCC", "TGC", "TTC", "TAG", "TCG", "TGG", "TTG", "TAT", "TCT", "TGT", "TTT"
-    ]
-
-    for x in codons:
-        test.add_codon(x)
-        #test.add_to_sequence(x)
-    
-    t = sequence()
-    t.add_to_sequence("AATGAAAAAAAAAAAATAAA")
-    # print(t.get_amino_count())
-    print(t.codon_to_amino())
+    test = sequence("AATGAAAAAAAAAAAATAAA")
+    print(test.get_data())
 
 if __name__ == "__main__":
     main()

@@ -1,6 +1,9 @@
-from flask import Flask, request, redirect, render_template, url_for
+from flask import Flask, request, redirect, render_template, url_for, jsonify
 
 import os
+import sys
+sys.path.append('./src/')
+import bioinformatics as bio
 
 app = Flask(__name__, static_folder='static')
 
@@ -51,17 +54,21 @@ def useful_tools():
 # Accessing counting_codons Page
 @app.route("/counting_codons", methods=["POST", "GET"])
 def counting_codons():
-    if(request.method == "GET"):
+    if(request.method == "GET"):                                    # Render baseline html
         return render_template('bioinformatics/counting_codons.html', nav_id='bio-page')
-    else:
-        file = request.files["file"]
-        path = os.path.join(os.path.dirname(__file__), "src/temp")
+    else:                                                           # User submitted form data
+        file = request.files["file"]                                # Get user's submitted file
+        path = os.path.join(os.path.dirname(__file__), "src/temp")  # Path where file will be saved
 
-        if not os.path.exists(path):
-            os.makedirs(path)
+        if not os.path.exists(path):                                # Checks if path exists
+            os.makedirs(path)                                       # Create path if it doesn't exist
         
-        file.save(os.path.join(path, file.filename))
-        return redirect(url_for("codon_results"))
+        file_path = os.path.join(path, file.filename)               # Creating saved file path
+        file.save(file_path)                                        # Saving input file
+        data = bio.getCodons(file.filename)                         # Get codon and amino acid data
+        os.remove(file_path)                                        # File is no longer needed
+
+        return jsonify(data)
 
 @app.route("/codon_results")
 def codon_results():
