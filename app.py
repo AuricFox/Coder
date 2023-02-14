@@ -55,7 +55,7 @@ def useful_tools():
 @app.route("/counting_codons", methods=["POST", "GET"])
 def counting_codons():
     if(request.method == "GET"):                                    # Render baseline html
-        return render_template('bioinformatics/counting_codons.html', nav_id='bio-page')
+        return render_template('bioinformatics/counting_codons.html', nav_id='bio-page', show_id='form')
     else:                                                           # User submitted form data
         file = request.files["file"]                                # Get user's submitted file
         path = os.path.join(os.path.dirname(__file__), "src/temp")  # Path where file will be saved
@@ -67,12 +67,13 @@ def counting_codons():
         file.save(file_path)                                        # Saving input file
         data = bio.getCodons(file.filename)                         # Get codon and amino acid data
         os.remove(file_path)                                        # File is no longer needed
+        
+        return render_template('bioinformatics/codon_results.html', nav_id='bio-page', data=data)
 
-        return jsonify(data)
-
+# Accessing codon_results Page
 @app.route("/codon_results")
 def codon_results():
-    return "File saved"
+    return render_template('bioinformatics/codon_results.html', nav_id='bio-page')
 
 # ====================================================================
 # Subpages of Computer Science

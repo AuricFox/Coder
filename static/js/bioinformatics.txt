@@ -1,8 +1,0 @@
-document.getElementById("submit-button").addEventListener("click", display_tile("form-data", "results"));
-
-// =====================================================================================
-// Hides the display of one block and shows another
-function display_tile(id1, id2){
-    document.getElementById(id1).style.display = "none";
-    document.getElementById(id2).style.display = "block";
-}
