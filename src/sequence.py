@@ -74,7 +74,7 @@ class sequence:
     def add_codon(self, codon):
 
         if (len(codon) != 3 or codon not in self.codon):                                               # String can only have 3 bases
-            print("ERROR: NOT A CODON!")
+            print("ERROR:" + codon + "NOT A CODON!")
             return
 
         # print("Index: ", index)
@@ -84,7 +84,7 @@ class sequence:
     # ----------------------------------------------------------------------------------------------------------------------
     # Parses the genome sequence string into individual codon sub-strings and adds them to the count
     def add_to_count(self):
-        end = len(self.sequence) - (len(self.sequence) % 3)   # Ignore any trailing characters
+        end = len(self.sequence) - (len(self.sequence) % 3) # Ignore any trailing characters
 
         for i in range(0, end, 3):                          # Iterate thru each 3 chars in the string
             codon = self.sequence[i:(i+3)]

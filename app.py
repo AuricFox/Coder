@@ -80,9 +80,44 @@ def codon_results():
 # ====================================================================
 
 # Accessing useful_tools Page
-@app.route("/cs_concepts")
-def cs_concepts():
-    return render_template('computer_science/cs_concepts.html')
+@app.route("/integers")
+def integers():
+    return render_template('computer_science/integers.html', nav_id="csci-page")
+
+# Accessing useful_tools Page
+@app.route("/floats")
+def floats():
+    return render_template('computer_science/floats.html', nav_id="csci-page")
+
+# Accessing useful_tools Page
+@app.route("/dates")
+def dates():
+    return render_template('computer_science/dates.html', nav_id="csci-page")
+
+# Accessing useful_tools Page
+@app.route("/characters")
+def characters():
+    return render_template('computer_science/characters.html', nav_id="csci-page")
+
+# Accessing useful_tools Page
+@app.route("/strings")
+def strings():
+    return render_template('computer_science/strings.html', nav_id="csci-page")
+
+# Accessing useful_tools Page
+@app.route("/booleans")
+def booleans():
+    return render_template('computer_science/booleans.html', nav_id="csci-page")
+
+# Accessing useful_tools Page
+@app.route("/nulls")
+def nulls():
+    return render_template('computer_science/nulls.html', nav_id="csci-page")
+
+# Accessing useful_tools Page
+@app.route("/data_types")
+def data_types():
+    return render_template('computer_science/data_types.html', nav_id="csci-page")
 
 # ====================================================================
 # Subpages of Useful Tools 

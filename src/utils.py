@@ -11,37 +11,52 @@ import os
 # Retruns seq_data: list of sequences, header_data: List of corresponding header info
 def get_data(filename):
 
+    fd = []
     seq_data = []
     header_data = []
-    mime = filename.split('.').pop()                        # Get file MIME type
+    mime = filename.split('.').pop()                # Get file MIME type
 
-    if(mime == 'fna'):                                      # Input file is a fna (data every two lines)
+    if(mime == 'fna'):                              # Input file is a fna (data every two lines)
         print("Reading FNA file: ", filename)
 
         with open(filename) as f:
-            for head, seq in zip(f,f):                      # Get header and sequence info
-                head, seq = head.strip(), seq.strip()       # Strip newline characters
-                header_data.append(head[1:])                # Add to header list
-                seq_data.append(seq)                        # Add to sequece list
 
-    elif(mime == 'fastq'):                                  # File is a fastq (data every four lines)
+            for line in f:                          # Clean data of junk lines
+                line = line.strip()
+                if line:                            # Add line to data if not empty
+                    fd.append(line)
+
+            for i in range(len(fd)):                # Get header and sequence info
+                if(i % 2 == 0):
+                    header_data.append(fd[i][1:])   # Add to header list
+                else:
+                    seq_data.append(fd[i])          # Add to sequece list
+
+    elif(mime == 'fastq'):                          # File is a fastq (data every four lines)
         print("Reading FASTQ file: ", filename)
 
         with open(filename) as f:
-            for head, seq, p, score in zip(f,f,f,f):        # Get four lines at a time (Header, sequence, plus thingy, score)
-                head, seq = head.strip(), seq.strip()       # Strip header and sequece data of newline chars
-                header_data.append(head[1:])                # Add to header list
-                seq_data.append(seq)                        # Add to sequence list
 
-    elif(mime == 'txt'):                                    # File is a Text
+            for line in f:                          # Clean data of junk lines
+                line = line.strip()
+                if line:                            # Add line to data if not empty
+                    fd.append(line)
+
+            for i in range(len(fd)):                # Get four lines at a time (Header, sequence, plus thingy, score)
+                if(i % 4 == 0):
+                    header_data.append(fd[i][1:])   # Add to header list
+                elif(i % 4 == 1):
+                    seq_data.append(fd[i])          # Add to sequence list
+
+    elif(mime == 'txt'):                            # File is a Text
         print("Reading text file ", filename)
 
         with open(filename) as f:
-            for seq in f:                                   # Read each line
-                seq = seq.strip()                           # Strip data of new line characters
-                seq_data.append(seq)                        # Append data to list
+            for seq in f:                           # Read each line
+                seq = seq.strip()                   # Strip data of new line characters
+                seq_data.append(seq)                # Append data to list
 
-            header_data.append('Assembled data')            # No headers should be in the file so add this one
+            header_data.append('Assembled data')    # No headers should be in the file so add this one
     else:
         print("ERROR: Invalid File Type!")
         print("Only fna, fastq, or txt types! The entered file type is ", mime)

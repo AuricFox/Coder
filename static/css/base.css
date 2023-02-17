@@ -148,6 +148,18 @@ button[type="submit"]:hover {
 .topic {
     background-color: rgba(255, 255, 255, 0.1);
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 2rem 0 2rem 0;
+    padding: 2rem 0 2rem 0;
+    border-radius: 10px;
+}
+
+.topic-list {
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -241,19 +253,74 @@ input[type="file"]:hover {
 
 /* ========== table ========== */
 
-table {
+.terms-table {
     color: white;
     text-align: center;
+    border-collapse: separate;
 }
 
-th {
+.terms-table th,td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    font-size: 16px;
+}
+
+/* ========== result table ========== */
+
+.result-table {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 75%;
+}
+
+.result-table table {
+    border-collapse: collapse;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.result-table thead th,
+.result-table tbody td {
+    padding: 8px;
+}
+
+.result-table thead th {
+    font-size: 20px;
     font-weight: bold;
 }
 
-th, td {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-    padding: 1rem;
-    font-size: 16px;
+.result-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.result-table tbody tr {
+    display: block;
+    float: left;
+    width: 12.5%;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ========== examples ========== */
+
+.code-examples {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.code-example{
+    background-color: Black;
+    color: white;
+    border-radius: 4px;
+    display: block;
+    white-space:pre-line;
+    font-family: monospace;
+    padding: 0.5rem;
+    margin: 1rem;
 }
 
 /* ========== footer ========== */
