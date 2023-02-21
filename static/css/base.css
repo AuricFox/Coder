@@ -26,6 +26,13 @@ body {
 
 /* ========== Nav Bar ========== */
 
+.nav-tile {
+    min-height: 40vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
 #nav-bar {
     color: rgb(255, 255, 255);
     font-size: 15px;
@@ -34,13 +41,8 @@ body {
     font-style: italic;
     padding: 10px 0px 10px 5px;
     background-color: rgba(0, 0, 0, 0.2);
-}
-
-.nav-tile {
-   height: 40vh;
-   position: relative;
-   background-position: center;
-   background-size: cover;
+    display: flex;
+    flex-direction: row;
 }
 
 #home-page {
@@ -78,7 +80,7 @@ body {
     border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-li nav a {
+.nav li div, .nav li a {
     display: block;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -90,41 +92,83 @@ li nav a {
     background: rgb(247, 7, 7);
 }
 
-li nav a:hover {
+.nav li div:hover, .nav li a:hover {
     background: rgb(247, 7, 7);
+    cursor: pointer;
+}
+
+/* ========== Sub Nav Bar ========== */
+
+.sub-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+}
+
+#bio-nav {display: none;}
+#chem-nav {display: none;}
+#csci-nav {display: none}
+#eng-nav {display: none;}
+#math-nav {display: none;}
+#tools-nav {display: none;}
+
+.sub-nav-topics {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.sub-nav a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.sn-title a {
+    font-weight: bold;
+    padding: 2px;
+    margin: 2px;
+    color: #FFF4A3;
+    font-size: 20px;
+}
+
+.sn-contents {
+    display: flex;
+    flex-direction: column;
+}
+
+.sn-contents a {
+    padding: 2px;
+    margin: 2px;
 }
 
 /* ========== Search tile ========== */
 
-#search-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    transform-origin: center;
-}
-
 #search-tile {
+    margin: 0 1rem 0 auto;
     display: flex;
-    align-items: center;
     justify-content: center;
+    border-radius: 4px;
 }
 
 input[type="text"] {
     padding: 12px 20px;
-    margin-right: 8px;
     box-sizing: border-box;
+    border-radius: 4px 0 0 4px;
     border: none;
-    border-radius: 4px;
     font-size: 16px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 button[type="submit"] {
-    width: 10%;
     padding: 14px 20px;
+    border-radius: 0 4px 4px 0;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
     background-color: #4CAF50;
     color: white;
@@ -313,7 +357,7 @@ input[type="file"]:hover {
 }
 
 .code-example{
-    background-color: Black;
+    background-color: rgba(255, 255, 255, 0.1);
     color: white;
     border-radius: 4px;
     display: block;

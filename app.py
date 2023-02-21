@@ -76,48 +76,48 @@ def codon_results():
     return render_template('bioinformatics/codon_results.html', nav_id='bio-page')
 
 # ====================================================================
-# Subpages of Computer Science
+# Subpages of Computer Science [Data Types]
 # ====================================================================
 
 # Accessing useful_tools Page
 @app.route("/integers")
 def integers():
-    return render_template('computer_science/integers.html', nav_id="csci-page")
+    return render_template('computer_science/data_types/integers.html', nav_id="csci-page")
 
 # Accessing useful_tools Page
 @app.route("/floats")
 def floats():
-    return render_template('computer_science/floats.html', nav_id="csci-page")
+    return render_template('computer_science/data_types/floats.html', nav_id="csci-page")
 
 # Accessing useful_tools Page
 @app.route("/dates")
 def dates():
-    return render_template('computer_science/dates.html', nav_id="csci-page")
+    return render_template('computer_science/data_types/dates.html', nav_id="csci-page")
 
 # Accessing useful_tools Page
 @app.route("/characters")
 def characters():
-    return render_template('computer_science/characters.html', nav_id="csci-page")
+    return render_template('computer_science/data_types/characters.html', nav_id="csci-page")
 
 # Accessing useful_tools Page
 @app.route("/strings")
 def strings():
-    return render_template('computer_science/strings.html', nav_id="csci-page")
+    return render_template('computer_science/data_types/strings.html', nav_id="csci-page")
 
 # Accessing useful_tools Page
 @app.route("/booleans")
 def booleans():
-    return render_template('computer_science/booleans.html', nav_id="csci-page")
+    return render_template('computer_science/data_types/booleans.html', nav_id="csci-page")
 
 # Accessing useful_tools Page
 @app.route("/nulls")
 def nulls():
-    return render_template('computer_science/nulls.html', nav_id="csci-page")
+    return render_template('computer_science/data_types/nulls.html', nav_id="csci-page")
 
 # Accessing useful_tools Page
 @app.route("/data_types")
 def data_types():
-    return render_template('computer_science/data_types.html', nav_id="csci-page")
+    return render_template('computer_science/data_types/data_types.html', nav_id="csci-page")
 
 # ====================================================================
 # Subpages of Useful Tools 
