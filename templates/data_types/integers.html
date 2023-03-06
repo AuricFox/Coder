@@ -1,0 +1,151 @@
+{% extends "code_base.html" %}
+
+{% block title %}Integer{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title">Integer</div>
+    <div class="description">
+        Numerical data types composed of whole numbers. They contain no fractions
+        or decimals.
+    </div>
+    <div class="examples">
+        <table class="terms-table" id="terms-center">
+            <thead>
+                <tr>
+                    <th>Integer</th>
+                    <th>Not Integer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>-1,004,567</td>
+                    <td>-1,004,567.01</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>'1'</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>Q</td>
+                </tr>
+                <tr>
+                    <td>56</td>
+                    <td>Fifty Six</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="topic">
+    <div class="title">Integer Types</div>
+    <div class="description">
+        In some programming languages the size of an integer that is stored
+        can be set. Integers can also be unsigned which only allows positive 
+        values to be stored. The size of an integer data type is compiler-dependent. 
+        A 16-bit system gives an output of an int as 2 bytes, and a 32-bit system 
+        gives an output of an int as 2 bytes and 4 bytes.
+    </div>
+    <div class="examples">
+        <table class="terms-table" id="terms-left">
+            <thead>
+                <tr>
+                    <th>Integer Types</th>
+                    <th>Range</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>short int</td>
+                    <td>-32,768 to 32,767</td>
+                </tr>
+                <tr>
+                    <td>unsigned short int</td>
+                    <td>0 to 65,535</td>
+                </tr>
+                <tr>
+                    <td>unsigned int</td>
+                    <td>0 to 4,294,967,295</td>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>-2,147,483,648 to 2,147,483,647</td>
+                </tr>
+                <tr>
+                    <td>long int</td>
+                    <td>-2,147,483,648 to 2,147,483,647</td>
+                </tr>
+                <tr>
+                    <td>unsigned long int</td>
+                    <td>0 to 4,294,967,295</td>
+                </tr>
+                <tr>
+                    <td>long long int</td>
+                    <td>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+                </tr>
+                <tr>
+                    <td>unsigned long long int</td>
+                    <td>0 to 18,446,744,073,709,551,615</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- Python code example -->
+{% block py %}
+# Integers in Python
+
+i = 1
+myNum = -2023
+longNum = 500123000
+{% endblock %}
+
+<!-- C code example -->
+{% block c %}
+// Integers in C
+
+int i = 1;
+int myNum = -2023;
+int longNum = 500123000;
+{% endblock %}
+
+<!-- C++ code example -->
+{% block cpp %}
+// Integers in C++
+
+int i = 1;
+int myNum = -2023;
+int longNum = 500123000;
+{% endblock %}
+
+<!-- C# code example -->
+{% block cs %}
+// Integers in C#
+
+int i = 1;
+int myNum = -2023;
+int longNum = 500123000;
+{% endblock %}
+
+<!-- Java code example -->
+{% block java %}
+// Integers in Java
+
+int i = 1;
+int myNum = -2023;
+int longNum = 500123000;
+{% endblock %}
+
+<!-- JavaScript code example -->
+{% block js %}
+// Integers in JavaScript
+
+let i = 1;
+var myNum = -2023;
+let longNum = 500123000;
+{% endblock %}

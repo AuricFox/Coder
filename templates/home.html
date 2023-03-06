@@ -3,41 +3,30 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="topic" id="bio-tile">
-    <div class="title">Bioinformatics</div>
-    <div class="description" id="bio-description">
-        Use tools that count codons in a genenic sequence along with comparing the
-        phylogeny and alignment of each sequence to each other. Furthermore, 
-        assemble sequence fragments into a complete genome.
+<div class="topic" id="tutorial-tile">
+    <div class="title">Computer Science Concepts</div>
+    <div class="description" id="tutorial-description">
+        Learn about common computer science concepts such as data types and structures
+        along with other common terms.
     </div>
-    <a class="more" href="{{  url_for('bioinformatics')  }}"><b>Learn More</b></a>
+    <a class="more" href="{{  url_for('tutorials')  }}"><b>Learn More</b></a>
 </div>
 
-<div class="topic" id="chemistry-tile">
-    <div class="title">Chemistry</div>
-    <div class="description" id="chem-description">
-        Get help memorizing the periodic table, balancing chemical formulas, creating
-        Lewis structures, and more.
+<div class="topic" id="lang-tile">
+    <div class="title">Programming Languages</div>
+    <div class="description" id="lang-description">
+        Learn about common programming languages in computer science and how to implement them.
     </div>
-    <a class="more" href="{{  url_for('chemistry')  }}"><b>Learn More</b></a>
+    <a class="more" href="{{  url_for('languages')  }}"><b>Learn More</b></a>
 </div>
 
-<div class="topic" id="computer-tile">
-    <div class="title">Computer Science</div>
-    <div class="description" id="csci-description">
-        Learn about common data structures and algorithms along with popular
-        languages used to implement them.
+<div class="topic" id="algo-tile">
+    <div class="title">Algorithms</div>
+    <div class="description" id="algo-description">
+        Learn about popular search and sort algorithms used in software and how to use them 
+        effectively.
     </div>
-    <a class="more" href="{{  url_for('computer_science')  }}"><b>Learn More</b></a>
-</div>
-
-<div class="topic" id="engineering-tile">
-    <div class="title">Engineering</div>
-    <div class="description" id="eng-description">
-        Get help balancing energy and material flow rates along with material science
-        and more.
-    </div>
-    <a class="more" href="{{  url_for('engineering')  }}"><b>Learn More</b></a>
+    <a class="more" href="{{  url_for('algorithms')  }}"><b>Learn More</b></a>
 </div>
 
 <div class="topic" id="math-tile">
@@ -52,8 +41,8 @@
 <div class="topic" id="tools-tile">
     <div class="title">Useful Tools</div>
     <div class="description" id="tools-description">
-        Use automated tools that simplify tedious tasks such as filling out tax returns
-        and editing images.
+        Use automated tools that simplify tedious tasks such as filling out tax returns, 
+        editing images, bioinformatics tools, and more.
     </div>
     <a class="more" href="{{  url_for('useful_tools')  }}"><b>Learn More</b></a>
 </div>

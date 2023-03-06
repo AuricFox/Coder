@@ -8,9 +8,7 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="{{ url_for('static', filename='js/base.js') }}" defer></script>
-
         {% block head %}{% endblock %}
-
     </head>
     <body>
 
@@ -22,10 +20,10 @@
                 <div id="nav-bar">
                     <ul class="nav">
                         <li><a href="{{  url_for('home')  }}" class="{% if nav_id == 'home-page' %}active{% endif %}">Home</a></li>
-                        <li><div id="bio-pages" class="{% if nav_id == 'bio-page' %}active{% endif %}">Bioinformatics</div></li>
-                        <li><div id="chem-pages" class="{% if nav_id == 'chem-page' %}active{% endif %}">Chemistry</div></li>
-                        <li><div id="csci-pages" class="{% if nav_id == 'csci-page' %}active{% endif %}">Computer Science</div></li>
-                        <li><div id="eng-pages" class="{% if nav_id == 'eng-page' %}active{% endif %}">Engineering</div></li>
+                        <li><div id="data-pages" class="{% if nav_id == 'data-page' %}active{% endif %}">Data Types</div></li>
+                        <li><div id="struct-pages" class="{% if nav_id == 'struct-page' %}active{% endif %}">Data Structures</div></li>
+                        <li><div id="algo-pages" class="{% if nav_id == 'algo-page' %}active{% endif %}">Algorithms</div></li>
+                        <li><div id="lang-pages" class="{% if nav_id == 'lang-page' %}active{% endif %}">Programming Languages</div></li>
                         <li><div id="math-pages" class="{% if nav_id == 'math-page' %}active{% endif %}">Math</div></li>
                         <li><div id="tools-pages" class="{% if nav_id == 'tools-page' %}active{% endif %}">Useful Tools</div></li>
                     </ul>
@@ -37,55 +35,12 @@
 
                 <!--Sub Navigation Tile-->
                 <div id="sub-nav-bar">
-                    <!--Bioinformatics Sub Navigation Tile-->
-                    <div id="bio-nav" class="sub-nav">
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('counting_codons')  }}">Counting Codons</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('bioinformatics')  }}">Sequence Alignment</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('bioinformatics')  }}">Phylogeny Trees</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('bioinformatics')  }}">Genetic Assembly</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                    </div>
 
-                    <!--Chemistry Sub Navigation Tile-->
-                    <div id="chem-nav" class="sub-nav">
+                    <!--Data Types Sub Navigation Tile-->
+                    <div id="data-nav" class="sub-nav">
+                        <a class="sn-main-title" href="{{  url_for('data_types')  }}">Data Types</a>
                         <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('chemistry')  }}">Atoms</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('chemistry')  }}">Formulas</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('chemistry')  }}">Reactions</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('chemistry')  }}">Stoichiometry</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('chemistry')  }}">Lewis Structures</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                    </div>
-
-                    <!--Computer Science Sub Navigation Tile-->
-                    <div id="csci-nav" class="sub-nav">
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('data_types')  }}">Data Types</a></div>
-                            <div class="sn-contents">
+                            <div class="sn-contents-row">
                                 <a href="{{  url_for('integers')  }}">Integers</a>
                                 <a href="{{  url_for('floats')  }}">Floats</a>
                                 <a href="{{  url_for('dates')  }}">Dates</a>
@@ -95,124 +50,139 @@
                                 <a href="{{  url_for('nulls')  }}">Nulls</a>
                             </div>
                         </div>
+                    </div>
 
+                    <!--Data Structures Sub Navigation Tile-->
+                    <div id="struct-nav" class="sub-nav">
+                        <a class="sn-main-title" href="{{  url_for('data_structures')  }}">Data Structures</a>
                         <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('computer_science')  }}">Data Structures</a></div>
                             <div class="sn-contents">
-                                <a href="{{  url_for('computer_science')  }}">Arrays</a>
-                                <a href="{{  url_for('computer_science')  }}">Binary Trees</a>
-                                <a href="{{  url_for('computer_science')  }}">Hash Tables</a>
+                                <a class="sn-title" href="{{  url_for('data_structures')  }}">Basic Structures</a>
+                                <a href="{{  url_for('data_structures')  }}">Sets</a>
+                                <a href="{{  url_for('data_structures')  }}">Lists</a>
+                                <a href="{{  url_for('data_structures')  }}">Arrays</a>
+                                <a href="{{  url_for('data_structures')  }}">Hash Tables</a>
                             </div>
-                        </div>
 
-                        <div class="sub-nav-topics">
-                            <div class="sn-title">
-                                <a href="{{  url_for('computer_science')  }}" class="sn-title">Programming Tools</a>
-                            </div>
                             <div class="sn-contents">
-                                <a href="{{  url_for('computer_science')  }}">Flask</a>
-                                <a href="{{  url_for('computer_science')  }}">Git</a>
-                                <a href="{{  url_for('computer_science')  }}">Docker</a>
+                                <a class="sn-title" href="{{  url_for('data_structures')  }}">Trees</a>
+                                <a href="{{  url_for('data_structures')  }}">Binary Search Tree</a>
+                                <a href="{{  url_for('data_structures')  }}">B-Tree</a>
+                                <a href="{{  url_for('data_structures')  }}">Red-Black Tree</a>
+                                <a href="{{  url_for('data_structures')  }}">AVL Tree</a>
                             </div>
-                        </div>
 
-                        <div class="sub-nav-topics">
-                            <div class="sn-title">
-                                <a href="{{  url_for('computer_science')  }}" class="sn-title">Programming Languages</a>
-                            </div>
                             <div class="sn-contents">
-                                <a href="{{  url_for('computer_science')  }}">Python</a>
-                                <a href="{{  url_for('computer_science')  }}">C</a>
-                                <a href="{{  url_for('computer_science')  }}">C#</a>
-                                <a href="{{  url_for('computer_science')  }}">Java</a>
-                                <a href="{{  url_for('computer_science')  }}">HTML</a>
-                                <a href="{{  url_for('computer_science')  }}">CSS</a>
-                                <a href="{{  url_for('computer_science')  }}">JavaScript</a>
-                                <a href="{{  url_for('computer_science')  }}">SQL</a>
-                            </div>
-                        </div>
-
-                        <div class="sub-nav-topics">
-                            <div class="sn-title">
-                                <a href="{{  url_for('computer_science')  }}" class="sn-title">Search Algorithms</a>
-                            </div>
-                            <div class="sn-contents">
-                                <a href="{{  url_for('computer_science')  }}">Depth First Search</a>
-                                <a href="{{  url_for('computer_science')  }}">Breadth First Search</a>
-                                <a href="{{  url_for('computer_science')  }}">A&#42</a>
+                                <a class="sn-title" href="{{  url_for('data_structures')  }}">Graphs</a>
+                                <a href="{{  url_for('data_structures')  }}">Undirected Graph</a>
+                                <a href="{{  url_for('data_structures')  }}">Directed Graph</a>
+                                <a href="{{  url_for('data_structures')  }}">Weighted Graph</a>
                             </div>
                         </div>
                     </div>
 
-                    <!--Engineering Sub Navigation Tile-->
-                    <div id="eng-nav" class="sub-nav">
+                    <!--Programming Languages Sub Navigation Tile-->
+                    <div id="lang-nav" class="sub-nav">
+                        <a class="sn-main-title" href="{{  url_for('languages')  }}">Programming Languages</a>
                         <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('engineering')  }}">Energy Balance</a></div>
-                            <div class="sn-contents"></div>
+                            <div class="sn-contents-row">
+                                <a href="{{  url_for('languages')  }}">Python</a>
+                                <a href="{{  url_for('languages')  }}">C</a>
+                                <a href="{{  url_for('languages')  }}">C++</a>
+                                <a href="{{  url_for('languages')  }}">C#</a>
+                                <a href="{{  url_for('languages')  }}">Java</a>
+                                <a href="{{  url_for('languages')  }}">HTML</a>
+                                <a href="{{  url_for('languages')  }}">CSS</a>
+                                <a href="{{  url_for('languages')  }}">JavaScript</a>
+                                <a href="{{  url_for('languages')  }}">SQL</a>
+                            </div>
                         </div>
+                    </div>
+                    
+                    <!--Algorithms Sub Navigation Tile-->
+                    <div id="algo-nav" class="sub-nav">
+                        <a class="sn-main-title" href="{{  url_for('algorithms')  }}">Algorithms</a>
                         <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('engineering')  }}">Material Balance</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('engineering')  }}">Lattice Structure</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('engineering')  }}">Formulas</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('engineering')  }}">Materials</a></div>
-                            <div class="sn-contents"></div>
+                            <div class="sn-contents">
+                                <a class="sn-title" href="{{  url_for('algorithms')  }}">Sorting</a>
+                                <a href="{{  url_for('algorithms')  }}">Bubble Sort</a>
+                                <a href="{{  url_for('algorithms')  }}">Quick Sort</a>
+                                <a href="{{  url_for('algorithms')  }}">Merge Sort</a>
+                                <a href="{{  url_for('algorithms')  }}">Bucket Sort</a>
+                            </div>
+
+                            <div class="sn-contents">
+                                <a class="sn-title" href="{{  url_for('algorithms')  }}">Search</a>
+                                <a href="{{  url_for('algorithms')  }}">Depth First Search</a>
+                                <a href="{{  url_for('algorithms')  }}">Breadth First Search</a>
+                                <a href="{{  url_for('algorithms')  }}">A&#42 Search</a>
+                            </div>
+
+                            <div class="sn-contents">
+                                <a class="sn-title" href="{{  url_for('algorithms')  }}">Hashing</a>
+                            </div>
                         </div>
                     </div>
 
                     <!--Math Sub Navigation Tile-->
                     <div id="math-nav" class="sub-nav">
+                        <a class="sn-main-title" href="{{  url_for('math')  }}">Math</a>
                         <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('math')  }}">Algebra</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('math')  }}">Differential Equations</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('math')  }}">Integrals</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('math')  }}">Discrete Mathematics</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('math')  }}">Trigonometry</a></div>
-                            <div class="sn-contents"></div>
+                            <div class="sn-contents">
+                                <a class="sn-title" href="{{  url_for('math')  }}">Algebra</a>
+                            </div>
+                            
+                            <div class="sn-contents">
+                                <a class="sn-title" href="{{  url_for('math')  }}">Differential Equations</a>
+                            </div>
+                            
+                            <div class="sn-contents">
+                                <a class="sn-title" href="{{  url_for('math')  }}">Integrals</a>
+                            </div>
+                            
+                            <div class="sn-contents">
+                                <a class="sn-title" href="{{  url_for('math')  }}">Discrete Mathematics</a>
+                            </div>
+                            
+                            <div class="sn-contents">
+                                <a class="sn-title" href="{{  url_for('math')  }}">Trigonometry</a>
+                            </div>
                         </div>
                     </div>
 
                     <!--Useful Tools Sub Navigation Tile-->
                     <div id="tools-nav" class="sub-nav">
+                        <a class="sn-main-title" href="{{  url_for('useful_tools')  }}">Useful Tools</a>
                         <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('useful_tools')  }}">Calculating Taxes</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('useful_tools')  }}">AI Image Editor</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('useful_tools')  }}">Reactions</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('useful_tools')  }}">Stoichiometry</a></div>
-                            <div class="sn-contents"></div>
-                        </div>
-                        <div class="sub-nav-topics">
-                            <div class="sn-title"><a href="{{  url_for('useful_tools')  }}">Lewis Structures</a></div>
-                            <div class="sn-contents"></div>
+                            <div class="sn-contents">
+                                <a class="sn-title" href="{{  url_for('useful_tools')  }}">Frameworks</a>
+                                <a href="{{  url_for('useful_tools')  }}">Flask</a>
+                                <a href="{{  url_for('useful_tools')  }}">Django</a>
+                            </div>
+                            
+                            <div class="sn-contents">
+                                <a class="sn-title" href="{{  url_for('useful_tools')  }}">Version Control Software</a>
+                                <a href="{{  url_for('useful_tools')  }}">Git</a>
+                            </div>
+                            
+                            <div class="sn-contents">
+                                <a class="sn-title" href="{{  url_for('useful_tools')  }}">Testing Software</a>
+                                <a href="{{  url_for('useful_tools')  }}">Docker</a>
+                            </div>
+                            
+                            <div class="sn-contents">
+                                <a class="sn-title" href="{{  url_for('useful_tools')  }}">Bioinformatics</a>
+                                <a href="{{  url_for('counting_codons')  }}">Counting Codons</a>
+                                <a href="{{  url_for('bioinformatics')  }}">Sequence Alignment</a>
+                                <a href="{{  url_for('bioinformatics')  }}">Phylogeny Trees</a>
+                                <a href="{{  url_for('bioinformatics')  }}">Genetic Assembly</a>
+                            </div>
+                        
+                            <div class="sn-contents">
+                                <a class="sn-title" href="{{  url_for('useful_tools')  }}">Other Tools</a>
+                                <a href="{{  url_for('useful_tools')  }}">Calculating Taxes</a>
+                                <a href="{{  url_for('useful_tools')  }}">AI Image Editor</a>
+                            </div>
                         </div>
                     </div>
                 </div>

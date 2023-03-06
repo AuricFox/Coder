@@ -3,7 +3,44 @@
 {% block title %}Useful Tools{% endblock %}
 
 {% block content %}
-<div class="topic" id="tax-tile">
+<div class="topic">
+    <div class="title">Frameworks</div>
+    <div class="description">
+        Learn about software frameworks that offer an enhanced platform for developing software 
+        applications for websites and more.
+    </div>
+    <a class="more" href="{{  url_for('useful_tools')  }}"><b>LEARN MORE</b></a>
+</div>
+
+<div class="topic">
+    <div class="title">Version Control Software</div>
+    <div class="description">
+        Learn how to use version control software such as Git that helps developers maintian their 
+        code and roll back to earlier versions if needed.
+    </div>
+    <a class="more" href="{{  url_for('useful_tools')  }}"><b>LEARN MORE</b></a>
+</div>
+
+<div class="topic">
+    <div class="title">Tools for Testing Software</div>
+    <div class="description">
+        Learn about useful tools such as Docker that enable developers to test their software in 
+        different environments. 
+    </div>
+    <a class="more" href="{{  url_for('useful_tools')  }}"><b>LEARN MORE</b></a>
+</div>
+
+<div class="topic">
+    <div class="title">Bioinformatics</div>
+    <div class="description">
+        Use tools that count codons in a genenic sequence along with comparing the
+        phylogeny and alignment of each sequence to each other. Furthermore,
+        assemble sequence fragments into a complete genome.
+    </div>
+    <a class="more" href="{{  url_for('bioinformatics')  }}"><b>LEARN MORE</b></a>
+</div>
+
+<div class="topic">
     <div class="title">Calculating Taxes</div>
     <div class="description">
         Get help calculating your taxes by simply submitting your tax related documents
@@ -14,30 +51,12 @@
     <a class="more" href="{{  url_for('taxes')  }}"><b>TRY TOOL</b></a>
 </div>
 
-<div class="topic" id="edit-tile">
+<div class="topic">
     <div class="title">Edit Images</div>
     <div class="description">
-        Get help calculating your taxes by simply submitting your tax related documents
-        (bills, pay stubs, receipts, etc.) via picture, pdf, and/or other digit documents.
-        A powerful AI then extracts the text within it, makes the nessessary calculations,
-        and returns the new packaged information.
+        Utilize the power of AI to edit image by simply instructing it where to make changes 
+        and what to fix.
     </div>
-    <a class="more" href=""><b>TRY TOOL</b></a>
-</div>
-
-<div class="topic" id="reactions">
-    <div class="title">Reactions</div>
-</div>
-
-<div class="topic" id="stoichiometry">
-    <div class="title">Stoichiometry</div>
-</div>
-
-<div class="topic" id="structure">
-    <div class="title">structure</div>
-</div>
-
-<div class="topic" id="future-topic">
-    <div class="title">Future Content</div>
+    <a class="more" href="{{  url_for('useful_tools')  }}"><b>TRY TOOL</b></a>
 </div>
 {% endblock %}

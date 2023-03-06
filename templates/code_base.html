@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% block topic %}{% endblock %}
+
+<div class="topic">
+    <div class="title">Code Examples</div>
+    <div class="code-select">
+        <div class="sel-code" id="sel-py">Python</div>
+        <div class="sel-code" id="sel-c">C</div>
+        <div class="sel-code" id="sel-cpp">C++</div>
+        <div class="sel-code" id="sel-cs">C#</div>
+        <div class="sel-code" id="sel-java">Java</div>
+        <div class="sel-code" id="sel-js">JavaScript</div>
+    </div>
+    <div class="code-examples">
+        <code class="code-example" id="py-code">
+            {% block py %}{% endblock %}
+        </code>
+        <code class="code-example" id="c-code">
+            {% block c %}{% endblock %}
+        </code>
+        <code class="code-example" id="cpp-code">
+            {% block cpp %}{% endblock %}
+        </code>
+        <code class="code-example" id="cs-code">
+            {% block cs %}{% endblock %}
+        </code>
+        <code class="code-example" id="java-code">
+            {% block java %}{% endblock %}
+        </code>
+        <code class="code-example" id="js-code">
+            {% block js %}{% endblock %}
+        </code>
+    </div>
+</div>
+
+{% endblock %}

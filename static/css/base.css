@@ -48,17 +48,8 @@ body {
 #home-page {
     background-image: url(../images/sunset.jpg);
 }
-#bio-page {
-    background-image: url(../images/dna.jpg);
-}
-#chem-page {
-    background-image: url(../images/chemistry.jpg);
-}
-#csci-page {
+#data-page, #struct-page, #lang-page, #algo-page {
     background-image: url(../images/code.jpg);
-}
-#eng-page {
-    background-image: url(../images/engineering.jpg);
 }
 #math-page {
     background-image: url(../images/math.jpg);
@@ -100,35 +91,39 @@ body {
 /* ========== Sub Nav Bar ========== */
 
 .sub-nav {
-    display: flex;
-    flex-direction: row;
+    display: none;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 1rem;
 }
 
-#bio-nav {display: none;}
-#chem-nav {display: none;}
-#csci-nav {display: none}
-#eng-nav {display: none;}
-#math-nav {display: none;}
-#tools-nav {display: none;}
+.sub-nav a:not(.sn-title, .sn-main-title) {
+    text-decoration: none;
+    color: white;
+}
+
+.sn-main-title {
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2px;
+    margin: 2px;
+    color: #FFF4A3;
+    font-size: 25px;
+}
 
 .sub-nav-topics {
     display: flex;
-    flex-direction: column;
-}
-
-.sub-nav a {
-    text-decoration: none;
-    color: white;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .sub-nav a:hover {
     background: rgba(255, 255, 255, 0.3);
 }
 
-.sn-title a {
+.sn-title {
+    text-decoration: none;
     font-weight: bold;
     padding: 2px;
     margin: 2px;
@@ -144,6 +139,16 @@ body {
 .sn-contents a {
     padding: 2px;
     margin: 2px;
+}
+
+.sn-contents-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.sn-contents-row a {
+    padding: 4px;
+    margin: 4px;
 }
 
 /* ========== Search tile ========== */
@@ -297,9 +302,14 @@ input[type="file"]:hover {
 
 /* ========== table ========== */
 
-.terms-table {
+.terms-table:not(#terms-left) {
     color: white;
     text-align: center;
+    border-collapse: separate;
+}
+
+#terms-left {
+    color: white;
     border-collapse: separate;
 }
 
@@ -348,23 +358,39 @@ input[type="file"]:hover {
     border-bottom: 1px solid #ddd;
 }
 
-/* ========== examples ========== */
+/* ========== code examples ========== */
+
+.code-select {
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    width: 75%;
+}
+
+.sel-code {
+    color:rgb(255, 255, 255);
+    padding: 0.5rem;
+}
+
+.sel-code:hover {
+    cursor: pointer;
+    color: #FFF4A3;
+}
 
 .code-examples {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
+    width: 75%;
 }
 
 .code-example{
     background-color: rgba(255, 255, 255, 0.1);
     color: white;
-    border-radius: 4px;
     display: block;
     white-space:pre-line;
     font-family: monospace;
     padding: 0.5rem;
-    margin: 1rem;
 }
 
 /* ========== footer ========== */

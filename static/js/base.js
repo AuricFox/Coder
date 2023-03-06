@@ -1,39 +1,41 @@
+// ===================================================================
 // Toggles display of sub navigation elements
+// ===================================================================
 
 var navDisplay = {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'column'
 };
 
-$('#bio-pages').click(() => {
-    $('.sub-nav').not($('#bio-nav')).hide();
+$('#data-pages').click(() => {
+    $('.sub-nav').not($('#data-nav')).hide();
 
-    if($('#bio-nav').is(':visible')) {$('#bio-nav').hide();}
-    else {$('#bio-nav').css(navDisplay).show();}
+    if($('#data-nav').is(':visible')) {$('#data-nav').hide();}
+    else {$('#data-nav').css(navDisplay).show();}
 });
 
 // ----------------------------------------------------------
-$('#chem-pages').click(() => {
-    $('.sub-nav').not($('#chem-nav')).hide();
+$('#struct-pages').click(() => {
+    $('.sub-nav').not($('#struct-nav')).hide();
 
-    if($('#chem-nav').is(':visible')) {$('#chem-nav').hide();}
-    else {$('#chem-nav').css(navDisplay).show();}
+    if ($('#struct-nav').is(':visible')) { $('#struct-nav').hide(); }
+    else { $('#struct-nav').css(navDisplay).show(); }
 });
 
 // ----------------------------------------------------------
-$('#csci-pages').click(() => {
-    $('.sub-nav').not($('#csci-nav')).hide();
+$('#lang-pages').click(() => {
+    $('.sub-nav').not($('#lang-nav')).hide();
 
-    if($('#csci-nav').is(':visible')) {$('#csci-nav').hide();}
-    else {$('#csci-nav').css(navDisplay).show();}
+    if($('#lang-nav').is(':visible')) {$('#lang-nav').hide();}
+    else {$('#lang-nav').css(navDisplay).show();}
 });
 
 // ----------------------------------------------------------
-$('#eng-pages').click(() => {
-    $('.sub-nav').not($('#eng-nav')).hide();
+$('#algo-pages').click(() => {
+    $('.sub-nav').not($('#algo-nav')).hide();
 
-    if($('#eng-nav').is(':visible')) {$('#eng-nav').hide();}
-    else {$('#eng-nav').css(navDisplay).show();}
+    if($('#algo-nav').is(':visible')) {$('#algo-nav').hide();}
+    else {$('#algo-nav').css(navDisplay).show();}
 });
 
 // ----------------------------------------------------------
@@ -50,4 +52,74 @@ $('#tools-pages').click(() => {
 
     if($('#tools-nav').is(':visible')) {$('#tools-nav').hide();}
     else {$('#tools-nav').css(navDisplay).show();}
+});
+
+// ===================================================================
+// Toggles code display for corresponding pages
+// ===================================================================
+
+var codeDisplay = {
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    color: "white",
+    display: "block",
+    whiteSpace: "pre-line",
+    fontFamily: "monospace",
+    padding: "0.5rem"
+}
+
+// Default to Python code example when loaded
+$('.code-example').not($('#py-code')).hide();
+$('#sel-py').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
+
+// Show Python code example
+$('#sel-py').click(() => {
+    $('.code-example').not($('#py-code')).hide();
+    $('.sel-code').css({ backgroundColor: "transparent" }).show();
+    $('#sel-py').css({backgroundColor: "rgba(255, 255, 255, 0.1"}).show();
+    $('#py-code').css(codeDisplay).show();
+});
+
+// -------------------------------------------------------------------------
+// Show C code example
+$('#sel-c').click(() => {
+    $('.code-example').not($('#c-code')).hide();
+    $('.sel-code').css({ backgroundColor: "transparent" }).show();
+    $('#sel-c').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
+    $('#c-code').css(codeDisplay).show();
+});
+
+// -------------------------------------------------------------------------
+// Show C++ code example
+$('#sel-cpp').click(() => {
+    $('.code-example').not($('#cpp-code')).hide();
+    $('.sel-code').css({ backgroundColor: "transparent" }).show();
+    $('#sel-cpp').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
+    $('#cpp-code').css(codeDisplay).show();
+});
+
+// -------------------------------------------------------------------------
+// Show C# code example
+$('#sel-cs').click(() => {
+    $('.code-example').not($('#cs-code')).hide();
+    $('.sel-code').css({ backgroundColor: "transparent" }).show();
+    $('#sel-cs').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
+    $('#cs-code').css(codeDisplay).show();
+});
+
+// -------------------------------------------------------------------------
+// Show Java code example
+$('#sel-java').click(() => {
+    $('.code-example').not($('#java-code')).hide();
+    $('.sel-code').css({ backgroundColor: "transparent" }).show();
+    $('#sel-java').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
+    $('#java-code').css(codeDisplay).show();
+});
+
+// -------------------------------------------------------------------------
+// Show JavaScript code example
+$('#sel-js').click(() => {
+    $('.code-example').not($('#js-code')).hide();
+    $('.sel-code').css({ backgroundColor: "transparent" }).show();
+    $('#sel-js').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
+    $('#js-code').css(codeDisplay).show();
 });
