@@ -240,6 +240,15 @@ button[type="submit"]:hover {
     text-align: center;
 }
 
+.description a {
+    text-decoration: none;
+    color: #FFF4A3;
+}
+
+.description a:hover {
+    text-decoration: underline;
+}
+
 .sub-topic {
     text-decoration: none;
     background-color: rgb(255, 255, 255);
@@ -390,7 +399,7 @@ input[type="file"]:hover {
     display: block;
     white-space:pre-line;
     font-family: monospace;
-    padding: 0.5rem;
+    padding-left: 2rem;
 }
 
 /* ========== footer ========== */

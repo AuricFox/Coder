@@ -64,7 +64,7 @@ var codeDisplay = {
     display: "block",
     whiteSpace: "pre-line",
     fontFamily: "monospace",
-    padding: "0.5rem"
+    paddingLeft: "2rem"
 }
 
 // Default to Python code example when loaded

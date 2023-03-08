@@ -14,7 +14,7 @@
             <thead>
                 <tr>
                     <th>Integer</th>
-                    <th>Not Integer</th>
+                    <th>Not an Integer</th>
                 </tr>
             </thead>
             <tbody>
@@ -47,6 +47,9 @@
         values to be stored. The size of an integer data type is compiler-dependent. 
         A 16-bit system gives an output of an int as 2 bytes, and a 32-bit system 
         gives an output of an int as 2 bytes and 4 bytes.
+        <p>
+            See <a href="https://en.wikipedia.org/wiki/Integer_(computer_science)">Link</a> for more on integers.
+        </p>
     </div>
     <div class="examples">
         <table class="terms-table" id="terms-left">
@@ -57,6 +60,10 @@
                 </tr>
             </thead>
             <tbody>
+                <tr>
+                    <td>byte</td>
+                    <td>-128 to 127</td>
+                </tr>
                 <tr>
                     <td>short int</td>
                     <td>-32,768 to 32,767</td>
@@ -101,8 +108,8 @@
 # Integers in Python
 
 i = 1
-myNum = -2023
-longNum = 500123000
+num = -2023
+lNum = 500123000
 {% endblock %}
 
 <!-- C code example -->
@@ -110,8 +117,8 @@ longNum = 500123000
 // Integers in C
 
 int i = 1;
-int myNum = -2023;
-int longNum = 500123000;
+int num = -2023;
+int lNum = 500123000;
 {% endblock %}
 
 <!-- C++ code example -->
@@ -119,8 +126,8 @@ int longNum = 500123000;
 // Integers in C++
 
 int i = 1;
-int myNum = -2023;
-int longNum = 500123000;
+int num = -2023;
+int lNum = 500123000;
 {% endblock %}
 
 <!-- C# code example -->
@@ -128,17 +135,18 @@ int longNum = 500123000;
 // Integers in C#
 
 int i = 1;
-int myNum = -2023;
-int longNum = 500123000;
+int num = -2023;
+long lNum = 500123000L;
 {% endblock %}
 
 <!-- Java code example -->
 {% block java %}
 // Integers in Java
 
-int i = 1;
-int myNum = -2023;
-int longNum = 500123000;
+byte i = 1;
+short sNum = -2023;
+int num = 10000
+long lNum = 500123000L;
 {% endblock %}
 
 <!-- JavaScript code example -->
@@ -146,6 +154,6 @@ int longNum = 500123000;
 // Integers in JavaScript
 
 let i = 1;
-var myNum = -2023;
-let longNum = 500123000;
+var num = -2023;
+let lNum = 500123000;
 {% endblock %}

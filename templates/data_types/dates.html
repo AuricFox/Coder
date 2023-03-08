@@ -8,5 +8,78 @@
     <div class="description">
         Data type that stores a calendar date as YYYY-MM-DD format.
     </div>
+    <div class="examples">
+        <table class="terms-table" id="terms-center">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Not a Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2023-03-08</td>
+                    <td>20230308</td>
+                </tr>
+                <tr>
+                    <td>2023-03-08T01:01:09.243027</td>
+                    <td>'1.1'</td>
+                </tr>
+                <tr>
+                    <td>08-03-2023 01:01:09</td>
+                    <td>Q</td>
+                </tr>
+                <tr>
+                    <td>2023-03-08</td>
+                    <td>Two Thousand Twenty Three</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
+
+<div class="topic">
+    <div class="title">Date Types</div>
+    <div class="description">
+        There are many ways to format dates. Since dates are not primative data types,
+        most programming languages require a module or library to be imported to set 
+        dates. The formatting depends on the module being imported with some common 
+        formats below.
+    </div>
+    <div class="examples">
+        <table class="terms-table" id="terms-left">
+            <thead>
+                <tr>
+                    <th>Date Types</th>
+                    <th>Format</th>
+                    <th>Range</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>date</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>0001-01-01 to 9999-12-31</td>
+                </tr>
+                <tr>
+                    <td>smalldatetime</td>
+                    <td>YYYY-MM-DD hh:mm:ss</td>
+                    <td>1900-01-01 to 2079-06-06</td>
+                </tr>
+                <tr>
+                    <td>datetime</td>
+                    <td>YYYY-MM-DD hh:mm:ss[.nnn]</td>
+                    <td>1753-01-01 to 9999-12-31</td>
+                </tr>
+                <tr>
+                    <td>datetime2</td>
+                    <td>YYYY-MM-DD hh:mm:ss[.nnnnnnn]</td>
+                    <td>0001-01-01 00:00:00.0000000 to 9999-12-31 23:59:59.9999999</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
 {% endblock %}
