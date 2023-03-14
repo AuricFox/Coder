@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+<!--{% block title %}Python{% endblock %}-->
+
+
+{% block sidenav %}
+<div class="sidebar">
+    <Span>Python Tutorial</Span>
+    <a href="{{  url_for('languages')  }}">Setup</a>
+    <a href="{{  url_for('languages')  }}">Comments</a>
+    <a href="{{  url_for('languages')  }}">Data Types</a>
+    <a href="{{  url_for('languages')  }}">Casting</a>
+    <a href="{{  url_for('languages')  }}">Operators</a>
+    <a href="{{  url_for('languages')  }}">Lists</a>
+    <a href="{{  url_for('languages')  }}">Arrays</a>
+    <a href="{{  url_for('languages')  }}">Casting</a>
+    <a href="{{  url_for('languages')  }}">Tuples</a>
+    <a href="{{  url_for('languages')  }}">Sets</a>
+    <a href="{{  url_for('languages')  }}">Dictionaries</a>
+    <a href="{{  url_for('languages')  }}">Conditionals</a>
+    <a href="{{  url_for('languages')  }}">Loops</a>
+    <a href="{{  url_for('languages')  }}">Functions</a>
+    <a href="{{  url_for('languages')  }}">lambda</a>
+    <a href="{{  url_for('languages')  }}">Classes</a>
+    <a href="{{  url_for('languages')  }}">Inheritance</a>
+    <a href="{{  url_for('languages')  }}">Modules</a>
+    <a href="{{  url_for('languages')  }}">Try..Except</a>
+    <span>Other</span>
+    <a href="{{  url_for('languages')  }}">User Input</a>
+    <a href="{{  url_for('languages')  }}">File Handling</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+{% block topic %}{% endblock %}
+
+<div class="topic">
+    <div class="title">Code Examples</div>
+    <div class="code-examples">
+        <code class="code-example" id="c-code">
+            {% block py %}{% endblock %}
+        </code>
+    </div>
+</div>
+{% endblock %}

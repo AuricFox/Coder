@@ -1,29 +1,63 @@
 {% extends "base.html" %}
 
-{% block title %}Engineering{% endblock %}
+{% block title %}Programming Languages{% endblock %}
 
 {% block content %}
-<div class="topic" id="atoms">
-    <div class="title">Atoms</div>
+<div class="topic-tile-list">
+    <div class="topic-tile">
+        <div class="title">Python</div>
+        <div class="description">A programming language</div>
+        <a class="more" href="{{  url_for('python')  }}"><b>Learn Python</b></a>
+    </div>
+    
+    <div class="topic-tile">
+        <div class="title">C</div>
+        <div class="description">A programming language</div>
+        <a class="more" href="{{  url_for('languages')  }}"><b>Learn C</b></a>
+    </div>
+    
+    <div class="topic-tile">
+        <div class="title">C++</div>
+        <div class="description">A programming language</div>
+        <a class="more" href="{{  url_for('languages')  }}"><b>Learn C++</b></a>
+    </div>
+    
+    <div class="topic-tile">
+        <div class="title">C#</div>
+        <div class="description">A programming language</div>
+        <a class="more" href="{{  url_for('languages')  }}"><b>Learn C#</b></a>
+    </div>
+    
+    <div class="topic-tile">
+        <div class="title">Java</div>
+        <div class="description">A programming language</div>
+        <a class="more" href="{{  url_for('languages')  }}"><b>Learn Java</b></a>
+    </div>
+    
+    <div class="topic-tile">
+        <div class="title">HTML</div>
+        <div class="description">A language for creating web pages</div>
+        <a class="more" href="{{  url_for('languages')  }}"><b>Learn HTML</b></a>
+    </div>
+    
+    <div class="topic-tile">
+        <div class="title">CSS</div>
+        <div class="description">A language for styling web pages</div>
+        <a class="more" href="{{  url_for('languages')  }}"><b>Learn CSS</b></a>
+    </div>
+    
+    <div class="topic-tile">
+        <div class="title">JavaScript</div>
+        <div class="description">A language for programming web pages</div>
+        <a class="more" href="{{  url_for('languages')  }}"><b>Learn JavaScript</b></a>
+    </div>
+    
+    <div class="topic-tile">
+        <div class="title">SQL</div>
+        <div class="description">A language for databases</div>
+        <a class="more" href="{{  url_for('languages')  }}"><b>Learn SQL</b></a>
+    </div>
 </div>
 
-<div class="topic" id="formulas">
-    <div class="title">Formulas</div>
-</div>
 
-<div class="topic" id="reactions">
-    <div class="title">Reactions</div>
-</div>
-
-<div class="topic" id="stoichiometry">
-    <div class="title">Stoichiometry</div>
-</div>
-
-<div class="topic" id="structure">
-    <div class="title">structure</div>
-</div>
-
-<div class="topic" id="future-topic">
-    <div class="title">Future Content</div>
-</div>
 {% endblock %}

@@ -48,40 +48,13 @@ def useful_tools():
     return render_template('useful_tools.html', nav_id="tools-page")
 
 # Accessing tutorials Page
-@app.route("/tutorials")
-def tutorials():
-    return render_template('tutorials.html', nav_id="info-page")
+@app.route("/concepts")
+def concepts():
+    return render_template('concepts.html', nav_id="info-page")
+
 
 # ====================================================================
-# Subpages of Bioinformatics
-# ====================================================================
-
-# Accessing counting_codons Page
-@app.route("/counting_codons", methods=["POST", "GET"])
-def counting_codons():
-    if(request.method == "GET"):                                    # Render baseline html
-        return render_template('useful_tools/bioinformatics/counting_codons.html', nav_id='tools-page', show_id='form')
-    else:                                                           # User submitted form data
-        file = request.files["file"]                                # Get user's submitted file
-        path = os.path.join(os.path.dirname(__file__), "src/temp")  # Path where file will be saved
-
-        if not os.path.exists(path):                                # Checks if path exists
-            os.makedirs(path)                                       # Create path if it doesn't exist
-        
-        file_path = os.path.join(path, file.filename)               # Creating saved file path
-        file.save(file_path)                                        # Saving input file
-        data = bio.getCodons(file.filename)                         # Get codon and amino acid data
-        os.remove(file_path)                                        # File is no longer needed
-        
-        return render_template('useful_tools/bioinformatics/codon_results.html', nav_id='tools-page', data=data)
-
-# Accessing codon_results Page
-@app.route("/codon_results")
-def codon_results():
-    return render_template('useful_tools/bioinformatics/codon_results.html', nav_id='tools-page')
-
-# ====================================================================
-# Subpages of Tutorials [Data Types]
+# Subpages of Data Types [REMOVE]
 # ====================================================================
 
 # Accessing useful_tools Page
@@ -119,6 +92,39 @@ def booleans():
 def nulls():
     return render_template('data_types/nulls.html', nav_id="data-page")
 
+
+# ====================================================================
+# Subpages of Data Structures
+# ====================================================================
+
+
+
+# ====================================================================
+# Subpages of Data Algorithms
+# ====================================================================
+
+
+
+# ====================================================================
+# Subpages of Programming Languages
+# ====================================================================
+
+
+
+# ====================================================================
+# Subpages of Python [Programming Languages]
+# ====================================================================
+
+# Accessing Python Main Page
+@app.route("/python")
+def python():
+    return render_template('languages/python/python.html', nav_id="lang-page")
+
+# ====================================================================
+# Subpages of Math
+# ====================================================================
+
+
 # ====================================================================
 # Subpages of Useful Tools 
 # ====================================================================
@@ -134,15 +140,35 @@ def taxes():
     return render_template('useful_tools/taxes.html', nav_id="tools-page")
 
 # ====================================================================
-# Uploading files sent by user
-'''
-@app.route("/upload", methods=["POST"])
-def upload():
-    files = request.files.getlist("files")
-    for file in files:
-        file.save("path/to/save/file")
-    return "Files uploaded successfully"
-'''
+# Subpages of Bioinformatics [Useful Tools]
+# ====================================================================
 
+# Accessing counting_codons Page
+@app.route("/counting_codons", methods=["POST", "GET"])
+def counting_codons():
+    if(request.method == "GET"):                                    # Render baseline html
+        return render_template('useful_tools/bioinformatics/counting_codons.html', nav_id='tools-page', show_id='form')
+    else:                                                           # User submitted form data
+        file = request.files["file"]                                # Get user's submitted file
+        path = os.path.join(os.path.dirname(__file__), "src/temp")  # Path where file will be saved
+
+        if not os.path.exists(path):                                # Checks if path exists
+            os.makedirs(path)                                       # Create path if it doesn't exist
+        
+        file_path = os.path.join(path, file.filename)               # Creating saved file path
+        file.save(file_path)                                        # Saving input file
+        data = bio.getCodons(file.filename)                         # Get codon and amino acid data
+        os.remove(file_path)                                        # File is no longer needed
+        
+        return render_template('useful_tools/bioinformatics/codon_results.html', nav_id='tools-page', data=data)
+
+# Accessing codon_results Page
+@app.route("/codon_results")
+def codon_results():
+    return render_template('useful_tools/bioinformatics/codon_results.html', nav_id='tools-page')
+
+# ====================================================================
+# Run Main
+# ====================================================================
 if __name__ == "__main__":
     app.run()

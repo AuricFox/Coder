@@ -3,16 +3,32 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="topic" id="tutorial-tile">
+<div class="topic">
     <div class="title">Computer Science Concepts</div>
     <div class="description" id="tutorial-description">
-        Learn about common computer science concepts such as data types and structures
-        along with other common terms.
+        Learn about common computer science concepts such as data types and common terms.
     </div>
-    <a class="more" href="{{  url_for('tutorials')  }}"><b>Learn More</b></a>
+    <a class="more" href="{{  url_for('concepts')  }}"><b>Learn More</b></a>
 </div>
 
-<div class="topic" id="lang-tile">
+<div class="topic">
+    <div class="title">Data Structures</div>
+    <div class="description" id="tutorial-description">
+        Learn about common data structures in computer science.
+    </div>
+    <a class="more" href="{{  url_for('data_structures')  }}"><b>Learn More</b></a>
+</div>
+
+<div class="topic">
+    <div class="title">Algorithms</div>
+    <div class="description" id="algo-description">
+        Learn about popular search and sort algorithms used in software and how to use them
+        effectively.
+    </div>
+    <a class="more" href="{{  url_for('algorithms')  }}"><b>Learn More</b></a>
+</div>
+
+<div class="topic">
     <div class="title">Programming Languages</div>
     <div class="description" id="lang-description">
         Learn about common programming languages in computer science and how to implement them.
@@ -20,16 +36,7 @@
     <a class="more" href="{{  url_for('languages')  }}"><b>Learn More</b></a>
 </div>
 
-<div class="topic" id="algo-tile">
-    <div class="title">Algorithms</div>
-    <div class="description" id="algo-description">
-        Learn about popular search and sort algorithms used in software and how to use them 
-        effectively.
-    </div>
-    <a class="more" href="{{  url_for('algorithms')  }}"><b>Learn More</b></a>
-</div>
-
-<div class="topic" id="math-tile">
+<div class="topic">
     <div class="title">Math</div>
     <div class="description" id="math-description">
         Learn how to solve mathmatical equations in calculus and algebra
@@ -38,7 +45,7 @@
     <a class="more" href="{{  url_for('math')  }}"><b>Learn More</b></a>
 </div>
 
-<div class="topic" id="tools-tile">
+<div class="topic">
     <div class="title">Useful Tools</div>
     <div class="description" id="tools-description">
         Use automated tools that simplify tedious tasks such as filling out tax returns, 
