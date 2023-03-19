@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+<!--{% block title %}C{% endblock %}-->
+
+{% block sidenav %}
+<div class="sidebar">
+    <Span>C Tutorial</Span>
+    <a href="{{  url_for('c')  }}">Setup</a>
+    <a href="{{  url_for('c')  }}">Comments</a>
+    <a href="{{  url_for('c')  }}">Data Types</a>
+    <a href="{{  url_for('c')  }}">Casting</a>
+    <a href="{{  url_for('c')  }}">Operators</a>
+    <a href="{{  url_for('c')  }}">Lists</a>
+    <a href="{{  url_for('c')  }}">Arrays</a>
+    <a href="{{  url_for('c')  }}">Casting</a>
+    <a href="{{  url_for('c')  }}">Tuples</a>
+    <a href="{{  url_for('c')  }}">Sets</a>
+    <a href="{{  url_for('c')  }}">Dictionaries</a>
+    <a href="{{  url_for('c')  }}">Conditionals</a>
+    <a href="{{  url_for('c')  }}">Loops</a>
+    <a href="{{  url_for('c')  }}">Functions</a>
+    <a href="{{  url_for('c')  }}">lambda</a>
+    <a href="{{  url_for('c')  }}">Classes</a>
+    <a href="{{  url_for('c')  }}">Inheritance</a>
+    <a href="{{  url_for('c')  }}">Modules</a>
+    <a href="{{  url_for('c')  }}">Try..Except</a>
+    <span>Other</span>
+    <a href="{{  url_for('c')  }}">User Input</a>
+    <a href="{{  url_for('c')  }}">File Handling</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+{% block topic %}{% endblock %}
+
+<div class="topic">
+    <div class="title">Code Example(s)</div>
+    <div class="code-examples">
+        <code class="code-example" id="code">
+            {% block code %}{% endblock %}
+        </code>
+    </div>
+</div>
+{% endblock %}

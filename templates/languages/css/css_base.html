@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+<!--{% block title %}CSS{% endblock %}-->
+
+{% block sidenav %}
+<div class="sidebar">
+    <Span>CSS Tutorial</Span>
+    <a href="{{  url_for('css')  }}">Setup</a>
+    <a href="{{  url_for('css')  }}">Comments</a>
+    <a href="{{  url_for('css')  }}">Data Types</a>
+    <a href="{{  url_for('css')  }}">Casting</a>
+    <a href="{{  url_for('css')  }}">Operators</a>
+    <a href="{{  url_for('css')  }}">Lists</a>
+    <a href="{{  url_for('css')  }}">Arrays</a>
+    <a href="{{  url_for('css')  }}">Casting</a>
+    <a href="{{  url_for('css')  }}">Tuples</a>
+    <a href="{{  url_for('css')  }}">Sets</a>
+    <a href="{{  url_for('css')  }}">Dictionaries</a>
+    <a href="{{  url_for('css')  }}">Conditionals</a>
+    <a href="{{  url_for('css')  }}">Loops</a>
+    <a href="{{  url_for('css')  }}">Functions</a>
+    <a href="{{  url_for('css')  }}">lambda</a>
+    <a href="{{  url_for('css')  }}">Classes</a>
+    <a href="{{  url_for('css')  }}">Inheritance</a>
+    <a href="{{  url_for('css')  }}">Modules</a>
+    <a href="{{  url_for('css')  }}">Try..Except</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+{% block topic %}{% endblock %}
+
+<div class="topic">
+    <div class="title">Code Example</div>
+    <div class="code-examples">
+        <code class="code-example" id="code">
+            {% block code %}{% endblock %}
+        </code>
+    </div>
+</div>
+{% endblock %}

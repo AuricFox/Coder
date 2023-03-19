@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Data Structures{% endblock %}
+
+{% block content %}
+<div class="topic">
+    <div class="title">Trees</div>
+    <div class="description">Similar to tree in real life.</div>
+    <a class="more" href="{{  url_for('data_structures')  }}"><b>Learn More</b></a>
+</div>
+
+<div class="topic">
+    <div class="title">Graphs</div>
+    <div class="description">Just like trees but can connect to each other.</div>
+    <a class="more" href="{{  url_for('data_structures')  }}"><b>Learn More</b></a>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "languages/cs/cs_base.html" %}
+
+{% block title %}C#{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title">C#</div>
+    <div class="description">A programming language</div>
+    <a class="more" href="{{  url_for('cs')  }}"><b>Learn C#</b></a>
+</div>
+{% endblock %}
+
+{% block code %}
+using System;
+
+namespace HelloWorld {
+    class Program {
+        static void Main(string[] args) {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+{% endblock %}

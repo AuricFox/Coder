@@ -25,7 +25,7 @@ def data_types():
 # Accessing useful_tools Page
 @app.route("/data_structures")
 def data_structures():
-    return render_template('data_types.html', nav_id="struct-page")
+    return render_template('data_structures.html', nav_id="struct-page")
 
 # Accessing engineering Page
 @app.route("/languages")
@@ -112,6 +112,51 @@ def nulls():
 
 
 # ====================================================================
+# Subpages of C [Programming Languages]
+# ====================================================================
+
+# Accessing C Main Page
+@app.route("/c")
+def c():
+    return render_template('languages/c/c.html', nav_id="lang-page")
+
+# ====================================================================
+# Subpages of C++ [Programming Languages]
+# ====================================================================
+
+# Accessing C++ Main Page
+@app.route("/cpp")
+def cpp():
+    return render_template('languages/cpp/cpp.html', nav_id="lang-page")
+
+# ====================================================================
+# Subpages of C# [Programming Languages]
+# ====================================================================
+
+# Accessing C# Main Page
+@app.route("/cs")
+def cs():
+    return render_template('languages/cs/cs.html', nav_id="lang-page")
+
+# ====================================================================
+# Subpages of Java [Programming Languages]
+# ====================================================================
+
+# Accessing Java Main Page
+@app.route("/java")
+def java():
+    return render_template('languages/java/java.html', nav_id="lang-page")
+
+# ====================================================================
+# Subpages of JavaScript [Programming Languages]
+# ====================================================================
+
+# Accessing JavaScript Main Page
+@app.route("/javascript")
+def javascript():
+    return render_template('languages/javascript/javascript.html', nav_id="lang-page")
+
+# ====================================================================
 # Subpages of Python [Programming Languages]
 # ====================================================================
 
@@ -119,6 +164,33 @@ def nulls():
 @app.route("/python")
 def python():
     return render_template('languages/python/python.html', nav_id="lang-page")
+
+# ====================================================================
+# Subpages of HTML [Programming Languages]
+# ====================================================================
+
+# Accessing HTML Main Page
+@app.route("/html")
+def html():
+    return render_template('languages/html/html.html', nav_id="lang-page")
+
+# ====================================================================
+# Subpages of CSS [Programming Languages]
+# ====================================================================
+
+# Accessing CSS Main Page
+@app.route("/css")
+def css():
+    return render_template('languages/css/css.html', nav_id="lang-page")
+
+# ====================================================================
+# Subpages of SQL [Programming Languages]
+# ====================================================================
+
+# Accessing SQL Main Page
+@app.route("/sql")
+def sql():
+    return render_template('languages/sql/sql.html', nav_id="lang-page")
 
 # ====================================================================
 # Subpages of Math

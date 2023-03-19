@@ -62,13 +62,13 @@ var codeDisplay = {
     backgroundColor: "rgba(255, 255, 255, 0.1)",
     color: "white",
     display: "block",
-    whiteSpace: "pre-line",
+    whiteSpace: "pre-wrap",
     fontFamily: "monospace",
     paddingLeft: "2rem"
 }
 
 // Default to Python code example when loaded
-$('.code-example').not($('#py-code')).hide();
+$('.code-example').not($('#py-code')).not($('#code')).hide();
 $('#sel-py').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
 
 // Show Python code example

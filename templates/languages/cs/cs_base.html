@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+<!--{% block title %}C#{% endblock %}-->
+
+{% block sidenav %}
+<div class="sidebar">
+    <Span>C# Tutorial</Span>
+    <a href="{{  url_for('cs')  }}">Setup</a>
+    <a href="{{  url_for('cs')  }}">Comments</a>
+    <a href="{{  url_for('cs')  }}">Data Types</a>
+    <a href="{{  url_for('cs')  }}">Casting</a>
+    <a href="{{  url_for('cs')  }}">Operators</a>
+    <a href="{{  url_for('cs')  }}">Lists</a>
+    <a href="{{  url_for('cs')  }}">Arrays</a>
+    <a href="{{  url_for('cs')  }}">Casting</a>
+    <a href="{{  url_for('cs')  }}">Tuples</a>
+    <a href="{{  url_for('cs')  }}">Sets</a>
+    <a href="{{  url_for('cs')  }}">Dictionaries</a>
+    <a href="{{  url_for('cs')  }}">Conditionals</a>
+    <a href="{{  url_for('cs')  }}">Loops</a>
+    <a href="{{  url_for('cs')  }}">Functions</a>
+    <a href="{{  url_for('cs')  }}">lambda</a>
+    <a href="{{  url_for('cs')  }}">Classes</a>
+    <a href="{{  url_for('cs')  }}">Inheritance</a>
+    <a href="{{  url_for('cs')  }}">Modules</a>
+    <a href="{{  url_for('cs')  }}">Try..Except</a>
+    <span>Other</span>
+    <a href="{{  url_for('cs')  }}">User Input</a>
+    <a href="{{  url_for('cs')  }}">File Handling</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+{% block topic %}{% endblock %}
+
+<div class="topic">
+    <div class="title">Code Examples</div>
+    <div class="code-examples">
+        <code class="code-example" id="code">
+            {% block code %}{% endblock %}
+        </code>
+    </div>
+</div>
+{% endblock %}

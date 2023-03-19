@@ -1,0 +1,23 @@
+{% extends "languages/css/css_base.html" %}
+
+{% block title %}CSS{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title">CSS</div>
+    <div class="description">A language used used for styling webpages.</div>
+    <a class="more" href="{{  url_for('css')  }}"><b>Learn CSS</b></a>
+</div>
+{% endblock %}
+
+{% block code %}
+body {
+    background-color: #212121;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+{% endblock %}

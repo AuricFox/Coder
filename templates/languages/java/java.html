@@ -1,0 +1,19 @@
+{% extends "languages/java/java_base.html" %}
+
+{% block title %}Java{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title">Java</div>
+    <div class="description">A programming language</div>
+    <a class="more" href="{{  url_for('java')  }}"><b>Learn Java</b></a>
+</div>
+{% endblock %}
+
+{% block code %}
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "languages/cpp/cpp_base.html" %}
+
+{% block title %}C++{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title">C++</div>
+    <div class="description">A programming language</div>
+    <a class="more" href="{{  url_for('cpp')  }}"><b>Learn C++</b></a>
+</div>
+{% endblock %}
+
+{% block code %}
+#include &#60;iostream&#62;
+using namespace std;
+
+int main() {
+    cout &#60;&#60; "Hello World!" ; 
+    return 0; 
+}
+{% endblock %}

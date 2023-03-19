@@ -24,10 +24,12 @@
                     <li><div id="math-pages" class="{% if nav_id == 'math-page' %}active{% endif %}">Math</div></li>
                     <li><div id="tools-pages" class="{% if nav_id == 'tools-page' %}active{% endif %}">Useful Tools</div></li>
                 </ul>
+                <!--
                 <form id="search-tile">
                     <input type="text">
                     <button type="submit">Search</button>
                 </form>
+                -->
             </div>
 
             <!--Sub Navigation Tile-->
@@ -80,14 +82,14 @@
                     <div class="sub-nav-topics">
                         <div class="sn-contents-row">
                             <a href="{{  url_for('python')  }}">Python</a>
-                            <a href="{{  url_for('languages')  }}">C</a>
-                            <a href="{{  url_for('languages')  }}">C++</a>
-                            <a href="{{  url_for('languages')  }}">C#</a>
-                            <a href="{{  url_for('languages')  }}">Java</a>
-                            <a href="{{  url_for('languages')  }}">HTML</a>
-                            <a href="{{  url_for('languages')  }}">CSS</a>
-                            <a href="{{  url_for('languages')  }}">JavaScript</a>
-                            <a href="{{  url_for('languages')  }}">SQL</a>
+                            <a href="{{  url_for('c')  }}">C</a>
+                            <a href="{{  url_for('cpp')  }}">C++</a>
+                            <a href="{{  url_for('cs')  }}">C#</a>
+                            <a href="{{  url_for('java')  }}">Java</a>
+                            <a href="{{  url_for('javascript')  }}">JavaScript</a>
+                            <a href="{{  url_for('html')  }}">HTML</a>
+                            <a href="{{  url_for('css')  }}">CSS</a>
+                            <a href="{{  url_for('sql')  }}">SQL</a>
                         </div>
                     </div>
                 </div>

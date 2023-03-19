@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+<!--{% block title %}Java{% endblock %}-->
+
+{% block sidenav %}
+<div class="sidebar">
+    <Span>Java Tutorial</Span>
+    <a href="{{  url_for('java')  }}">Setup</a>
+    <a href="{{  url_for('java')  }}">Comments</a>
+    <a href="{{  url_for('java')  }}">Data Types</a>
+    <a href="{{  url_for('java')  }}">Casting</a>
+    <a href="{{  url_for('java')  }}">Operators</a>
+    <a href="{{  url_for('java')  }}">Lists</a>
+    <a href="{{  url_for('java')  }}">Arrays</a>
+    <a href="{{  url_for('java')  }}">Casting</a>
+    <a href="{{  url_for('java')  }}">Tuples</a>
+    <a href="{{  url_for('java')  }}">Sets</a>
+    <a href="{{  url_for('java')  }}">Dictionaries</a>
+    <a href="{{  url_for('java')  }}">Conditionals</a>
+    <a href="{{  url_for('java')  }}">Loops</a>
+    <a href="{{  url_for('java')  }}">Functions</a>
+    <a href="{{  url_for('java')  }}">lambda</a>
+    <a href="{{  url_for('java')  }}">Classes</a>
+    <a href="{{  url_for('java')  }}">Inheritance</a>
+    <a href="{{  url_for('java')  }}">Modules</a>
+    <a href="{{  url_for('java')  }}">Try..Except</a>
+    <span>Other</span>
+    <a href="{{  url_for('java')  }}">User Input</a>
+    <a href="{{  url_for('java')  }}">File Handling</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+{% block topic %}{% endblock %}
+
+<div class="topic">
+    <div class="title">Code Examples</div>
+    <div class="code-examples">
+        <code class="code-example" id="code">
+            {% block code %}{% endblock %}
+        </code>
+    </div>
+</div>
+{% endblock %}
