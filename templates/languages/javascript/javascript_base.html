@@ -35,11 +35,17 @@
 {% block topic %}{% endblock %}
 
 <div class="topic">
-    <div class="title">Code Examples</div>
+    <div class="title">Code Example</div>
     <div class="code-examples">
-        <code class="code-example" id="c-code">
-            {% block py %}{% endblock %}
+        <code class="code">
+            {% block code %}{% endblock %}
         </code>
+    </div>
+    <div class="title">Output</div>
+    <div class="code-examples">
+        <code class="code">
+                {% block eoutput %}{% endblock %}
+            </code>
     </div>
 </div>
 {% endblock %}

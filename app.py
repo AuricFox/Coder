@@ -120,6 +120,10 @@ def nulls():
 def c():
     return render_template('languages/c/c.html', nav_id="lang-page")
 
+@app.route("/c_setup")
+def c_setup():
+    return render_template('languages/c/c_setup.html', nav_id="lang-page")
+
 # ====================================================================
 # Subpages of C++ [Programming Languages]
 # ====================================================================
@@ -128,6 +132,10 @@ def c():
 @app.route("/cpp")
 def cpp():
     return render_template('languages/cpp/cpp.html', nav_id="lang-page")
+
+@app.route("/cpp_setup")
+def cpp_setup():
+    return render_template('languages/cpp/cpp_setup.html', nav_id="lang-page")
 
 # ====================================================================
 # Subpages of C# [Programming Languages]

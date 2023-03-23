@@ -1,0 +1,118 @@
+{% extends "languages/c/c_base.html" %}
+
+{% block title %}Setting Up C{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title">Downloading MSYS2</div>
+    <div class="description-left">
+        <p>
+            Since C/C++ are compiled languages they must be translated (compiled) before the
+            source code can be executed on a system. Thus, a compiler must be installed
+            in order to compile the program so it can be executed. MinGW is a popular and free
+            compiler used for C and C++. The executable file for the compiler can be downloaded
+            from <a href="https://www.msys2.org/">MSYS2</a>.
+        </p>
+        <p>
+            Download the executable under installation and run the .exe file. Select the default
+            settings or change them how you want. Click finished when done.
+        </p>
+    </div>
+    
+</div>
+
+<div class="topic">
+    <div class="title">Installing G++ Compiler (64-bit)</div>
+    <div class="description-left">
+        <p>
+            A terminal will be launched once the compiler has been installed. If you prefer to
+            do the remaining steps later then you will have to launch the terminal from the start
+            menu. The application to launch will be named <b>MSYS2 MSYS</b>. In the terminal, apply 
+            the following command to install  the compiler.
+        </p>
+        <div class="code-snippet">
+            pacman -S mingw-w64-x86_64-gcc
+        </div>
+    </div>
+</div>
+
+<div class="topic">
+    <div class="title">Installing gdb Debugger</div>
+    <div class="description-left">
+        <p>
+            You will need to need to install the full Mingw-w64 toolchain to get the gdb debugger. The 
+            gdb debugger help trouble shoot code and set breakpoints.
+        </p>
+        <div class="code-snippet">
+            pacman -S --needed base-devel mingw-w64-x86_64-toolchain
+        </div>
+    </div>
+</div>
+
+<div class="topic">
+    <div class="title">Adding Directory to Path Environment</div>
+    <div class="description-left">
+        <ol type="1">
+            <li>
+                In the Windows search bar, type 'settings' to open your Windows Settings.
+            </li>
+            <li>
+                Search for <b>Edit environment variables</b> for your account.
+            </li>
+            <li>
+                Choose the <b>Path</b> variable in your User variables and then select <b>Edit</b>.
+            </li>
+            <li>
+                Select <b>New</b> and add the Mingw-w64 destination folder path, with <code>\mingw64\bin</code> 
+                appended, to the system path. The exact path depends on which version of 
+                Mingw-w64 you have installed and where you installed it. If you used the settings 
+                above to install Mingw-w64, then add this to the path: <code>C:\msys64\mingw64\bin</code>.
+            </li>
+            <li>
+                Select <b>OK</b> to save the updated PATH. You will need to reopen any console windows 
+                for the new PATH location to be available.
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="topic">
+    <div class="title">Check Install</div>
+    <div class="description-left">
+        The following command can be used in the terminal to verify the the installation and version of gcc/g++:
+        <div class="code-snippet">
+            gcc --version
+        </div>
+        Something similar should be returned:
+        <div class="code-snippet">
+            gcc.exe (Rev1, Built by MSYS2 project) 12.2.0
+        </div>
+    </div>
+</div>
+
+<div class="topic">
+    <div class="title">Helpful Resources</div>
+    <a class="res-link" href="https://www.freecodecamp.org/news/how-to-install-c-and-cpp-compiler-on-windows/">
+        freecodecamp: How to Install C and C++ Compilers on Windows
+    </a>
+    <a class="res-link" href="https://code.visualstudio.com/docs/languages/cpp">
+        Visual Studio Code: C/C++ for Visual Studio Code
+    </a>
+    <a class="res-link" href="https://www.msys2.org/">
+        MSYS2: Software Distribution and Building Platform for Windows
+    </a>
+</div>
+{% endblock %}
+
+{% block code %}
+#include &#60;stdio.h&#62;
+
+int main() {
+    printf("Hello World!");
+    return 0;
+}
+{% endblock %}
+
+{% block output %}
+Hello World!
+{% endblock %}

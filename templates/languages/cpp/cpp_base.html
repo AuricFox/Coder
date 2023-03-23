@@ -5,7 +5,7 @@
 {% block sidenav %}
 <div class="sidebar">
     <Span>C++ Tutorial</Span>
-    <a href="{{  url_for('cpp')  }}">Setup</a>
+    <a href="{{  url_for('cpp_setup')  }}">Setup</a>
     <a href="{{  url_for('cpp')  }}">Comments</a>
     <a href="{{  url_for('cpp')  }}">Data Types</a>
     <a href="{{  url_for('cpp')  }}">Casting</a>
@@ -37,9 +37,15 @@
 <div class="topic">
     <div class="title">Code Example</div>
     <div class="code-examples">
-        <code class="code-example" id="code">
+        <code class="code">
             {% block code %}{% endblock %}
         </code>
+    </div>
+    <div class="title">Output</div>
+    <div class="code-examples">
+        <code class="code">
+                {% block output %}{% endblock %}
+            </code>
     </div>
 </div>
 {% endblock %}

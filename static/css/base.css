@@ -310,16 +310,36 @@ button[type="submit"]:hover {
     margin: 1rem 0 1rem 0;
     padding: 1rem 5rem 1rem 5rem;
     width: 100%;
+    line-height: 2rem;
     text-align: center;
 }
 
-.description a {
+.description-left {
+    color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+    margin: 1rem 0 1rem 0;
+    padding: 1rem 5rem 1rem 5rem;
+    width: 100%;
+    line-height: 2rem;
+}
+
+.description a, 
+.description-left a {
     text-decoration: none;
     color: #FFF4A3;
 }
 
-.description a:hover {
+.description a:hover, 
+.description-left a:hover {
     text-decoration: underline;
+}
+
+.description code,
+.description-left code {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FFF4A3;
+    padding: 5px;
+    border-radius: 4px;
 }
 
 .sub-topic {
@@ -349,6 +369,34 @@ button[type="submit"]:hover {
 .more:hover {
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.4);
+}
+
+.code-snippet {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-family: monospace;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.res-link {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.res-link:hover {
+    color: #FFF4A3
+}
+
+li {
+    margin: 1rem 0 1rem 0;
+}
+
+b {
+    color: #FFF4A3;
 }
 
 /* ========== form ========== */
@@ -472,6 +520,15 @@ input[type="file"]:hover {
     color: white;
     display: block;
     white-space:pre-wrap;
+    font-family: monospace;
+    padding-left: 2rem;
+}
+
+.code {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    display: block;
+    white-space: pre-wrap;
     font-family: monospace;
     padding-left: 2rem;
 }
