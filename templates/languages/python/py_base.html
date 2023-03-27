@@ -5,7 +5,7 @@
 {% block sidenav %}
 <div class="sidebar">
     <Span>Python Tutorial</Span>
-    <a href="{{  url_for('python')  }}">Setup</a>
+    <a href="{{  url_for('python_setup')  }}">Setup</a>
     <a href="{{  url_for('python')  }}">Comments</a>
     <a href="{{  url_for('python')  }}">Data Types</a>
     <a href="{{  url_for('python')  }}">Casting</a>
@@ -44,7 +44,7 @@
     <div class="title">Output</div>
     <div class="code-examples">
         <code class="code">
-                {% block eoutput %}{% endblock %}
+                {% block output %}{% endblock %}
             </code>
     </div>
 </div>

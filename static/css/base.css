@@ -58,16 +58,16 @@ body {
 }
 
 #home-page {
-    background-image: url(../images/sunset.jpg);
+    background-image: url(../images/nav/sunset.jpg);
 }
 #data-page, #struct-page, #lang-page, #algo-page {
-    background-image: url(../images/code.jpg);
+    background-image: url(../images/nav/code.jpg);
 }
 #math-page {
-    background-image: url(../images/math.jpg);
+    background-image: url(../images/nav/math.jpg);
 }
 #tools-page {
-    background-image: url(../images/future.jpg);
+    background-image: url(../images/nav/future.jpg);
 }
 
 .nav {
@@ -98,6 +98,11 @@ body {
 .nav li div:hover, .nav li a:hover {
     background: rgb(247, 7, 7);
     cursor: pointer;
+}
+
+img {
+    width: 100%;
+    margin: 1rem 0 1rem 0;
 }
 
 /* ========== Sub Nav Bar ========== */
@@ -233,7 +238,8 @@ button[type="submit"]:hover {
 }
 
 .sidebar a:hover {
-    color: white;
+    color: #FFF4A3;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 /* ========== topics ========== */
 

@@ -11,14 +11,15 @@
             source code can be executed on a system. Thus, a compiler must be installed
             in order to compile the program so it can be executed. MinGW is a popular and free
             compiler used for C and C++. The executable file for the compiler can be downloaded
-            from <a href="https://www.msys2.org/">MSYS2</a>.
+            from <a href="https://www.msys2.org/" target="_blank" rel="noopener noreferrer">MSYS2</a>.
         </p>
+        <img src="../../../static/images/prog_lang/c_cpp_images/install_compiler.PNG">
         <p>
             Download the executable under installation and run the .exe file. Select the default
-            settings or change them how you want. Click finished when done.
+            settings or change them how you want. Click finished when you are done.
         </p>
     </div>
-    
+
 </div>
 
 <div class="topic">
@@ -27,8 +28,8 @@
         <p>
             A terminal will be launched once the compiler has been installed. If you prefer to
             do the remaining steps later then you will have to launch the terminal from the start
-            menu. The application to launch will be named <b>MSYS2 MSYS</b>. In the terminal, apply 
-            the following command to install  the compiler.
+            menu. The application to launch will be named <b>MSYS2 MSYS</b>. In the terminal, apply
+            the following command to install the compiler:
         </p>
         <div class="code-snippet">
             pacman -S mingw-w64-x86_64-gcc
@@ -40,8 +41,9 @@
     <div class="title">Installing gdb Debugger</div>
     <div class="description-left">
         <p>
-            You will need to need to install the full Mingw-w64 toolchain to get the gdb debugger. The 
-            gdb debugger help trouble shoot code and set breakpoints.
+            You will need to need to install the full Mingw-w64 toolchain to get the gdb debugger. The
+            gdb debugger helps trouble shoot code and set breakpoints. In the terminal, apply
+            the following command to install gdb:
         </p>
         <div class="code-snippet">
             pacman -S --needed base-devel mingw-w64-x86_64-toolchain
@@ -57,20 +59,23 @@
                 In the Windows search bar, type 'settings' to open your Windows Settings.
             </li>
             <li>
-                Search for <b>Edit environment variables</b> for your account.
+                Search for <b>Edit the system environment variables</b>.
+                <img src="../../../static/images/prog_lang/c_cpp_images/search.PNG">
             </li>
             <li>
-                Choose the <b>Path</b> variable in your User variables and then select <b>Edit</b>.
+                Choose the <b>Path</b> variable in your System variables and then select <b>Edit</b>.
+                <img src="../../../static/images/prog_lang/c_cpp_images/selecting_path.PNG">
             </li>
             <li>
-                Select <b>New</b> and add the Mingw-w64 destination folder path, with <code>\mingw64\bin</code> 
-                appended, to the system path. The exact path depends on which version of 
-                Mingw-w64 you have installed and where you installed it. If you used the settings 
-                above to install Mingw-w64, then add this to the path: <code>C:\msys64\mingw64\bin</code>.
+                Select <b>New</b> and add the Mingw-w64 destination folder path, with <code>\mingw64\bin</code>
+                appended, to the system path. The exact path depends on which version of
+                Mingw-w64 you have installed and where you installed it. You can also navigate to the bin folder
+                whithin mingw64, copy the path the the url, and add it to the path. Select <b>OK</b> to save the
+                updated PATH.
+                <img src="../../../static/images/prog_lang/c_cpp_images/adding_path.PNG">
             </li>
             <li>
-                Select <b>OK</b> to save the updated PATH. You will need to reopen any console windows 
-                for the new PATH location to be available.
+                You will need to reopen any console windows for the new PATH location to be available.
             </li>
         </ol>
     </div>
@@ -92,13 +97,15 @@
 
 <div class="topic">
     <div class="title">Helpful Resources</div>
-    <a class="res-link" href="https://www.freecodecamp.org/news/how-to-install-c-and-cpp-compiler-on-windows/">
+    <a class="res-link" href="https://www.freecodecamp.org/news/how-to-install-c-and-cpp-compiler-on-windows/"
+        target="_blank" rel="noopener noreferrer">
         freecodecamp: How to Install C and C++ Compilers on Windows
     </a>
-    <a class="res-link" href="https://code.visualstudio.com/docs/languages/cpp">
+    <a class="res-link" href="https://code.visualstudio.com/docs/languages/cpp" target="_blank"
+        rel="noopener noreferrer">
         Visual Studio Code: C/C++ for Visual Studio Code
     </a>
-    <a class="res-link" href="https://www.msys2.org/">
+    <a class="res-link" href="https://www.msys2.org/" target="_blank" rel="noopener noreferrer">
         MSYS2: Software Distribution and Building Platform for Windows
     </a>
 </div>

@@ -173,6 +173,10 @@ def javascript():
 def python():
     return render_template('languages/python/python.html', nav_id="lang-page")
 
+@app.route("/python_setup")
+def py_setup():
+    return render_template('languages/python/py_setup.html', nav_id="lang-page")
+
 # ====================================================================
 # Subpages of HTML [Programming Languages]
 # ====================================================================
