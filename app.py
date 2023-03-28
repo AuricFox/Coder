@@ -120,7 +120,7 @@ def nulls():
 def c():
     return render_template('languages/c/c.html', nav_id="lang-page")
 
-@app.route("/c_setup")
+@app.route("/c/setup/", endpoint="c/setup/")
 def c_setup():
     return render_template('languages/c/c_setup.html', nav_id="lang-page")
 
@@ -133,7 +133,7 @@ def c_setup():
 def cpp():
     return render_template('languages/cpp/cpp.html', nav_id="lang-page")
 
-@app.route("/cpp_setup")
+@app.route("/cpp/setup/", endpoint="cpp/setup/")
 def cpp_setup():
     return render_template('languages/cpp/cpp_setup.html', nav_id="lang-page")
 
@@ -174,8 +174,8 @@ def python():
     return render_template('languages/python/python.html', nav_id="lang-page")
 
 #python setup page
-@app.route("/python_setup")
-def py_setup():
+@app.route("/python/setup/", endpoint="python/setup/")
+def python_setup():
     return render_template('languages/python/py_setup.html', nav_id="lang-page")
 
 # ====================================================================
