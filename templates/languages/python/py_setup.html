@@ -69,12 +69,11 @@
 {% endblock %}
 
 {% block code %}
-#include &#60;stdio.h&#62;
+def myfunction():
+    print("Hello World!")
 
-int main() {
-    printf("Hello World!");
-    return 0;
-}
+if __name__ == "__main__":
+    myfunction()
 {% endblock %}
 
 {% block output %}

@@ -52,46 +52,35 @@ def useful_tools():
 def concepts():
     return render_template('concepts.html', nav_id="info-page")
 
+# Custom page not found
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html', nav_id="home-page"), 404
 
 # ====================================================================
 # Subpages of Data Types [REMOVE]
 # ====================================================================
 
-# Accessing useful_tools Page
-@app.route("/integers")
-def integers():
-    return render_template('data_types/integers.html', nav_id="data-page")
-
-# Accessing useful_tools Page
-@app.route("/floats")
-def floats():
-    return render_template('data_types/floats.html', nav_id="data-page")
-
-# Accessing useful_tools Page
-@app.route("/dates")
-def dates():
-    return render_template('data_types/dates.html', nav_id="data-page")
-
-# Accessing useful_tools Page
-@app.route("/characters")
-def characters():
-    return render_template('data_types/characters.html', nav_id="data-page")
-
-# Accessing useful_tools Page
-@app.route("/strings")
-def strings():
-    return render_template('data_types/strings.html', nav_id="data-page")
-
-# Accessing useful_tools Page
-@app.route("/booleans")
-def booleans():
-    return render_template('data_types/booleans.html', nav_id="data-page")
-
-# Accessing useful_tools Page
-@app.route("/nulls")
-def nulls():
-    return render_template('data_types/nulls.html', nav_id="data-page")
-
+@app.route('/data_types/<path:pagename>')
+def datatypes_route(pagename):
+    if pagename == 'Main':
+        return render_template('data_types.html', nav_id="data-page")
+    elif pagename == 'integers':
+        return render_template('data_types/integers.html', nav_id="data-page")
+    elif pagename == 'floats':
+        return render_template('data_types/floats.html', nav_id="data-page")
+    elif pagename == 'dates':
+        return render_template('data_types/dates.html', nav_id="data-page")
+    elif pagename == 'characters':
+        return render_template('data_types/characters.html', nav_id="data-page")
+    elif pagename == 'strings':
+        return render_template('data_types/strings.html', nav_id="data-page")
+    elif pagename == 'booleans':
+        return render_template('data_types/booleans.html', nav_id="data-page")
+    elif pagename == 'nulls':
+        return render_template('data_types/nulls.html', nav_id="data-page")
+    else:
+        return render_template('404.html', nav_id="data-page")
 
 # ====================================================================
 # Subpages of Data Structures
@@ -120,9 +109,15 @@ def nulls():
 def c():
     return render_template('languages/c/c.html', nav_id="lang-page")
 
-@app.route("/c/setup/", endpoint="c/setup/")
-def c_setup():
-    return render_template('languages/c/c_setup.html', nav_id="lang-page")
+@app.route('/c/<path:pagename>')
+def c_route(pagename):
+    print(pagename)
+    if pagename == 'Main':
+        return render_template('languages/c/c.html', nav_id="lang-page")
+    elif pagename == 'Setup':
+        return render_template('languages/c/c_setup.html', nav_id="lang-page")
+    else:
+        return render_template('404.html', nav_id="lang-page")
 
 # ====================================================================
 # Subpages of C++ [Programming Languages]
@@ -133,10 +128,15 @@ def c_setup():
 def cpp():
     return render_template('languages/cpp/cpp.html', nav_id="lang-page")
 
-@app.route("/cpp/setup/", endpoint="cpp/setup/")
-def cpp_setup():
-    return render_template('languages/cpp/cpp_setup.html', nav_id="lang-page")
-
+@app.route('/cpp/<path:pagename>')
+def cpp_route(pagename):
+    if pagename == 'Main':
+        return render_template('languages/cpp/cpp.html', nav_id="lang-page")
+    elif pagename == 'Setup':
+        return render_template('languages/cpp/cpp_setup.html', nav_id="lang-page")
+    else:
+        return render_template('404.html', nav_id="lang-page")
+        
 # ====================================================================
 # Subpages of C# [Programming Languages]
 # ====================================================================
@@ -145,6 +145,15 @@ def cpp_setup():
 @app.route("/cs")
 def cs():
     return render_template('languages/cs/cs.html', nav_id="lang-page")
+
+@app.route('/cs/<path:pagename>')
+def cs_route(pagename):
+    if pagename == 'Main':
+        return render_template('languages/cs/cs.html', nav_id="lang-page")
+    elif pagename == 'Setup':
+        return render_template('languages/cs/cs_setup.html', nav_id="lang-page")
+    else:
+        return render_template('404.html', nav_id="lang-page")
 
 # ====================================================================
 # Subpages of Java [Programming Languages]
@@ -155,6 +164,13 @@ def cs():
 def java():
     return render_template('languages/java/java.html', nav_id="lang-page")
 
+@app.route('/java/<path:pagename>')
+def java_route(pagename):
+    if pagename == 'Main':
+        return render_template('languages/java/java.html', nav_id="lang-page")
+    else:
+        return render_template('404.html', nav_id="lang-page")
+
 # ====================================================================
 # Subpages of JavaScript [Programming Languages]
 # ====================================================================
@@ -163,6 +179,13 @@ def java():
 @app.route("/javascript")
 def javascript():
     return render_template('languages/javascript/javascript.html', nav_id="lang-page")
+
+@app.route('/javascript/<path:pagename>')
+def javascript_route(pagename):
+    if pagename == 'Main':
+        return render_template('languages/javascript/javascript.html', nav_id="lang-page")
+    else:
+        return render_template('404.html', nav_id="lang-page")
 
 # ====================================================================
 # Subpages of Python [Programming Languages]
@@ -173,10 +196,17 @@ def javascript():
 def python():
     return render_template('languages/python/python.html', nav_id="lang-page")
 
-#python setup page
-@app.route("/python/setup/", endpoint="python/setup/")
-def python_setup():
-    return render_template('languages/python/py_setup.html', nav_id="lang-page")
+@app.route('/python/<path:pagename>')
+def python_route(pagename):
+    print(pagename)
+    if pagename == 'Main':
+        return render_template('languages/python/python.html', nav_id="lang-page")
+    elif pagename == 'Setup':
+        return render_template('languages/python/py_setup.html', nav_id="lang-page")
+    elif pagename == 'Lambda':
+        return render_template('languages/python/py_lambda.html', nav_id="lang-page")
+    else:
+        return render_template('404.html', nav_id="lang-page")
 
 # ====================================================================
 # Subpages of HTML [Programming Languages]
@@ -187,6 +217,13 @@ def python_setup():
 def html():
     return render_template('languages/html/html.html', nav_id="lang-page")
 
+@app.route('/html/<path:pagename>')
+def html_route(pagename):
+    if pagename == 'Main':
+        return render_template('languages/html/html.html', nav_id="lang-page")
+    else:
+        return render_template('404.html', nav_id="lang-page")
+
 # ====================================================================
 # Subpages of CSS [Programming Languages]
 # ====================================================================
@@ -196,6 +233,13 @@ def html():
 def css():
     return render_template('languages/css/css.html', nav_id="lang-page")
 
+@app.route('/css/<path:pagename>')
+def css_route(pagename):
+    if pagename == 'Main':
+        return render_template('languages/css/css.html', nav_id="lang-page")
+    else:
+        return render_template('404.html', nav_id="lang-page")
+
 # ====================================================================
 # Subpages of SQL [Programming Languages]
 # ====================================================================
@@ -204,6 +248,13 @@ def css():
 @app.route("/sql")
 def sql():
     return render_template('languages/sql/sql.html', nav_id="lang-page")
+
+@app.route('/sql/<path:pagename>')
+def sql_route(pagename):
+    if pagename == 'Main':
+        return render_template('languages/sql/sql.html', nav_id="lang-page")
+    else:
+        return render_template('404.html', nav_id="lang-page")
 
 # ====================================================================
 # Subpages of Math

@@ -348,6 +348,11 @@ button[type="submit"]:hover {
     border-radius: 4px;
 }
 
+.description li,
+.description-left li {
+    margin: 1rem 0 1rem 0;
+}
+
 .sub-topic {
     text-decoration: none;
     background-color: rgb(255, 255, 255);
@@ -397,9 +402,7 @@ button[type="submit"]:hover {
     color: #FFF4A3
 }
 
-li {
-    margin: 1rem 0 1rem 0;
-}
+
 
 b {
     color: #FFF4A3;
@@ -574,4 +577,18 @@ input[type="file"]:hover {
 .info:hover {
     color: rgb(247, 7, 7);
     cursor: pointer;
+}
+
+/* ========== 404 Page ========== */
+
+.error-404 {
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 
+        'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
 }

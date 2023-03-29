@@ -1,0 +1,44 @@
+{% extends "languages/python/py_base.html" %}
+
+{% block title %}Lambda Functions{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title">Lambda Functions</div>
+    <div class="description-left">
+        A lambda function is a small one line anonymous functions designed without a 
+        name. It can take any number of arguments, but is restricted to one expression. 
+        Typically a lambda function is only used for a brief period of time.
+        The syntax of a lambda function is:
+        <div class="code-snippet">
+            lambda arguments : expression
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block code %}
+x = lambda a: a + 10
+print("x(5) = ", x(5))
+
+y = lambda a, b: a * b
+print("y(5,6) = ", y(5,6))
+
+def myfun(n):
+    return lambda a: a * n
+
+z = myfun(2)
+print("z(12) = ", z(12))
+
+a = [1, 2, 3, 4, 5, 6]
+b = filter(lambda x: x % 2 == 0, a)
+print("b = ", list(b))
+{% endblock %}
+
+{% block output %}
+x(5) = 15
+y(5,6) = 30
+z(12) = 24
+b = [2, 4, 6]
+{% endblock %}
