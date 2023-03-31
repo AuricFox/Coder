@@ -47,11 +47,6 @@ def math():
 def useful_tools():
     return render_template('useful_tools.html', nav_id="tools-page")
 
-# Accessing tutorials Page
-@app.route("/concepts")
-def concepts():
-    return render_template('concepts.html', nav_id="info-page")
-
 # Custom page not found
 @app.errorhandler(404)
 def page_not_found(error):
