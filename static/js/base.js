@@ -55,7 +55,7 @@ $('#tools-pages').click(() => {
 });
 
 // ===================================================================
-// Toggles code display for corresponding pages
+// Toggles display for different coding languages [Data Types]
 // ===================================================================
 
 var codeDisplay = {
@@ -122,4 +122,33 @@ $('#sel-js').click(() => {
     $('.sel-code').css({ backgroundColor: "transparent" }).show();
     $('#sel-js').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
     $('#js-code').css(codeDisplay).show();
+});
+
+// ===================================================================
+// Toggles display for different coding examples [Languages]
+// ===================================================================
+
+var exampleDisplay = {
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    color: "white",
+    display: "block",
+    whiteSpace: "pre-wrap",
+    fontFamily: "monospace",
+    padding: "1rem"
+}
+
+// Default to example 1 code when loaded
+$('.code').not($('#ex-1-code')).not($('#ex-1-output')).hide();
+$('#ex-1').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
+
+$('.sel-code').click(function() {
+    var id = $(this).attr('id');                                        // Get id of clicked element
+    $('.sel-code').css({ backgroundColor: "transparent" }).show();      // Remove background
+    $('#' + id).css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();   // Highlight element backgroun
+    
+    var code = '#' + id + '-code';
+    var output = '#' + id + '-output';
+    $('.code').not($(code)).not($(output)).hide();                      // Hide other examples
+    $(code).css(exampleDisplay).show();                                 // Style code
+    $(output).css(exampleDisplay).show();                               // Style output
 });

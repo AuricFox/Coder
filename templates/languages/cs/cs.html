@@ -10,7 +10,12 @@
 </div>
 {% endblock %}
 
+{% block examples %}
+<div class="sel-code" id="ex-1">Example 1</div>
+{% endblock %}
+
 {% block code %}
+<code class="code" id="ex-1-code">
 using System;
 
 namespace HelloWorld {
@@ -20,4 +25,11 @@ namespace HelloWorld {
         }
     }
 }
+</code>
+{% endblock %}
+
+{% block output %}
+<code class="code" id="ex-1-output">
+Hello World!
+</code>
 {% endblock %}

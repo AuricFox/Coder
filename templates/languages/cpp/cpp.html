@@ -10,16 +10,24 @@
 </div>
 {% endblock %}
 
+{% block examples %}
+<div class="sel-code" id="ex-1">Example 1</div>
+{% endblock %}
+
 {% block code %}
+<code class="code" id="ex-1-code">
 #include &#60;iostream&#62;
 using namespace std;
 
 int main() {
-    cout &#60;&#60; "Hello World!" ; 
-    return 0; 
+    cout &#60;&#60; "Hello World!" ;
+    return 0;
 }
+</code>
 {% endblock %}
 
 {% block output %}
+<code class="code" id="ex-1-output">
 Hello World!
+</code>
 {% endblock %}

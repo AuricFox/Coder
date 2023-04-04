@@ -10,7 +10,12 @@
 </div>
 {% endblock %}
 
+{% block examples %}
+<div class="sel-code" id="ex-1">Example 1</div>
+{% endblock %}
+
 {% block code %}
+<code class="code" id="ex-1-code">
 body {
     background-color: #212121;
     font-family: 'Times New Roman', Times, serif;
@@ -20,4 +25,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+</code>
+{% endblock %}
+
+{% block output %}
+<code class="code" id="ex-1-output">
+NONE
+</code>
 {% endblock %}

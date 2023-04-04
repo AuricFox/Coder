@@ -36,10 +36,17 @@
 
 <div class="topic">
     <div class="title">Code Example</div>
+    <div class="code-select">
+        {% block examples %}{% endblock %}
+    </div>
+
     <div class="code-examples">
-        <code class="code-example" id="code">
-            {% block code %}{% endblock %}
-        </code>
+        {% block code %}{% endblock %}
+    </div>
+
+    <div class="title">Output</div>
+    <div class="code-examples">
+        {% block output %}{% endblock %}
     </div>
 </div>
 {% endblock %}

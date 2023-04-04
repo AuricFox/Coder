@@ -68,14 +68,22 @@
 </div>
 {% endblock %}
 
+{% block examples %}
+<div class="sel-code" id="ex-1">Example 1</div>
+{% endblock %}
+
 {% block code %}
+<code class="code" id="ex-1-code">
 def myfunction():
     print("Hello World!")
 
 if __name__ == "__main__":
     myfunction()
+</code>
 {% endblock %}
 
 {% block output %}
+<code class="code" id="ex-1-output">
 Hello World!
+</code>
 {% endblock %}

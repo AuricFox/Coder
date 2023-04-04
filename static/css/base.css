@@ -402,8 +402,6 @@ button[type="submit"]:hover {
     color: #FFF4A3
 }
 
-
-
 b {
     color: #FFF4A3;
 }
@@ -539,7 +537,7 @@ input[type="file"]:hover {
     display: block;
     white-space: pre-wrap;
     font-family: monospace;
-    padding-left: 2rem;
+    padding: 1rem;
 }
 
 /* ========== footer ========== */
