@@ -64,65 +64,22 @@ var codeDisplay = {
     display: "block",
     whiteSpace: "pre-wrap",
     fontFamily: "monospace",
-    paddingLeft: "2rem"
+    paddingLeft: "1rem"
 }
 
 // Default to Python code example when loaded
-$('.code-example').not($('#py-code')).not($('#code')).hide();
+$('.code-example').not($('#sel-py-code')).not($('#code')).hide();
 $('#sel-py').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
 
-// Show Python code example
-$('#sel-py').click(() => {
-    $('.code-example').not($('#py-code')).hide();
+$('.sel-code').click(function() {
+    var id = '#' + $(this).attr('id');
+
+    $('.code-example').not($(id + '-code')).hide();
     $('.sel-code').css({ backgroundColor: "transparent" }).show();
-    $('#sel-py').css({backgroundColor: "rgba(255, 255, 255, 0.1"}).show();
-    $('#py-code').css(codeDisplay).show();
+    $(id).css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
+    $(id + '-code').css(codeDisplay).show();
 });
 
-// -------------------------------------------------------------------------
-// Show C code example
-$('#sel-c').click(() => {
-    $('.code-example').not($('#c-code')).hide();
-    $('.sel-code').css({ backgroundColor: "transparent" }).show();
-    $('#sel-c').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
-    $('#c-code').css(codeDisplay).show();
-});
-
-// -------------------------------------------------------------------------
-// Show C++ code example
-$('#sel-cpp').click(() => {
-    $('.code-example').not($('#cpp-code')).hide();
-    $('.sel-code').css({ backgroundColor: "transparent" }).show();
-    $('#sel-cpp').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
-    $('#cpp-code').css(codeDisplay).show();
-});
-
-// -------------------------------------------------------------------------
-// Show C# code example
-$('#sel-cs').click(() => {
-    $('.code-example').not($('#cs-code')).hide();
-    $('.sel-code').css({ backgroundColor: "transparent" }).show();
-    $('#sel-cs').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
-    $('#cs-code').css(codeDisplay).show();
-});
-
-// -------------------------------------------------------------------------
-// Show Java code example
-$('#sel-java').click(() => {
-    $('.code-example').not($('#java-code')).hide();
-    $('.sel-code').css({ backgroundColor: "transparent" }).show();
-    $('#sel-java').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
-    $('#java-code').css(codeDisplay).show();
-});
-
-// -------------------------------------------------------------------------
-// Show JavaScript code example
-$('#sel-js').click(() => {
-    $('.code-example').not($('#js-code')).hide();
-    $('.sel-code').css({ backgroundColor: "transparent" }).show();
-    $('#sel-js').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
-    $('#js-code').css(codeDisplay).show();
-});
 
 // ===================================================================
 // Toggles display for different coding examples [Languages]

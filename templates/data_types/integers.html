@@ -103,57 +103,68 @@
 
 {% endblock %}
 
+{% block examples %}
+<div class="sel-code" id="ex-1">Python</div>
+<div class="sel-code" id="ex-2">C</div>
+<div class="sel-code" id="ex-3">C++</div>
+<div class="sel-code" id="ex-4">C#</div>
+<div class="sel-code" id="ex-5">Java</div>
+<div class="sel-code" id="ex-6">JavaScript</div>
+{% endblock %}
+
+{% block code %}
 <!-- Python code example -->
-{% block py %}
+<code class="code" id="ex-1-code">
 # Integers in Python
 
 i = 1
 num = -2023
 lNum = 500123000
-{% endblock %}
+</code>
 
 <!-- C code example -->
-{% block c %}
+<code class="code" id="ex-2-code">
 // Integers in C
 
 int i = 1;
 int num = -2023;
 int lNum = 500123000;
-{% endblock %}
+</code>
 
 <!-- C++ code example -->
-{% block cpp %}
+<code class="code" id="ex-3-code">
 // Integers in C++
 
 int i = 1;
 int num = -2023;
 int lNum = 500123000;
-{% endblock %}
+</code>
 
 <!-- C# code example -->
-{% block cs %}
+<code class="code" id="ex-4-code">
 // Integers in C#
 
 int i = 1;
 int num = -2023;
 long lNum = 500123000L;
-{% endblock %}
+</code>
 
 <!-- Java code example -->
-{% block java %}
+<code class="code" id="ex-5-code">
 // Integers in Java
 
 byte i = 1;
 short sNum = -2023;
 int num = 10000
 long lNum = 500123000L;
-{% endblock %}
+</code>
 
 <!-- JavaScript code example -->
-{% block js %}
+<code class="code" id="ex-6-code">
 // Integers in JavaScript
 
 let i = 1;
 var num = -2023;
 let lNum = 500123000;
+</code>
 {% endblock %}

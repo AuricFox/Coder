@@ -1,12 +1,77 @@
-{% extends "base.html" %}
+{% extends "code_base.html" %}
 
 {% block title %}String{% endblock %}
 
-{% block content %}
+{% block topic %}
 <div class="topic" id="data-type">
     <div class="title">String</div>
     <div class="description">
         Data type that stores a sequence of characters, numbers, or symbols.
     </div>
 </div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Python</div>
+<div class="sel-code" id="ex-2">C</div>
+<div class="sel-code" id="ex-3">C++</div>
+<div class="sel-code" id="ex-4">C#</div>
+<div class="sel-code" id="ex-5">Java</div>
+<div class="sel-code" id="ex-6">JavaScript</div>
+{% endblock %}
+
+{% block code %}
+<!-- Python code example -->
+<code class="code" id="ex-1-code">
+# Strings in Python
+
+c = "string"
+mystring = "some string"
+s = "Hello World!"
+</code>
+
+<!-- C code example -->
+<code class="code" id="ex-2-code">
+// Strings in C
+
+char c[] = "string";
+char myChar[] = "some string";
+char s[] = "Hello World!";
+</code>
+
+<!-- C++ code example -->
+<code class="code" id="ex-3-code">
+// Strings in C++
+
+string c = "string";
+string myChar = "some string";
+string s = "Hello World!";
+</code>
+
+<!-- C# code example -->
+<code class="code" id="ex-4-code">
+// Strings in C#
+
+string c = "string";
+string myChar = "some string";
+string s = "Hello World!";
+</code>
+
+<!-- Java code example -->
+<code class="code" id="ex-5-code">
+// Strings in Java
+
+String c = "String";
+String myChar = "some string";
+String s = "Hello World!";
+</code>
+
+<!-- JavaScript code example -->
+<code class="code" id="ex-6-code">
+// Strings in JavaScript
+
+let c = "string";
+var myChar = "some string";
+const s = "Hello World!";
+</code>
 {% endblock %}

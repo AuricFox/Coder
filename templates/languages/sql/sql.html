@@ -16,7 +16,14 @@
 
 {% block code %}
 <code class="code" id="ex-1-code">
-NONE
+CREATE TABLE CONTRIBUTOR(
+    ID INT,
+    Fname VARCHAR(20) NOT NULL,
+    MInit CHAR,
+    Lname VARCHAR(20) NOT NULL,
+    Contact VARCHAR(40) NOT NULL,
+    PRIMARY KEY(ID)
+    UNIQUE(Contact));
 </code>
 {% endblock %}
 

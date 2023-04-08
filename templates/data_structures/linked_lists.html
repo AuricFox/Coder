@@ -1,0 +1,115 @@
+{% extends "data_structures/code_base.html" %}
+
+{% block title %}Linked Lists{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title">Linked List</div>
+    <div class="description-left">
+        <p>
+            A linked list is a data structure that represents a sequence of elements. It consists 
+            of a sequence of nodes, where each node contains a value and a pointer (or reference) 
+            to the next node in the sequence. The first node in the sequence is called the head, 
+            and the last node is called the tail. If a node's pointer is set to null, it means 
+            that the node is the tail of the linked list.
+        </p>
+        <p>
+            Linked lists can be singly-linked, where each node only has a pointer to the next node, 
+            or doubly-linked, where each node has a pointer to both the next and previous nodes in 
+            the sequence.
+        </p>
+        <p>
+            One of the key advantages of linked lists over arrays is that they allow for efficient 
+            insertion and deletion operations, since elements can be easily inserted or removed by 
+            updating pointers between nodes. This makes linked lists useful for implementing stacks, 
+            queues, and other data structures where elements are frequently added or removed from
+            the beginning or end of the sequence.
+        </p>
+        <p>
+            However, one disadvantage of linked lists is that they do not provide constant-time access 
+            to arbitrary elements in the sequence, as arrays do. To access an arbitrary element in a 
+            linked list, you must traverse the list from the head until you reach the desired element. 
+            This makes linked lists less suitable for use cases where random access to elements is
+            required.
+        </p>
+        <p>
+            Overall, linked lists are a powerful and flexible data structure that can be used in a 
+            wide variety of applications.
+        </p>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Python</div>
+<div class="sel-code" id="ex-2">C</div>
+<div class="sel-code" id="ex-3">C++</div>
+<div class="sel-code" id="ex-4">C#</div>
+<div class="sel-code" id="ex-5">Java</div>
+<div class="sel-code" id="ex-6">JavaScript</div>
+{% endblock %}
+
+{% block code %}
+<!-- Python code example -->
+<code class="code language-python" id="ex-1-code">
+{% include "data_structures/code/linked_list/py_linked_list.html" %}
+</code>
+
+<!-- C code example -->
+<code class="code" id="ex-2-code">
+
+</code>
+
+<!-- C++ code example -->
+<code class="code" id="ex-3-code">
+
+</code>
+
+<!-- C# code example -->
+<code class="code" id="ex-4-code">
+
+</code>
+
+<!-- Java code example -->
+<code class="code" id="ex-5-code">
+
+</code>
+
+<!-- JavaScript code example -->
+<code class="code" id="ex-6-code">
+
+</code>
+{% endblock %}
+
+{% block output %}
+<!-- Python code example output -->
+<code class="code" id="ex-1-output">
+
+</code>
+
+<!-- C code example output -->
+<code class="code" id="ex-2-output">
+
+</code>
+
+<!-- C++ code example output -->
+<code class="code" id="ex-3-output">
+
+</code>
+
+<!-- C# code example output -->
+<code class="code" id="ex-4-output">
+
+</code>
+
+<!-- Java code example output -->
+<code class="code" id="ex-5-output">
+
+</code>
+
+<!-- JavaScript code example output -->
+<code class="code" id="ex-6-output">
+
+</code>
+{% endblock %}

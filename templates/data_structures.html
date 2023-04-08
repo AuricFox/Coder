@@ -4,14 +4,32 @@
 
 {% block content %}
 <div class="topic">
+    <div class="title">Linear Data Structures</div>
+    <div class="description">
+        Data structures organized in a sequential or linear arrangement where
+        each element is attached to elements before and after it. These structures 
+        can both be static (fixed memory size) or dynamic (memory size can change).
+    </div>
+    <a class="more" href="{{  url_for('data_structures')  }}"><b>Learn More</b></a>
+</div>
+
+<div class="topic">
     <div class="title">Trees</div>
-    <div class="description">Similar to tree in real life.</div>
+    <div class="description">
+        A non-linear data structure that resembles the shape of trees in real life. 
+        Unlike linear structures, trees can have multiple branches (children) and only 
+        one previous element (parent).
+    </div>
     <a class="more" href="{{  url_for('data_structures')  }}"><b>Learn More</b></a>
 </div>
 
 <div class="topic">
     <div class="title">Graphs</div>
-    <div class="description">Just like trees but can connect to each other.</div>
+    <div class="description">
+        Another non-linear data structure just like trees but can have multiple parent 
+        and child elements. These connections can also form cycles where the pathways will 
+        lead back to the original or starting element.
+    </div>
     <a class="more" href="{{  url_for('data_structures')  }}"><b>Learn More</b></a>
 </div>
 {% endblock %}
