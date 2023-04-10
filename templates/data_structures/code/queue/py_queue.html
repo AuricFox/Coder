@@ -7,13 +7,12 @@ class Node:
         # Next node
         self.child = child
 
-class LinkedList:
+class Queue:
     def __init__(self):
         # Initializing list
         self.head = None
 
     def add(self, data):
-
         # List is empty
         if(self.head == None):
             # Set element as head
@@ -32,57 +31,7 @@ class LinkedList:
             # Move to next element
             head = head.child
 
-    def insert(self, data, idx):
-        # Set as head since the list is empty
-        if (self.head == None):
-            self.head = Node(data, None, None)
-            return
-        
-        head = self.head
-        # Add to the front of the list
-        if (idx == 0):
-            self.head = Node(data, None, head)
-        else:
-            # Looking at child index
-            index = 1
-            while head.child != None:
-                if (idx == index):
-                    # Insert new data between head and it's child
-                    head.child = Node(data, head, head.child)
-                    return
-                
-                # Update values
-                index += 1
-                head = head.child
-
-    def remove(self, data):
-        # List is empty
-        if(self.head == None):
-            print("List is Empty!")
-            return
-
-        # List is populated
-        head = self.head
-        # Current head needs to be removed
-        if (head.data == data):
-            # Move head to next element
-            self.head = head.child
-            return
-
-        # Loop thru list until the end of the list is reached
-        while head != None:
-            # Remove child and replace with grandchild
-            if (head.child.data == data and head.child.child != None):
-                head.child = head.child.child
-                return
-            # There is no grandchild
-            elif (head.child.data == data and head.child.child == None):
-                head.child = None
-
-            # Move to next element
-            head = head.child
-
-    def pop(self, idx=-1):
+    def pop(self, idx=0):
         # List is empty
         if(self.head == None):
             print("List is Empty!")
@@ -92,8 +41,9 @@ class LinkedList:
         head = self.head
         # Current head needs to be removed
         if (idx == 0 or idx == -1 and head.child == None):
-            # Move head to next element
+            # Get data
             data = head.data
+            # Move head to next element
             self.head = head.child
             return data
         else:
@@ -109,37 +59,38 @@ class LinkedList:
                 elif (idx == -1 and head.child.child == None):
                     data = head.child.data
                     head.child = None
-                    return data
+                    return
                 
                 # Update values
                 index += 1
                 head = head.child
 
-    # Print the entire list
+    # Print the entire active queue
     def printList(self):
 
         if self.head == None:
             print("List is Empty!")
 
         else:
-            llist = ''
             head = self.head
+            myQueue = ''
             while head != None:
-                llist += str(head.data)
+                myQueue += str(head.data)
 
                 if (head.child != None):
-                    llist += ' -> '
+                    myQueue += ' -> '
+
                 head = head.child
-            print(llist)
+            print(myQueue)
 
 
 if __name__ == "__main__":
-    myList = LinkedList()
+    myList = Queue()
     myList.add(1)
     myList.add(2)
     myList.add(3)
     myList.add(4)
-    print(myList.pop())
+    myList.pop()
     myList.add(5)
-    
+
     myList.printList()

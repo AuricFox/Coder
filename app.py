@@ -85,8 +85,6 @@ def datatypes_route(pagename):
 def datastructure_route(pagename):
     if pagename == 'Main':
         return render_template('data_structures.html', nav_id="struct-page")
-    elif pagename == 'lists':
-        return render_template('data_structures/lists.html', nav_id="struct-page")
     elif pagename == 'arrays':
         return render_template('data_structures/arrays.html', nav_id="struct-page")
     elif pagename == 'linked_lists':

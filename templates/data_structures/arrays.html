@@ -1,0 +1,113 @@
+{% extends "data_structures/code_base.html" %}
+
+{% block title %}Arrays{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title">Array</div>
+    <div class="description-left">
+        <p>
+            An array is a data structure that represents a collection of elements of the same 
+            type stored in contiguous memory locations. Each element in the array can be 
+            accessed by its index, which is an integer value that represents the position of 
+            the element in the array.
+        </p>
+        <p>
+            Arrays have a fixed size, which is determined when the array is created. This means 
+            that you cannot add or remove elements from an array after it is created. To add or 
+            remove elements from an array, you must create a new array with the desired size and 
+            copy the elements from the old array into the new array.
+        </p>
+        <p>
+            Arrays provide constant-time access to arbitrary elements in the array, since the 
+            memory locations of the elements are contiguous and can be accessed directly using 
+            pointer arithmetic. This makes arrays suitable for use cases where random access to 
+            elements is required, such as searching or sorting algorithms.
+        </p>
+        <p>
+            One potential disadvantage of arrays is that their fixed size can make them inflexible 
+            for certain use cases. If the size of the array needs to be increased or decreased 
+            frequently, this can lead to inefficient memory usage and performance issues.
+        </p>
+        <p>
+            Overall, arrays are a fundamental data structure that provide efficient random access to 
+            elements and are suitable for use cases where the size of the data is known in advance 
+            and does not change frequently.
+        </p>        
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Python</div>
+<div class="sel-code" id="ex-2">C</div>
+<div class="sel-code" id="ex-3">C++</div>
+<div class="sel-code" id="ex-4">C#</div>
+<div class="sel-code" id="ex-5">Java</div>
+<div class="sel-code" id="ex-6">JavaScript</div>
+{% endblock %}
+
+{% block code %}
+<!-- Python code example -->
+<pre class="code language-python" id="ex-1-code">
+{% include "data_structures/code/array/py_array.html" %}
+</pre>
+
+<!-- C code example -->
+<pre class="code" id="ex-2-code">
+
+</pre>
+
+<!-- C++ code example -->
+<pre class="code" id="ex-3-code">
+
+</pre>
+
+<!-- C# code example -->
+<pre class="code" id="ex-4-code">
+
+</pre>
+
+<!-- Java code example -->
+<pre class="code" id="ex-5-code">
+
+</pre>
+
+<!-- JavaScript code example -->
+<pre class="code" id="ex-6-code">
+
+</pre>
+{% endblock %}
+
+{% block output %}
+<!-- Python code example output -->
+<pre class="code" id="ex-1-output">
+
+</pre>
+
+<!-- C code example output -->
+<pre class="code" id="ex-2-output">
+
+</pre>
+
+<!-- C++ code example output -->
+<pre class="code" id="ex-3-output">
+
+</pre>
+
+<!-- C# code example output -->
+<pre class="code" id="ex-4-output">
+
+</pre>
+
+<!-- Java code example output -->
+<pre class="code" id="ex-5-output">
+
+</pre>
+
+<!-- JavaScript code example output -->
+<pre class="code" id="ex-6-output">
+
+</pre>
+{% endblock %}
