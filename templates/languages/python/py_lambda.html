@@ -26,46 +26,46 @@
 {% endblock %}
 
 {% block code %}
-<pre class="code" id="ex-1-code">
+<pre class="code" id="ex-1-code"><code class="language-python">
 x = lambda a: a + 10
 print("x(5) = ", x(5))
-</pre>
+</code></pre>
 
-<pre class="code" id="ex-2-code">
+<pre class="code" id="ex-2-code"><code class="language-python">
 y = lambda a, b: a * b
 print("y(5,6) = ", y(5,6))
-</pre>
+</code></pre>
 
-<pre class="code" id="ex-3-code">
+<pre class="code" id="ex-3-code"><code class="language-python">
 def myfun(n):
     return lambda a: a * n
 
 z = myfun(2)
 print("z(12) = ", z(12))
-</pre>
+</code></pre>
 
-<pre class="code" id="ex-4-code">
+<pre class="code" id="ex-4-code"><code class="language-python">
 a = [1, 2, 3, 4, 5, 6]
 b = filter(lambda x: x % 2 == 0, a)
 print("b = ", list(b(a)))
-</pre>
+</code></pre>
 {% endblock %}
 
 {% block output %}
-<pre class="code" id="ex-1-output">
+<pre class="code" id="ex-1-output"><code class="language-python">
 x(5) = 15
-</pre>
+</code></pre>
 
-<pre class="code" id="ex-2-output">
+<pre class="code" id="ex-2-output"><code class="language-python">
 y(5,6) = 30
-</pre>
+</code></pre>
 
-<pre class="code" id="ex-3-output">
+<pre class="code" id="ex-3-output"><code class="language-python">
 z(12) = 24
-</pre>
+</code></pre>
 
-<pre class="code" id="ex-4-output">
+<pre class="code" id="ex-4-output"><code class="language-python">
 b = [2, 4, 6]
-</pre>
+</code></pre>
 
 {% endblock %}
