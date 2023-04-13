@@ -1,0 +1,135 @@
+{% extends "data_structures/code_base.html" %}
+
+{% block title %}Stacks{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title">Stack</div>
+    <div class="description-left">
+        <p>
+            In computer science, a "stack" is a data structure that stores a collection of 
+            elements in a specific way. It's a Last-In, First-Out (LIFO) data structure, which 
+            means that the last element added to the stack is the first one to be removed.
+        </p>
+        <p>
+            A stack has two primary operations: push and pop. The push operation adds an 
+            element to the top of the stack, while the pop operation removes the top element 
+            from the stack. Other common operations on a stack include peek, which returns 
+            the top element without removing it, and isEmpty, which checks if the stack is 
+            empty.
+        </p>
+        <p>
+            A stack can be implemented using an array or a linked list. When using an array, 
+            the top element of the stack is represented by the index of the last element 
+            added to the array. When using a linked list, the top element is represented by 
+            the first node in the list.
+        </p>
+        <p>
+            Stacks are commonly used in programming languages to manage function calls and 
+            local variables. When a function is called, its local variables are added to the 
+            stack, and when the function returns, the local variables are removed from the 
+            stack. Stacks are also used in many algorithms, such as depth-first search and 
+            backtracking.
+        </p>
+        <p>
+            Overall, arrays are a fundamental data structure that provide efficient random access to 
+            elements and are suitable for use cases where the size of the data is known in advance 
+            and does not change frequently.
+        </p>
+        <p>
+            One important characteristic of a stack is that it has a limited capacity, determined by 
+            the underlying data structure used to implement it. If the stack becomes full and an 
+            element is pushed onto it, a stack overflow error can occur. To prevent this from 
+            happening, many implementations of a stack include a size limit or dynamic resizing 
+            capability.
+        </p>
+        <p>
+            Another important consideration when using a stack is the order in which elements are added 
+            and removed. Because a stack is LIFO, the order in which elements are popped from the stack 
+            is the reverse of the order in which they were pushed onto it. This can have implications for 
+            algorithms that use a stack, as the order in which elements are processed may need to be 
+            reversed.
+        </p>
+        <p>
+            In summary, a stack is a simple but powerful data structure that can be used in a variety of 
+            contexts. It has two primary operations, push and pop, and is commonly used in programming 
+            languages and algorithms to manage function calls, local variables, and recursive operations.
+
+        </p>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Python</div>
+<div class="sel-code" id="ex-2">C</div>
+<div class="sel-code" id="ex-3">C++</div>
+<div class="sel-code" id="ex-4">C#</div>
+<div class="sel-code" id="ex-5">Java</div>
+<div class="sel-code" id="ex-6">JavaScript</div>
+{% endblock %}
+
+{% block code %}
+<!-- Python code example -->
+<pre class="code" id="ex-1-code"><code class="language-python">
+{% include "data_structures/code/stack/py_stack.html" %}
+</code></pre>
+
+<!-- C code example -->
+<pre class="code" id="ex-2-code"><code class="language-c">
+
+</code></pre>
+
+<!-- C++ code example -->
+<pre class="code" id="ex-3-code"><code class="language-cpp">
+
+</code></pre>
+
+<!-- C# code example -->
+<pre class="code" id="ex-4-code"><code class="language-cs">
+
+</code></pre>
+
+<!-- Java code example -->
+<pre class="code" id="ex-5-code"><code class="language-java">
+
+</code></pre>
+
+<!-- JavaScript code example -->
+<pre class="code" id="ex-6-code"><code class="language-js-templates">
+
+</code></pre>
+{% endblock %}
+
+{% block output %}
+<!-- Python code example output -->
+<pre class="code" id="ex-1-output">
+
+</pre>
+
+<!-- C code example output -->
+<pre class="code" id="ex-2-output">
+
+</pre>
+
+<!-- C++ code example output -->
+<pre class="code" id="ex-3-output">
+
+</pre>
+
+<!-- C# code example output -->
+<pre class="code" id="ex-4-output">
+
+</pre>
+
+<!-- Java code example output -->
+<pre class="code" id="ex-5-output">
+
+</pre>
+
+<!-- JavaScript code example output -->
+<pre class="code" id="ex-6-output">
+
+</pre>
+{% endblock %}

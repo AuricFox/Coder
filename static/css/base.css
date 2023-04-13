@@ -329,6 +329,11 @@ button[type="submit"]:hover {
     line-height: 2rem;
 }
 
+.description p,
+.description-left p {
+    margin: 1rem 0 1rem 0;
+}
+
 .description a, 
 .description-left a {
     text-decoration: none;
@@ -539,10 +544,8 @@ input[type="file"]:hover {
 }
 
 .code {
-    background-color: rgba(255, 255, 255, 0.1);
     color: white;
-   
-   
+    background-color: #272822;
     font-family: monospace;
     padding: 1rem;
 }

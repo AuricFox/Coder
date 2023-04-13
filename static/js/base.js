@@ -59,24 +59,20 @@ $('#tools-pages').click(() => {
 // ===================================================================
 
 var codeDisplay = {
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
-    color: "white",
-    display: "block",
-    whiteSpace: "pre-wrap",
-    fontFamily: "monospace",
+    backgroundColor: "#272822",
     paddingLeft: "1rem"
 }
 
 // Default to Python code example when loaded
 $('.code-example').not($('#sel-py-code')).not($('#code')).hide();
-$('#sel-py').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
+$('#sel-py').css({ backgroundColor: "#272822" }).show();
 
 $('.sel-code').click(function() {
     var id = '#' + $(this).attr('id');
 
     $('.code-example').not($(id + '-code')).hide();
     $('.sel-code').css({ backgroundColor: "transparent" }).show();
-    $(id).css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
+    $(id).css({ backgroundColor: "#272822" }).show();
     $(id + '-code').css(codeDisplay).show();
 });
 
@@ -86,22 +82,18 @@ $('.sel-code').click(function() {
 // ===================================================================
 
 var exampleDisplay = {
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
-    color: "white",
-    display: "block",
-    whiteSpace: "pre-wrap",
-    fontFamily: "monospace",
+    backgroundColor: "#272822",
     padding: "1rem"
 }
 
 // Default to example 1 code when loaded
 $('.code').not($('#ex-1-code')).not($('#ex-1-output')).hide();
-$('#ex-1').css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();
+$('#ex-1').css({ backgroundColor: "#272822" }).show();
 
 $('.sel-code').click(function() {
     var id = $(this).attr('id');                                        // Get id of clicked element
     $('.sel-code').css({ backgroundColor: "transparent" }).show();      // Remove background
-    $('#' + id).css({ backgroundColor: "rgba(255, 255, 255, 0.1" }).show();   // Highlight element backgroun
+    $('#' + id).css({ backgroundColor: "#272822" }).show();   // Highlight element backgroun
     
     var code = '#' + id + '-code';
     var output = '#' + id + '-output';

@@ -1,0 +1,124 @@
+{% extends "data_structures/code_base.html" %}
+
+{% block title %}Queues{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title">Queue</div>
+    <div class="description-left">
+        <p>
+            In computer science, a "queue" is another common data structure used to store a collection 
+            of elements. Unlike a stack, a queue is a First-In, First-Out (FIFO) data structure, which 
+            means that the first element added to the queue is the first one to be removed.
+        </p>
+        <p>
+            A queue has two primary operations: enqueue and dequeue. The enqueue operation adds an 
+            element to the back of the queue, while the dequeue operation removes the element at the 
+            front of the queue. Other common operations on a queue include peek, which returns the front 
+            element without removing it, and isEmpty, which checks if the queue is empty.
+        </p>
+        <p>
+            A queue can be implemented using an array or a linked list. When using an array, the front 
+            and back of the queue are represented by the indices of the first and last elements, 
+            respectively. When using a linked list, the front and back of the queue are represented by 
+            the first and last nodes in the list.
+        </p>
+        <p>
+            Queues are commonly used in operating systems and networking systems to manage tasks and 
+            messages. For example, when a printer receives multiple print jobs at once, it may use a 
+            queue to store the jobs in the order they were received and print them one at a time.
+        </p>
+        <p>
+            Like a stack, a queue can also have a limited capacity, determined by the underlying data 
+            structure used to implement it. If the queue becomes full and an element is enqueued, a queue 
+            overflow error can occur. To prevent this from happening, many implementations of a queue 
+            include a size limit or dynamic resizing capability.
+        </p>
+        <p>
+            In summary, a queue is another fundamental data structure in computer science that stores a 
+            collection of elements in a specific way. It has two primary operations, enqueue and dequeue, 
+            and is commonly used in operating systems and networking systems to manage tasks and messages.
+        </p>
+        <p>
+            
+        </p>
+        <p>
+            
+        </p>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Python</div>
+<div class="sel-code" id="ex-2">C</div>
+<div class="sel-code" id="ex-3">C++</div>
+<div class="sel-code" id="ex-4">C#</div>
+<div class="sel-code" id="ex-5">Java</div>
+<div class="sel-code" id="ex-6">JavaScript</div>
+{% endblock %}
+
+{% block code %}
+<!-- Python code example -->
+<pre class="code" id="ex-1-code"><code class="language-python">
+{% include "data_structures/code/queue/py_queue.html" %}
+</code></pre>
+
+<!-- C code example -->
+<pre class="code" id="ex-2-code"><code class="language-c">
+
+</code></pre>
+
+<!-- C++ code example -->
+<pre class="code" id="ex-3-code"><code class="language-cpp">
+
+</code></pre>
+
+<!-- C# code example -->
+<pre class="code" id="ex-4-code"><code class="language-cs">
+
+</code></pre>
+
+<!-- Java code example -->
+<pre class="code" id="ex-5-code"><code class="language-java">
+
+</code></pre>
+
+<!-- JavaScript code example -->
+<pre class="code" id="ex-6-code"><code class="language-js-templates">
+
+</code></pre>
+{% endblock %}
+
+{% block output %}
+<!-- Python code example output -->
+<pre class="code" id="ex-1-output">
+
+</pre>
+
+<!-- C code example output -->
+<pre class="code" id="ex-2-output">
+
+</pre>
+
+<!-- C++ code example output -->
+<pre class="code" id="ex-3-output">
+
+</pre>
+
+<!-- C# code example output -->
+<pre class="code" id="ex-4-output">
+
+</pre>
+
+<!-- Java code example output -->
+<pre class="code" id="ex-5-output">
+
+</pre>
+
+<!-- JavaScript code example output -->
+<pre class="code" id="ex-6-output">
+
+</pre>
+{% endblock %}

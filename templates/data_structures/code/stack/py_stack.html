@@ -1,5 +1,3 @@
-# Linked List
-
 class Node:
     def __init__(self, data, parent=None, child=None):
         # Node contents
@@ -9,25 +7,13 @@ class Node:
         # Next node
         self.child = child
 
-class Queue:
+class Stack:
     def __init__(self):
         # Initializing list
         self.head = None
 
-    # See if the Queue is empty
-    def isEmpty(self):
-        return self.head == None
+    def push(self, data):
 
-    # Look at the data of the first element but don't remove
-    def peek(self):
-        if (self.isEmpty()):
-            print("Queue is Empty!")
-            return None
-        
-        return self.head.data
-
-    # Add to the queue
-    def enqueue(self, data):
         # List is empty
         if(self.head == None):
             # Set element as head
@@ -46,8 +32,7 @@ class Queue:
             # Move to next element
             head = head.child
 
-    # Remove from the queue
-    def dequeue(self, idx=0):
+    def pop(self, idx=-1):
         # List is empty
         if(self.head == None):
             print("List is Empty!")
@@ -57,9 +42,8 @@ class Queue:
         head = self.head
         # Current head needs to be removed
         if (idx == 0 or idx == -1 and head.child == None):
-            # Get data
-            data = head.data
             # Move head to next element
+            data = head.data
             self.head = head.child
             return data
         else:
@@ -75,38 +59,37 @@ class Queue:
                 elif (idx == -1 and head.child.child == None):
                     data = head.child.data
                     head.child = None
-                    return
+                    return data
                 
                 # Update values
                 index += 1
                 head = head.child
 
-    # Print the entire active queue
+    # Print the entire list
     def printList(self):
 
         if self.head == None:
             print("List is Empty!")
 
         else:
+            llist = ''
             head = self.head
-            myQueue = ''
             while head != None:
-                myQueue += str(head.data)
+                llist += str(head.data)
 
                 if (head.child != None):
-                    myQueue += ' -> '
-
+                    llist += ' -> '
                 head = head.child
-            print(myQueue)
+            print(llist)
 
 
 if __name__ == "__main__":
-    myList = Queue()
-    myList.enqueue(1)
-    myList.enqueue(2)
-    myList.enqueue(3)
-    myList.enqueue(4)
-    myList.dequeue()
-    myList.enqueue(5)
-
+    myList = Stack()
+    myList.push(1)
+    myList.push(2)
+    myList.push(3)
+    myList.push(4)
+    print(myList.pop())
+    myList.push(5)
+    
     myList.printList()
