@@ -1,0 +1,134 @@
+{% extends "data_structures/code_base.html" %}
+
+{% block title %}Hash Table{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title">Hash Table</div>
+    <div class="description-left">
+        <p>
+            A hash table is a data structure that allows you to store and retrieve values based on a 
+            key. It uses a hash function to map the key to an index in an array of buckets, where the 
+            corresponding value is stored. The hash function takes the key as input and produces an 
+            integer output that represents the index in the array. The hash function should be designed 
+            to distribute keys evenly across the array of buckets to minimize collisions.
+        </p>
+        <p>
+            When inserting a key-value pair into a hash table, the hash function is applied to the key 
+            to determine the index where the value should be stored. If another value has already been 
+            stored at that index, a collision occurs. There are several strategies for handling 
+            collisions, such as chaining (where each bucket contains a linked list of values) or open 
+            addressing (where values are stored in a different bucket if the first one is already 
+            occupied).
+        </p>
+        <p>
+            To retrieve a value from a hash table, the hash function is again applied to the key to 
+            determine the index in the array where the value should be stored. If the key is not found 
+            at that index, the search continues using the collision resolution strategy until the key 
+            is found or all buckets have been searched.
+        </p>
+        <p>
+            Hash tables offer fast insertion and retrieval times (usually O(1) on average) and are 
+            widely used in computer science and software engineering applications where fast access to 
+            data is important.
+        </p>
+        <p>
+            One potential issue with hash tables is that the hash function may produce collisions, 
+            where different keys map to the same index in the array. Collisions can cause performance 
+            issues because they require additional time to resolve. To mitigate the effects of 
+            collisions, hash tables are typically designed to accommodate a load factor, which is the 
+            ratio of the number of elements stored in the hash table to the number of buckets in the 
+            table. A higher load factor means that there are more elements stored in the table, which 
+            increases the likelihood of collisions.
+        </p>
+        <p>
+            When the load factor exceeds a certain threshold, the hash table is typically resized to 
+            increase the number of buckets. This involves creating a new array with a larger size, 
+            rehashing all the existing elements, and inserting them into the new array. This process 
+            can be expensive, but it is necessary to maintain the expected performance of the hash 
+            table.
+        </p>
+        <p>
+            In summary, a hash table is a data structure that provides fast access to values based on 
+            keys using a hash function to map keys to indices in an array. It is widely used in 
+            computer science and software engineering applications, but can suffer from performance 
+            issues due to collisions. Hash tables can be resized to accommodate a larger number of 
+            elements and maintain performance.
+        </p>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Python</div>
+<div class="sel-code" id="ex-2">C</div>
+<div class="sel-code" id="ex-3">C++</div>
+<div class="sel-code" id="ex-4">C#</div>
+<div class="sel-code" id="ex-5">Java</div>
+<div class="sel-code" id="ex-6">JavaScript</div>
+{% endblock %}
+
+{% block code %}
+<!-- Python code example -->
+<pre class="code" id="ex-1-code"><code class="language-python">
+{% include "data_structures/code/hash_table/py_hash_table.html" %}
+</code></pre>
+
+<!-- C code example -->
+<pre class="code" id="ex-2-code"><code class="language-c">
+
+</code></pre>
+
+<!-- C++ code example -->
+<pre class="code" id="ex-3-code"><code class="language-cpp">
+
+</code></pre>
+
+<!-- C# code example -->
+<pre class="code" id="ex-4-code"><code class="language-cs">
+
+</code></pre>
+
+<!-- Java code example -->
+<pre class="code" id="ex-5-code"><code class="language-java">
+
+</code></pre>
+
+<!-- JavaScript code example -->
+<pre class="code" id="ex-6-code"><code class="language-js">
+
+</code></pre>
+{% endblock %}
+
+{% block output %}
+<!-- Python code example output -->
+<pre class="code" id="ex-1-output"><code class="language-python">
+
+</code></pre>
+
+<!-- C code example output -->
+<pre class="code" id="ex-2-output"><code class="language-c">
+
+</code></pre>
+
+<!-- C++ code example output -->
+<pre class="code" id="ex-3-output"><code class="language-cpp">
+
+</code></pre>
+
+<!-- C# code example output -->
+<pre class="code" id="ex-4-output"><code class="language-cs">
+
+</code></pre>
+
+<!-- Java code example output -->
+<pre class="code" id="ex-5-output"><code class="language-java">
+
+</code></pre>
+
+<!-- JavaScript code example output -->
+<pre class="code" id="ex-6-output"><code class="language-js">
+
+</code></pre>
+{% endblock %}
