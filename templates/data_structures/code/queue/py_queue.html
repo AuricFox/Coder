@@ -1,3 +1,5 @@
+# Linked List
+
 class Node:
     def __init__(self, data, parent=None, child=None):
         # Node contents
@@ -100,11 +102,13 @@ class Queue:
 
 if __name__ == "__main__":
     myList = Queue()
-    myList.enqueue(1)
-    myList.enqueue(2)
-    myList.enqueue(3)
-    myList.enqueue(4)
-    myList.dequeue()
-    myList.enqueue(5)
 
+    # Adding data to the queue
+    for i in range(10):
+        myList.enqueue(i)
+    myList.printList()
+
+    # Removing data from the queue
+    myList.dequeue()
+    myList.dequeue()
     myList.printList()

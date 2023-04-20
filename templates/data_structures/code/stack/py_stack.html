@@ -1,71 +1,32 @@
 class Node:
-    def __init__(self, data, parent=None, child=None):
+    def __init__(self, data, next=None):
         # Node contents
         self.data = data
-        # Previous node
-        self.parent = parent
-        # Next node
-        self.child = child
+        # next node
+        self.next = next
 
 class Stack:
     def __init__(self):
         # Initializing list
         self.head = None
 
+    # Adding new node to the stack
     def push(self, data):
+        self.head = Node(data, self.head)
 
-        # List is empty
-        if(self.head == None):
-            # Set element as head
-            self.head = Node(data, None, None)
-            return
-
-        # List is populated
-        head = self.head
-        # Loop thru list until the end of the list is reached
-        while head != None:
-            if (head.child == None):
-                # Add the new data here
-                head.child = Node(data, head, None)
-                return
-
-            # Move to next element
-            head = head.child
-
-    def pop(self, idx=-1):
+    def pop(self):
         # List is empty
         if(self.head == None):
             print("List is Empty!")
             return
 
-        # List is populated
-        head = self.head
-        # Current head needs to be removed
-        if (idx == 0 or idx == -1 and head.child == None):
-            # Move head to next element
-            data = head.data
-            self.head = head.child
-            return data
-        else:
-            # Looking at child index
-            index = 1
-            while head.child != None:
-                # Remove node between head and it's grandchild
-                if (idx == index):
-                    data = head.child.data
-                    head.child = head.child.child
-                    return data
-                # Remove node at the end of the list
-                elif (idx == -1 and head.child.child == None):
-                    data = head.child.data
-                    head.child = None
-                    return data
-                
-                # Update values
-                index += 1
-                head = head.child
+        # Getting data from the first node
+        data = self.head.data
+        # Moving pointer to next node
+        self.head = self.head.next
+        return data
 
-    # Print the entire list
+    # Prints the entire Stack
     def printList(self):
 
         if self.head == None:
@@ -77,19 +38,21 @@ class Stack:
             while head != None:
                 llist += str(head.data)
 
-                if (head.child != None):
+                if (head.next != None):
                     llist += ' -> '
-                head = head.child
+                head = head.next
             print(llist)
 
 
 if __name__ == "__main__":
     myList = Stack()
-    myList.push(1)
-    myList.push(2)
-    myList.push(3)
-    myList.push(4)
-    print(myList.pop())
-    myList.push(5)
     
+    # Adding data 0-9 to stack
+    for i in range(10):
+        myList.push(i)
+    myList.printList()
+
+    # Removing data from the stack
+    myList.pop()
+    myList.pop()
     myList.printList()

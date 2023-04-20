@@ -135,11 +135,16 @@ class LinkedList:
 
 if __name__ == "__main__":
     myList = LinkedList()
-    myList.add(1)
-    myList.add(2)
-    myList.add(3)
-    myList.add(4)
-    print(myList.pop())
-    myList.add(5)
-    
+
+    for i in range(10): 
+        myList.add(i)
     myList.printList()
+
+    myList.insert(20, 2)
+    myList.insert(11, 0)
+    myList.printList()
+
+    myList.remove(20)
+    myList.remove(11)
+    myList.printList()
+    
