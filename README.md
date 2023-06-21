@@ -4,7 +4,7 @@ This is a personal project designed to help me refresh what I have learned in sc
 
 # Server-side
 
-This section documents the setup and executing the server.
+This section documents the setup and execution the server.
 
 ## Server Setup
 
@@ -17,7 +17,7 @@ STEP 2: Install env module: `pip install virtualenv`
 STEP 3: Activate env:  
 ```
 C: virtualenv env               # env is the environment file name
-C: env\Scripts\activate.bat     # Windows
+C: env\Scripts\activate     # Windows
 C: source env/bin/activate      # Mac
 ```  
 

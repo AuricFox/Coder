@@ -1,0 +1,113 @@
+{% extends "languages/cs/cs_base.html" %}
+
+{% block title %}Setting Up C#{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title">Setting Up Visual Studio Code (VSCode)</div>
+    <div class="description-left">
+        <p>
+            Download and install the latest version of 
+            <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a> 
+            from the official website.
+        </p>
+
+        <p>
+            Install the C# Extension: Launch Visual Studio Code and open the Extensions view by clicking on the square icon on the
+            left sidebar or using the shortcut Ctrl+Shift+X. Search for "C#" in the extensions marketplace and click on the "C# for
+            Visual Studio Code" extension by Microsoft. Click on the "Install" button to install the extension.
+        </p>
+        <img src="../../../static/images/prog_lang/cs_images/cs_extension.PNG">
+    </div>
+    
+</div>
+
+<div class="topic">
+    <div class="title">Install .NET Core SDK</div>
+    <div class="description-left">
+        <p>
+            C# development requires the .NET Core SDK, which provides the necessary tools and libraries. Visit the 
+            <a href="https://dotnet.microsoft.com/download/dotnet" target="_blank" rel="noopener noreferrer">.NET Core</a>
+            download page and download the latest version of the SDK for your
+            operating system. Follow the installation instructions provided by Microsoft.
+        </p>
+        <p>
+            Verify .NET Core Installation: Open a new terminal window in Visual Studio Code by going to "View" then "Terminal" or
+            using the shortcut Ctrl+ ``. Type the command:
+        </p>
+        <div class="code-snippet">
+            dotnet --version
+        </div>
+        <p>
+            If you see the version number of the installed .NET Core SDK, it means the installation was successful.
+        </p>
+    </div>
+</div>
+
+<div class="topic">
+    <div class="title">Creating a New Project</div>
+    <div class="description-left">
+        In Visual Studio Code, open a new terminal window and navigate to the directory where you want to create your C# project.
+        Use the cd command to change directories. Once you're in the desired directory, run the command:
+        <div class="code-snippet">
+            dotnet new console
+        </div>
+        to create a new console application project. You can replace "console" with "web" if you want to create a web
+        application project. Use the code command followed by the project folder's path to open the project in Visual 
+        Studio Code. For example, if your project is in a folder called "MyProject," you can run
+        <div class="code-snippet">
+            code MyProject
+        </div>
+        in the terminal.
+    </div>
+</div>
+
+<div class="topic">
+    <div class="title">Build and Run</div>
+    <div class="description-left">
+        To build and run your C# project, you can open a terminal window in Visual Studio Code and navigate to the project's
+        root folder. Then, use the command: 
+        <div class="code-snippet">
+            dotnet run
+        </div>
+        to compile and execute the code.
+    </div>
+</div>
+
+<div class="topic">
+    <div class="title">Helpful Resources</div>
+    <a class="res-link" href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">
+        Visual Studio Code Download
+    </a>
+    <a class="res-link" href="https://dotnet.microsoft.com/en-us/download/dotnet" target="_blank" rel="noopener noreferrer">
+        .NET Core SDK Download
+    </a>
+    <a class="res-link" href="https://code.visualstudio.com/docs/languages/csharp" target="_blank" rel="noopener noreferrer">
+        Visual Studio Code: C# for Visual Studio Code
+    </a>
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Example 1</div>
+{% endblock %}
+
+{% block code %}
+<pre class="code" id="ex-1-code"><code class="language-c">
+using System;
+
+namespace HelloWorld {
+    class Program {
+        static void Main(string[] args) {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+</code></pre>
+{% endblock %}
+
+{% block output %}
+<pre class="code" id="ex-1-output"><code class="language-c">
+Hello World!
+</code></pre>
+{% endblock %}
