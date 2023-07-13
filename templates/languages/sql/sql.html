@@ -4,9 +4,56 @@
 
 {% block topic %}
 <div class="topic">
-    <div class="title">SQL</div>
-    <div class="description">A programming language</div>
-    <a class="more" href="{{  url_for('sql')  }}"><b>Learn SQL</b></a>
+    <div class="title">Structured Query Language (SQL) Tutorial</div>
+    <div class="description-left">
+        <p>
+            SQL is a widely adopted language in the database world, and its knowledge is crucial for working with relational
+            databases. It is supported by most relational database management systems, including MySQL, Oracle, PostgreSQL,
+            Microsoft SQL Server, and SQLite, among others. SQL provides a standardized and powerful means to interact with and
+            manage data, making it a fundamental skill for database administrators, data analysts, and software developers working
+            with databases.
+        </p>
+        <p>
+            <b>Database Management:</b> SQL is a programming language used for managing relational databases. It provides a standardized
+            way to interact with databases, allowing users to define, manipulate, and query data stored in relational database
+            management systems (RDBMS).
+        </p>
+        <p>
+            <b>Data Definition Language (DDL):</b> SQL includes commands for defining the structure of a database. With DDL statements such
+            as CREATE, ALTER, and DROP, you can create tables, modify their structure, define constraints, and manage database
+            objects like indexes and views.
+        </p>
+        <p>
+            <b>Data Manipulation Language (DML):</b> SQL supports DML statements for manipulating and querying data within the database.
+            Common DML commands include SELECT (for retrieving data), INSERT (for adding new records), UPDATE (for modifying
+            existing records), and DELETE (for removing records).
+        </p>
+        <p>
+            <b>Data Querying:</b> SQL's primary strength lies in its ability to query data. The SELECT statement allows you to retrieve
+            specific data from one or more tables based on conditions, perform aggregations, sorting, filtering, and joining tables
+            together to retrieve meaningful information.
+        </p>
+        <p>
+            <b>Data Integrity and Constraints:</b> SQL provides mechanisms for maintaining data integrity through constraints. You can
+            enforce rules on columns or tables, such as unique values (UNIQUE constraint), referential integrity (FOREIGN KEY
+            constraint), and data validation (CHECK constraint). These constraints help ensure data accuracy and consistency.
+        </p>
+        <p>
+            <b>Database Administration:</b> SQL is used for database administration tasks such as creating and managing database users,
+            granting and revoking permissions, and performing backups and restores. Administrative tasks are typically performed
+            using specialized SQL statements and commands.
+        </p>
+        <p>
+            <b>Stored Procedures and Functions:</b> SQL supports the creation of stored procedures and functions, which are pre-compiled
+            database programs that can be executed on the server. These programs encapsulate business logic, improve performance,
+            and enhance code reusability.
+        </p>
+        <p>
+            <b>Data Analysis and Reporting:</b> SQL is commonly used for data analysis and reporting tasks. By combining SQL queries with
+            other tools like reporting frameworks, business intelligence (BI) tools, or data analysis libraries, you can extract,
+            transform, and visualize data to derive insights and generate reports.
+        </p>
+    </div>
 </div>
 {% endblock %}
 
