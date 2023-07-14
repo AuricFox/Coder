@@ -1,0 +1,255 @@
+{% extends "languages/c/c_base.html" %}
+
+{% block title %}C Data Types{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title">Data Types</div>
+    <div class="description-left">
+        <p>
+            In the C programming language, data types are used to specify the type of data that variables can hold. The choice of
+            data type depends on the nature of the data and the operations that need to be performed on it. C provides several
+            built-in data types, which can be broadly classified into the following categories:
+        </p>
+        <p>
+            <b>Integer Types:</b> Integer types represent whole numbers (positive, negative, or zero) without any fractional or decimal
+            part. The size of integer types can vary across different systems. Common integer types in C include:
+            <ul>
+                <li>int: Used to store integers within a specified range (typically 32 bits).</li>
+                <li>short: Short integer type, usually smaller than int (typically 16 bits).</li>
+                <li>long: Long integer type, often larger than int (typically 32 or 64 bits).</li>
+                <li>char: Used to store small integers or characters (typically 8 bits).</li>
+            </ul>
+        </p>
+        <p>    
+            <b>Floating-Point Types:</b> Floating-point types are used to represent real numbers with fractional parts. They can represent
+            both positive and negative values. Common floating-point types in C include:
+            
+            <ul>
+                <li>float: Single-precision floating-point type (typically 32 bits).</li>
+                <li>double: Double-precision floating-point type (typically 64 bits).</li>
+            </ul>
+        </p>
+        <p>
+            <b>Character Types:</b> Character types represent individual characters or small integers. In C, characters are enclosed in
+            single quotes ('). Common character types include:
+            <ul>
+                <li>char: Used to store individual characters (typically 8 bits).</li>
+            </ul>
+        </p>
+        <p>
+            <b>Void Type:</b> The void type represents the absence of a value. It is often used to indicate that a function does not return
+            a value or to define generic pointers.
+        </p>
+        <p>
+            <b>Derived Types:</b> C also allows the creation of derived types through structures, unions, and enumerations.
+            <div>
+            <ul>
+                <li>struct: A structure is a composite data type that groups together related data items of different types.</li>
+                <li>
+                    union: A union is a data type that allows storing different types of data in the same memory location. 
+                    When a value is assigned to one member of a union, the other member may not hold a meaningful or predictable value. It's
+                    important to note that accessing the inactive member of a union can lead to incorrect results or unexpected behavior.
+                </li>
+                <li>enum: An enumeration is a user-defined data type that consists of named values called enumerators.</li>
+            </ul>
+            </div>
+        </p>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Integers</div>
+<div class="sel-code" id="ex-2">Floats</div>
+<div class="sel-code" id="ex-3">Characters</div>
+<div class="sel-code" id="ex-4">Void</div>
+<div class="sel-code" id="ex-5">Struct</div>
+<div class="sel-code" id="ex-6">Union</div>
+<div class="sel-code" id="ex-7">Enum</div>
+{% endblock %}
+
+{% block code %}
+<pre class="code" id="ex-1-code"><code class="language-c">
+int num = 5;
+short shortNum = 1500;
+long longNum = 50000L;
+char charNum = 65;
+
+printf("Integer: %d\n", num);
+printf("Short number: %hd\n", num);
+printf("Long number: %ld\n", num);
+printf("Character: %c\n", num);
+</code></pre>
+
+<pre class="code" id="ex-2-code"><code class="language-c">
+float floatNum = 5.99;
+double doubleNum = 19.98;
+
+printf("Floating Point: %f\n", floatNum);
+printf("Double Floating Point: %lf\n", doubleNum);
+</code></pre>
+
+<pre class="code" id="ex-3-code"><code class="language-c">
+char charNum = 65;
+char character = b;
+
+printf("Char number: %c\n", charNum);
+printf("Character: %c\n", character);
+</code></pre>
+
+<pre class="code" id="ex-4-code"><code class="language-c">
+void greet() {
+    printf("Hello, World!\n");
+}
+
+int main() {
+    greet(); // Calling the greet function
+    return 0;
+}
+</code></pre>
+
+<pre class="code" id="ex-5-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+// Define a struct to represent a point in 2D space
+struct Point {
+    int x;
+    int y;
+};
+
+int main() {
+    // Create an instance of the Point struct
+    struct Point p1 = { 3, 5 };
+
+    // Access and modify the struct members
+    p1.x = 7;
+    p1.y = 9;
+
+    // Print the values of the struct members
+    printf("Coordinates: (%d, %d)\n", p1.x, p1.y);
+
+    return 0;
+}
+</code></pre>
+
+<pre class="code" id="ex-6-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+// Define a union to represent either an integer or a float
+union Number {
+    int intValue;
+    float floatValue;
+};
+
+int main() {
+    // Create an instance of the Number union
+    union Number num;
+
+    // Assign a value to the intValue member
+    num.intValue = 42;
+    printf("Integer value: %d\n", num.intValue);
+
+    // Assign a value to the floatValue member
+    num.floatValue = 3.14;
+    printf("Float value: %.2f\n", num.floatValue);
+
+    // Access the intValue member after assigning a float value
+    printf("Integer value after assigning float: %d\n", num.intValue);
+
+    return 0;
+}
+</code></pre>
+
+<pre class="code" id="ex-7-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+// Define an enum to represent weekdays
+enum Weekday {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+};
+
+int main() {
+    // Declare a variable of the Weekday enum type
+    enum Weekday today;
+
+    // Assign a value to the variable
+    today = Wednesday;
+
+    // Print the value of today
+    printf("Today is ");
+
+    switch (today) {
+        case Monday:
+            printf("Monday");
+            break;
+        case Tuesday:
+            printf("Tuesday");
+            break;
+        case Wednesday:
+            printf("Wednesday");
+            break;
+        case Thursday:
+            printf("Thursday");
+            break;
+        case Friday:
+            printf("Friday");
+            break;
+        case Saturday:
+            printf("Saturday");
+            break;
+        case Sunday:
+            printf("Sunday");
+            break;
+    }
+
+    printf("\n");
+
+    return 0;
+}
+</code></pre>
+{% endblock %}
+
+{% block output %}
+<pre class="code" id="ex-1-output"><code class="language-c">
+Integer: 5
+Short number: 1500
+Long number: 50000
+Character: A
+</code></pre>
+
+<pre class="code" id="ex-2-output"><code class="language-c">
+Floating Point: 5.990000
+Double Floating Point: 19.980000
+</code></pre>
+
+<pre class="code" id="ex-3-output"><code class="language-c">
+Char number: A
+Character: b
+</code></pre>
+
+<pre class="code" id="ex-4-output"><code class="language-c">
+Hello, World!
+</code></pre>
+
+<pre class="code" id="ex-5-output"><code class="language-c">
+Coordinates: (7, 9)
+</code></pre>
+
+<pre class="code" id="ex-6-output"><code class="language-c">
+Integer value: 42
+Float value: 3.14
+Integer value after assigning float: undefined
+</code></pre>
+
+<pre class="code" id="ex-7-output"><code class="language-c">
+Today is Wednesday
+</code></pre>
+{% endblock %}

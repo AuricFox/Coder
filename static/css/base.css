@@ -353,9 +353,14 @@ button[type="submit"]:hover {
     border-radius: 4px;
 }
 
-.description li,
-.description-left li {
+.description ol li,
+.description-left ol li {
     margin: 1rem 0 1rem 0;
+}
+
+.description ul li,
+.description-left ul li {
+    margin: 0 2rem 0 2rem;
 }
 
 .sub-topic {
