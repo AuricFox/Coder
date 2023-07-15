@@ -135,6 +135,10 @@ def c_route(pagename):
         return render_template('languages/c/c_comments.html', nav_id="lang-page")
     elif pagename == 'Data_Types':
         return render_template('languages/c/c_data_types.html', nav_id="lang-page")
+    elif pagename == 'Constants':
+        return render_template('languages/c/c_constants.html', nav_id="lang-page")
+    elif pagename == 'Operators':
+        return render_template('languages/c/c_operators.html', nav_id="lang-page")
     else:
         return render_template('404.html', nav_id="lang-page")
 

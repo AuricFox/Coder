@@ -1,0 +1,180 @@
+{% extends "languages/c/c_base.html" %}
+
+{% block title %}C Constants{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title">Constants</div>
+    <div class="description-left">
+        <p>
+            In the C programming language, constants are fixed values that cannot be changed during the execution of a program. They
+            provide a way to represent fixed or immutable data in your code. Constants can be categorized into two main types:
+            literal constants and symbolic constants.
+        </p>
+        <p>
+            <b>Literal Constants:</b> Literal constants are fixed values directly written in the code. There are several types of literal 
+            constants in C:
+            <ul>
+                <li>
+                    Integer Constants: Integer constants represent whole numbers and can be written in decimal, octal, or hexadecimal
+                    formats. For example: 42, 075, 0x2A.
+                </li>
+                <li>
+                    Floating-Point Constants: Floating-point constants represent real numbers with fractional parts. They can be written in
+                    decimal or exponential notation. For example: 3.14, 6.02e23.
+                </li>
+                <li>
+                    Character Constants: Character constants represent individual characters enclosed in single quotes. For example: 'A',
+                    '7', '\n'.
+                </li>
+                <li>
+                    String Constants: String constants represent a sequence of characters enclosed in double quotes. For example: "Hello,
+                    world!", "String Constant".
+                </li>
+                <li>
+                    Enumeration Constants: Enumeration constants are defined as part of an enumeration (enum). They represent named values
+                    within the enumeration. For example: Monday, Red, YES.
+                </li>
+            </ul>
+        </p>
+        <p>
+            <b>Symbolic Constants:</b> Symbolic constants are represented using identifiers (variable names) and are typically defined 
+            using the #define preprocessor directive or const keyword. They provide a way to assign a name to a constant value, making 
+            the code more readable and maintainable. Symbolic constants are commonly used when you have a value that appears multiple 
+            times in your code and you want to give it a meaningful name.
+            <ul>
+                <li>
+                    #define Preprocessor Directive: The #define directive allows you to define symbolic constants using the following
+                    syntax: #define constant_name value. For example: #define PI 3.14159, #define MAX_VALUE 100.
+                </li>
+                <li>
+                    const Keyword: The const keyword is used to declare constants with a specific type. These constants are defined like
+                    variables, but their values cannot be modified once initialized. For example: const int MAX_VALUE = 100, const float PI
+                    = 3.14159.
+                </li>
+            </ul>
+        </p>
+        <p>
+            Constants are useful for providing meaningful names to fixed values in your code, improving code readability, and making
+            it easier to maintain and update values throughout the program. By using constants, you can avoid the need to hardcode
+            values directly in your code, allowing for more flexibility and easier modification of those values when needed.
+        </p>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Literal Constants</div>
+<div class="sel-code" id="ex-2">Symbolic Constants</div>
+{% endblock %}
+
+{% block code %}
+<pre class="code" id="ex-1-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+int main() {
+    // Integer Constants
+    int age = 25;
+    printf("My age is %d\n", age);
+
+    // Floating-Point Constants
+    float pi = 3.14159;
+    printf("The value of pi is %.2f\n", pi);
+
+    // Character Constants
+    char grade = 'A';
+    printf("My grade is %c\n", grade);
+
+    // String Constants
+    char message[] = "Hello, World!";
+    printf("Message: %s\n", message);
+
+    // Enumeration Constants
+    enum Weekday {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
+    };
+    enum Weekday today = Wednesday;
+    printf("Today is ");
+
+    switch (today) {
+        case Monday:
+            printf("Monday");
+            break;
+        case Tuesday:
+            printf("Tuesday");
+            break;
+        case Wednesday:
+            printf("Wednesday");
+            break;
+        case Thursday:
+            printf("Thursday");
+            break;
+        case Friday:
+            printf("Friday");
+            break;
+        case Saturday:
+            printf("Saturday");
+            break;
+        case Sunday:
+            printf("Sunday");
+            break;
+    }
+
+    printf("\n");
+    return 0;
+}
+</code></pre>
+
+<pre class="code" id="ex-2-code"><code class="language-c">
+#include <stdio.h>
+
+#define PI 3.14159
+#define MAX_VALUE 100
+
+int main() {
+    // Using symbolic constants defined using #define
+    float radius = 5.0;
+    float circumference = 2 * PI * radius;
+    printf("The circumference of the circle is %.2f\n", circumference);
+
+    int score = 85;
+    if (score > MAX_VALUE) {
+        printf("The score is above the maximum value.\n");
+    } else {
+        printf("The score is within the acceptable range.\n");
+    }
+
+    // Using symbolic constants defined using const keyword
+    const int MIN_VALUE = 0;
+    const int MAX_LENGTH = 255;
+    printf("The minimum value is %d\n", MIN_VALUE);
+    printf("The maximum length is %d\n", MAX_LENGTH);
+
+    return 0;
+}
+</code></pre>
+{% endblock %}
+
+{% block output %}
+<pre class="code" id="ex-1-output"><code class="language-c">
+My age is 25
+The value of pi is 3.14
+My grade is A 
+Message: Hello World!
+Today is Wednesday
+</code></pre>
+
+<pre class="code" id="ex-2-output"><code class="language-c">
+The circumference of the circle is 31.41
+The score is within the acceptable range.
+The minimum value is 0
+The maximum length is 255
+</code></pre>
+{% endblock %}
