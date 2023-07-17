@@ -98,7 +98,7 @@
                 <tr>
                     <td>!=</td>
                     <td>Not equal to</td>
-                    <td>Check if values a not the same</td>
+                    <td>Check if values are not the same</td>
                     <td>x != y</td>
                 </tr>
                 <tr>
@@ -350,21 +350,201 @@
 {% endblock %}
 
 {% block examples %}
-<div class="sel-code" id="ex-1">Example 1</div>
+<div class="sel-code" id="ex-1">Arithmetic</div>
+<div class="sel-code" id="ex-2">Relational</div>
+<div class="sel-code" id="ex-3">Logical</div>
+<div class="sel-code" id="ex-4">Assignment</div>
+<div class="sel-code" id="ex-5">Bitwise</div>
+<div class="sel-code" id="ex-6">Conditional</div>
+<div class="sel-code" id="ex-7">Other</div>
 {% endblock %}
 
 {% block code %}
 <pre class="code" id="ex-1-code"><code class="language-c">
-// This is a one-line comment
+#include &#60;stdio.h&#62;
 
-/*
-This is a multi-line comment
-*/
+int main(){
+    int addNum = 5 + 5;
+    printf("Addition: %d\n", addNum);
+
+    int subNum = 16 - 7;
+    printf("Subtraction: %d\n", subNum);
+
+    int mutNum = 6 * 7;
+    printf("Multiplication: %d\n", mutNum);
+
+    int divNum = 16 / 4;
+    printf("Division: %d\n", divNum);
+
+    int modNum = 7 % 4;
+    printf("Modulo: %d\n", modNum);
+
+    printf("Increment: %d\n", ++addNum);
+    printf("Decrement: %d\n", --subNum);
+
+    return 0;
+}
+</code></pre>
+<pre class="code" id="ex-2-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+int main(){
+    // In C 1 is True and 0 is False
+    printf("5 is equal to 6: %d\n", 5 == 6);
+    printf("5 is not equal to 6: %d\n", 5 != 6);
+
+    printf("20 is greater than 7: %d\n", 20 &#62; 7);
+    printf("20 is less than 7: %d\n", 20 &#60; 7);
+
+    printf("54 is greater than or equal to 99: %d\n", 54 &#62;= 99);
+    printf("54 is less than or equal to 99: %d\n", 54 &#60;= 99);
+
+    return 0;
+}
+</code></pre>
+<pre class="code" id="ex-3-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+int main(){
+    printf("8 is greater than 6 AND 6 equals 7: %d\n", 8 &#62; 6 && 6 == 7);
+    printf("8 is greater than 6 OR 6 equals 7: %d\n", 8 &#62; 6 || 6 == 7);
+    printf("NOT 8 is greater than 6 AND 6 equals 7: %d\n", !(8 &#62; 6 && 6 == 7));
+
+    return 0;
+}
+</code></pre>
+<pre class="code" id="ex-4-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+int main(){
+    int x = 5;
+    printf("x: %d\n", x);
+
+    x += 5;
+    printf("x += 5: %d\n", x);
+
+    x -= 5;
+    printf("x -= 5: %d\n", x);
+
+    x *= 5;
+    printf("x *= 5: %d\n", x);
+
+    x /= 5;
+    printf("x /= 5: %d\n", x);
+
+    x %= 5;
+    printf("x %= 5: %d\n", x);
+
+    return 0;
+}
+</code></pre>
+<pre class="code" id="ex-5-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+int main(){
+    unsigned int a = 5; // binary: 0101
+
+    a &= 3; // binary: 0011
+    printf("a &= 3: %d\n", a); // binary 0001
+
+    a |= 3;
+    printf("a |= 3: %d\n", a); // binary 0011
+
+    a ^= 3;
+    printf("a ^= 3: %d\n", a); // binary 0000
+
+    a = ~3;
+    printf("a ~= 3: %d\n", a); // binary 1100
+
+    a &#62;&#62;= 3;
+    printf("a &#62;&#62;= 3: %d\n", a); // binary 0001
+
+    a &#60;&#60;= 3;
+    printf("a &#60;&#60;= 3: %d\n", a); // binary 1000
+
+    return 0;
+}
+</code></pre>
+<pre class="code" id="ex-6-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+int main(){
+    int num = 42;
+    const char* message = (num > 50) ? "Greater than 50" : "Less than or equal to 50";
+    
+    printf("%s\n", message);
+
+    return 0;
+}
+</code></pre>
+<pre class="code" id="ex-7-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+int main(){
+    int num = 42;
+    int* ptr = &num; // Assigns the address of 'num' to 'ptr'
+
+    int value = *ptr; // Dereferences 'ptr' to get the value at the address
+    printf("Value: %d\n", value);
+
+    size_t size = sizeof(num); // Returns the size of 'num' in bytes
+    printf("Size: %zu\n", size);
+
+    int a = 2, b = 3, c;
+    c = (a++, b++, a + b); // Uses comma operator to increment 'a' and 'b'
+    printf("c: %d\n", c);
+
+    return 0;
+}
 </code></pre>
 {% endblock %}
 
 {% block output %}
 <pre class="code" id="ex-1-output"><code class="language-c">
-None
+Addition: 10
+Subtraction: 9
+Multiplication: 42
+Division: 4
+Modulo: 3
+Increment: 11
+Decrement: 8
+</code></pre>
+<pre class="code" id="ex-2-output"><code class="language-c">
+// In C 1 is True and 0 is False
+5 is equal to 6: 0
+5 is not equal to 6: 1
+20 is greater than 7: 1
+20 is less than 7: 0
+54 is greater than or equal to 99: 0
+54 is less than or equal to 99: 1
+</code></pre>
+<pre class="code" id="ex-3-output"><code class="language-c">
+8 is greater than 6 AND 6 equals 7: 0
+8 is greater than 6 OR 6 equals 7: 1
+NOT 8 is greater than 6 AND 6 equals 7: 1
+</code></pre>
+<pre class="code" id="ex-4-output"><code class="language-c">
+5
+x += 5: 10
+x -= 5: 5
+x *= 5: 25
+x /= 5: 5
+x %= 5: 0
+</code></pre>
+<pre class="code" id="ex-5-output"><code class="language-c">
+a &= 3: 1
+a |= 3: 3
+a ^= 3: 0
+a ~= 3: 12
+a &#62;&#62;= 3: 1
+a &#60;&#60;= 3: 8
+</code></pre>
+<pre class="code" id="ex-6-output"><code class="language-c">
+Less than or equal to 50
+</code></pre>
+<pre class="code" id="ex-7-output"><code class="language-c">
+Value: 42
+Size: 4
+c: 6
 </code></pre>
 {% endblock %}
