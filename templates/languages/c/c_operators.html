@@ -90,15 +90,262 @@
             </thead>
             <tbody>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>==</td>
+                    <td>Equal to</td>
+                    <td>Check if values are the same</td>
+                    <td>x == y</td>
+                </tr>
+                <tr>
+                    <td>!=</td>
+                    <td>Not equal to</td>
+                    <td>Check if values a not the same</td>
+                    <td>x != y</td>
+                </tr>
+                <tr>
+                    <td>&#62;</td>
+                    <td>Greater than</td>
+                    <td>Check if one value is greater than the other</td>
+                    <td>x &#62; y</td>
+                </tr>
+                <tr>
+                    <td>&#60;</td>
+                    <td>Less than</td>
+                    <td>Check if one value is less than the other</td>
+                    <td>x &#60;</td>
+                </tr>
+                <tr>
+                    <td>&#62;=</td>
+                    <td>Greater than or equal to</td>
+                    <td>Check if one value is greater than or equal the other</td>
+                    <td>x &#62;= y</td>
+                </tr>
+                <tr>
+                    <td>&#60;=</td>
+                    <td>Less than or equal to</td>
+                    <td>Check if one value is less than or equla to the other</td>
+                    <td>x &#60;= y</td>
                 </tr>
             </tbody>
         </table>
     </div>
-
+</div>
+<div class="topic">
+    <div class="title">Logical Operators</div>
+    <div class="description">
+        <table class="center-table">
+            <thead>
+                <th>Operator</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Example</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&&</td>
+                    <td>And</td>
+                    <td>True if both statements are true</td>
+                    <td>x && y</td>
+                </tr>
+                <tr>
+                    <td>||</td>
+                    <td>Or</td>
+                    <td>True if one statement is true</td>
+                    <td>x || y</td>
+                </tr>
+                <tr>
+                    <td>!</td>
+                    <td>Not</td>
+                    <td>Opposite of the statement</td>
+                    <td>!x</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="topic">
+    <div class="title">Assignment Operators</div>
+    <div class="description">
+        <table class="center-table">
+            <thead>
+                <th>Operator</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Example</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>=</td>
+                    <td>Simple assignment</td>
+                    <td>Set variable to value</td>
+                    <td>x = 5</td>
+                </tr>
+                <tr>
+                    <td>+=</td>
+                    <td>Addition and assignment</td>
+                    <td>Add value to variable</td>
+                    <td>x += 5</td>
+                </tr>
+                <tr>
+                    <td>-=</td>
+                    <td>Subtraction and assignment</td>
+                    <td>Subtract value from variable</td>
+                    <td>x -= 5</td>
+                </tr>
+                <tr>
+                    <td>*=</td>
+                    <td>Multiplication and assignment</td>
+                    <td>Multiply variable by value</td>
+                    <td>x *= 5</td>
+                </tr>
+                <tr>
+                    <td>/=</td>
+                    <td>Division and assignment</td>
+                    <td>Divide variable by value</td>
+                    <td>x /= 5</td>
+                </tr>
+                <tr>
+                    <td>%=</td>
+                    <td>Modulo and assignment</td>
+                    <td>Set the variable to the remainder</td>
+                    <td>x %= 5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="topic">
+    <div class="title">Bitwise Operators</div>
+    <div class="description">
+        <table class="center-table">
+            <thead>
+                <th>Operator</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Example</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&=</td>
+                    <td>Bitwise and</td>
+                    <td>
+                        Performs a bitwise AND operation between the corresponding bits of two operands. The result is 1 if both bits
+                        are 1,
+                        otherwise, the result is 0.
+                    </td>
+                    <td>x &= 5</td>
+                </tr>
+                <tr>
+                    <td>|=</td>
+                    <td>Bitwise or</td>
+                    <td>
+                        Performs a bitwise OR operation between the corresponding bits of two operands. The result is 1
+                        if at least one of the bits is 1, otherwise, the result is 0.
+                    </td>
+                    <td>x |= 5</td>
+                </tr>
+                <tr>
+                    <td>^=</td>
+                    <td>Bitwise XOR</td>
+                    <td>
+                        performs a bitwise XOR operation between the corresponding bits of two operands. The result is 1 if the bits are
+                        different, otherwise, the result is 0.
+                    </td>
+                    <td>x ^= 5</td>
+                </tr>
+                <tr>
+                    <td>~=</td>
+                    <td>Bitwise not</td>
+                    <td>
+                        performs a bitwise inversion of each bit. It flips each 0 to 1 and each 1 to 0.
+                    </td>
+                    <td>x ~= 5</td>
+                </tr>
+                <tr>
+                    <td>&#62;&#62;=</td>
+                    <td>Right shift</td>
+                    <td>
+                        shifts the bits of the left operand to the right by a specified number of positions. Bits shifted beyond the
+                        rightmost
+                        position are discarded.
+                    </td>
+                    <td>x &#62;&#62;= 5</td>
+                </tr>
+                <tr>
+                    <td>&#60;&#60;=</td>
+                    <td>Left shift</td>
+                    <td>
+                        shifts the bits of the left operand to the left by a specified number of positions. Bits shifted beyond the
+                        leftmost
+                        position are discarded, and zero bits are filled in from the right.
+                    </td>
+                    <td>x &#60;&#60;= 5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="topic">
+    <div class="title">Other Operators</div>
+    <div class="description">
+        <table class="center-table">
+            <thead>
+                <th>Operator</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Example</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&</td>
+                    <td>Address-of</td>
+                    <td>Returns the memory address where the variable is stored.</td>
+                    <td>int* ptr = &x;</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>Pointer dereference</td>
+                    <td>Used to access the value stored at a specific memory address pointed to by a pointer variable.</td>
+                    <td>int value = *ptr;</td>
+                </tr>
+                <tr>
+                    <td>sizeof</td>
+                    <td>Sizeof</td>
+                    <td>Returns the size in bytes of a type or an expression.</td>
+                    <td>size_t size = sizeof(value);</td>
+                </tr>
+                <tr>
+                    <td>,</td>
+                    <td>Comma</td>
+                    <td>
+                        Used to separate expressions. It evaluates each expression from left to right and returns the result of the rightmost
+                        expression.
+                    </td>
+                    <td>c = (a++, b++, a + b);</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="topic">
+    <div class="title">Conditional Operators</div>
+    <div class="description-left">
+        <p>
+            The conditional operator, also known as the ternary operator, is a unique operator in C that allows you to write a
+            concise conditional expression. It provides a shorthand way to make a decision based on a condition.
+        </p>
+        <div class="code-snippet">
+            condition ? expression1 : expression2
+        </div>
+        <ul>
+            <li>
+                The condition is evaluated. If the condition is true (non-zero), then expression1 is evaluated and becomes the result of
+                the entire expression.
+            </li>
+            <li>
+                If the condition is false (zero), then expression2 is evaluated and becomes the result of the entire expression.
+            </li>
+        </ul>
+    </div>
 </div>
 {% endblock %}
 
