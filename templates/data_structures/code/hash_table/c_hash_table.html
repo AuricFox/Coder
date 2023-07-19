@@ -1,0 +1,138 @@
+#include &#60;stdio.h&#62;
+#include &#60;stdlib.h&#62;
+
+// Size of the hash table
+#define SIZE 20
+
+// Stores data of each node
+typedef struct Node{
+    int key;
+    int data;
+    struct Node *next;
+}Node;
+
+// Hash Table that stores all the nodes
+typedef struct HashTable{
+    struct Node *ht[SIZE];
+}HashTable;
+
+void initHashTable(HashTable *table){
+    for(int i = 0; i &#60; SIZE; i++){
+        table-&#62;ht[i] = NULL;
+    }
+}
+
+void addNode(int data, HashTable *table){
+    // Hash function
+    int key = data % SIZE;
+    // Initializing memory for node
+    Node *node = malloc(sizeof(Node));
+
+    node-&#62;key = key;
+    node-&#62;data = data;
+    node-&#62;next = NULL;
+    
+    if(table-&#62;ht[key] == NULL){// No entries yet
+        table-&#62;ht[key] = node;
+    } else{ // Location is populated (collision)
+        Node *head = table-&#62;ht[key];
+        // Loop thru the list until the end is reached
+        while (head-&#62;next != NULL){
+            // Move pointer to the next node
+            head = head-&#62;next;
+        }
+        // Add the new data to the table
+        head-&#62;next = node;
+    }
+}
+
+void removeNode(int data, HashTable *table){
+    // Hash function
+    int key = data % SIZE;
+    Node *head = table-&#62;ht[key];
+
+    // Delete first element
+    if(head != NULL && head-&#62;data == data){
+        Node *node = head;
+        table-&#62;ht[key] = head-&#62;next;
+        // Free node from memory
+        free(node);
+    } 
+    else if (head != NULL && head-&#62;data != data){
+        // loop to element needing deletion
+        while (head-&#62;next != NULL) {
+            // Remove this element from the table
+            if (head-&#62;next-&#62;data == data){
+                Node *node = head-&#62;next;
+                head-&#62;next = head-&#62;next-&#62;next;
+                // Free node from memeory
+                free(node);
+                break;
+            }
+            // Move pointer to the next node
+            head = head-&#62;next;
+        }
+    }
+}
+
+// Get first instantance of the key
+int get(int key, HashTable *table){
+    int data = table-&#62;ht[key]-&#62;data;
+    return data;
+}
+
+// Get all instantances of the key
+int* getAll(int key, HashTable *table){
+    int size = 0;
+    Node *head = table-&#62;ht[key];
+
+    // Count the number of nodes in the list
+    while (head != NULL){
+        size++;
+        head = head-&#62;next;
+    }
+
+    // Intialize data to be returned
+    int* data = malloc(size * sizeof(int));
+    // Reset head
+    head = table-&#62;ht[key];
+    for(int i = 0; i &#60; size; i++){
+        data[i] = head-&#62;data;
+        head = head-&#62;next;
+    }
+
+    return data;
+}
+
+int main(){
+    HashTable *table = malloc(sizeof(HashTable));
+    initHashTable(table);
+
+    // Adding nodes to the hash table
+    printf("Element(s) added:");
+    for(int i = 0; i &#60; SIZE; i++) {
+        addNode(i, table);
+        printf(" %d", i);
+    }
+    printf("\n");
+
+    // Adding nodes that collide to the hash table
+    printf("Element(s) collided:");
+    for (int i = 20; i &#60; SIZE+20; i++){
+        addNode(i, table);
+        printf(" %d", i);
+    }
+    printf("\n");
+
+    int k = get(3, table);
+    printf("Getting %d from key 3\n", k);
+
+    int *j = getAll(3, table);
+    printf("All elements retreived from key 3:");
+    int length = sizeof(j) / sizeof(j[0]);
+    for(int i = 0; i &#60; length; i++){
+        printf(" %d", j[i]);
+    }
+
+    return 0;
+}
