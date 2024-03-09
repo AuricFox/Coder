@@ -1,53 +1,47 @@
-# Full-Stack Website Practice
+# Coder
 
-This is a personal project designed to help me refresh what I have learned in school. The topics addressed range from computer science, math, chemistry, and engineering. Other features include tools I have built while in college or topics I was interested in. These include bioinformatics tools, tax calculation, and more.
+Coder is a personal project designed to help me practice and experiment with building a full-stack application and experiment with other concepts. The topics focus primarily on computer science and mathematics. Other features include tools I have built or frameworks I am experimenting with.
 
-# Server-side
+## Getting Started
 
-This section documents the setup and execution the server.
+To get started, follow these steps:
 
-## Server Setup
+1. **Clone the Repository:**
+    ```
+    git clone https://github.com/AuricFox/Coder.git
+    ```
 
-This server is run using the FLASK framework used in Python, But an envirnment must first be setup.
+2. **Navigate to the Project Directory:**
+    ```
+    cd flask_template
+    ```
 
-STEP 1: cd into working directory that contains your project  
+3. **Setup Environment:**
+    ```
+    pip install virtualenv  
+    virtualenv env
 
-STEP 2: Install env module: `pip install virtualenv`  
+    .\env\Scripts\activate      # Windows
+    source env/bin/activate     # Mac OS
+    ```
 
-STEP 3: Activate env:  
-```
-C: virtualenv env               # env is the environment file name
-C: env\Scripts\activate     # Windows
-C: source env/bin/activate      # Mac
-```  
+4. **Install Dependencies:**
+    ```
+    (env) pip install flask python-dotenv
+    ```
 
-STEP 4: Install flask in env:  
-```
-(env) pip install flask
-```  
+5. **Run Server:**
+    ```
+    (env) python wsgi.py
+    ```
 
+    The server will start running, and you can access the application by navigating to `http://localhost:5000` in your web browser. NOTE: Restart the server if any changes are made to any of the py or html files.
 
-## Running Server
+6. **Deactive Environment:**
+    ```
+    (env) deactivate
+    ```
 
-This is a development server so everything will be running on localhost (possibly on local network).
+## License
 
-The env needs to be activated to run:  
-```
-C: env\Scripts\activate     # Windows
-C: source env/bin/activate      # Mac
-```
-
-Execute server program:  
-```
-(env) python server.py
-```
-
-NOTE: Restart the server if any changes are made to any of the files.
-
-Deactivate Environment:  
-```
-(env) deactivate
-```
-
-
-## Client Side
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE](LICENSE) file for details.
