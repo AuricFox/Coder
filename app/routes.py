@@ -1,8 +1,7 @@
-from flask import Flask, request, redirect, render_template, url_for
+from flask import request, redirect, render_template, url_for
+from flask import current_app as app
 
 import os, sys
-
-app = Flask(__name__, static_folder='static')
 
 # ====================================================================
 # Main Pages
