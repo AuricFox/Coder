@@ -26,16 +26,6 @@ def data_structures():
 def languages():
     return render_template('languages.html', nav_id="lang-page")
 
-# Accessing algorithms Page
-@bp.route("/algorithms")
-def algorithms():
-    return render_template('algorithms.html', nav_id="algo-page")
-
-# Accessing math Page
-@bp.route("/math")
-def math():
-    return render_template('math.html', nav_id="math-page")
-
 # Accessing useful_tools Page
 @bp.route("/useful_tools")
 def useful_tools():
