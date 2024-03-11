@@ -14,7 +14,18 @@ def init_app():
     app.config.from_object('config.DevConfig')
 
     with app.app_context():
-        # NOTE: Include routes and custom modules here
-        from .main import routes
+        # Import routes and custom modules
+        from app.main import bp as main_bp
+        from app.data_structures import bp as data_structures_bp
+        from app.data_types import bp as data_types_bp
+        from app.languages import bp as languages_bp
+        from app.useful_tools import bp as useful_tools_bp
+
+        # Register blueprint to link routes
+        app.register_blueprint(main_bp)
+        app.register_blueprint(data_structures_bp)
+        app.register_blueprint(data_types_bp)
+        app.register_blueprint(languages_bp)
+        app.register_blueprint(useful_tools_bp)
 
     return app
