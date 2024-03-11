@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="title" content="">
         <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/prism.css') }}">
@@ -17,7 +18,7 @@
             <!--Main Navigation Tile-->
             <div id="nav-bar">
                 <ul class="nav">
-                    <li><a href="{{  url_for('main.home')  }}" class="{% if nav_id == 'home-page' %}active{% endif %}">Home</a></li>
+                    <li><a href="{{  url_for('main.index')  }}" class="{% if nav_id == 'home-page' %}active{% endif %}">Home</a></li>
                     <li><div id="data-pages" class="{% if nav_id == 'data-page' %}active{% endif %}">Data Types</div></li>
                     <li><div id="struct-pages" class="{% if nav_id == 'struct-page' %}active{% endif %}">Data Structures</div></li>
                     <li><div id="lang-pages" class="{% if nav_id == 'lang-page' %}active{% endif %}">Programming Languages</div></li>

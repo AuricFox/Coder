@@ -8,7 +8,7 @@ from app.main import bp
 # Accessing Home page
 @bp.route("/")
 @bp.route("/home")
-def home():
+def index():
     return render_template('home.html', nav_id="home-page")
 
 # Accessing useful_tools Page
