@@ -1,4 +1,16 @@
 from flask import Flask
+import logging, os
+
+PATH = os.path.dirname(os.path.abspath(__file__))
+
+# Configure the logging object
+logging.basicConfig(
+    filename=os.path.join(PATH, '../logs/app.log'),
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s]: %(message)s'
+)
+
+LOGGER = logging.getLogger(__name__)
 
 def init_app():
     '''
