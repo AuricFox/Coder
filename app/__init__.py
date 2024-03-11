@@ -23,9 +23,9 @@ def init_app():
 
         # Register blueprint to link routes
         app.register_blueprint(main_bp)
-        app.register_blueprint(data_structures_bp)
-        app.register_blueprint(data_types_bp)
-        app.register_blueprint(languages_bp)
-        app.register_blueprint(useful_tools_bp)
+        app.register_blueprint(data_structures_bp, url_prefix='/data_structures')
+        app.register_blueprint(data_types_bp, url_prefix='/data_types')
+        app.register_blueprint(languages_bp, url_prefix='/languages')
+        app.register_blueprint(useful_tools_bp, url_prefix='/useful_tools')
 
     return app

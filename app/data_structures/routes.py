@@ -11,7 +11,7 @@ def index():
 # Subpages of Data Structures
 # ====================================================================
 
-@bp.route('/data_structures/<path:pagename>')
+@bp.route('/<path:pagename>')
 def datastructure_route(pagename):
     if pagename == 'Main':
         return render_template('data_structures.html', nav_id="struct-page")

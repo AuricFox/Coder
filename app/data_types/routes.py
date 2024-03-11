@@ -5,13 +5,13 @@ from app.data_types import bp
 
 @bp.route('/')
 def index():
-    return render_template('data_types.html', nav_id="struct-page")
+    return render_template('data_types.html', nav_id="data-page")
 
 # ====================================================================
 # Subpages of Data Types
 # ====================================================================
 
-@bp.route('/data_types/<path:pagename>')
+@bp.route('/<path:pagename>')
 def datatypes_route(pagename):
     if pagename == 'Main':
         return render_template('data_types.html', nav_id="data-page")

@@ -3,8 +3,8 @@ from app.languages import bp
 
 # Routes for pages associated with data structures
 
-@bp.route("/languages")
-def languages():
+@bp.route("/")
+def index():
     return render_template('languages.html', nav_id="lang-page")
 
 # ====================================================================
