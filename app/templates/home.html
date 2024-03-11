@@ -8,9 +8,10 @@
     <div class="description" id="tutorial-description">
         Learn about common computer science concepts such as data types and common terms.
     </div>
-    <div>
-        <a class="more" href="{{  url_for('data_types.index')  }}"><b>Data Types</b></a>
-        <a class="more" href="{{  url_for('data_structures.index')  }}"><b>Data Structures</b></a>
+    <div class="link-list">
+        <a class="link" href="{{  url_for('data_types.index')  }}">Data Types</a>
+        <a class="link" href="{{  url_for('data_structures.index')  }}">Data Structures</a>
+        <a class="link" href="#">General</a>
     </div>
 </div>
 
@@ -19,15 +20,28 @@
     <div class="description" id="lang-description">
         Learn about common programming languages in computer science and how to implement them.
     </div>
-    <a class="more" href="{{  url_for('languages.index')  }}"><b>Learn More</b></a>
+    <div class="link-list">
+        <a class="link" href="{{  url_for('languages.python')  }}">Learn Python</a>
+        <a class="link" href="{{  url_for('languages.c')  }}">Learn C</a>
+        <a class="link" href="{{  url_for('languages.cpp')  }}">Learn C++</a>
+        <a class="link" href="{{  url_for('languages.cs')  }}">Learn C#</a>
+        <a class="link" href="{{  url_for('languages.java')  }}">Learn Java</a>
+        <a class="link" href="{{  url_for('languages.javascript')  }}">Learn JavaScript</a>
+        <a class="link" href="{{  url_for('languages.html')  }}">Learn HTML</a>
+        <a class="link" href="{{  url_for('languages.css')  }}">Learn CSS</a>
+        <a class="link" href="{{  url_for('languages.sql')  }}">Learn SQL</a>
+    </div>
 </div>
 
 <div class="topic">
     <div class="title">Useful Tools</div>
     <div class="description" id="tools-description">
-        Use automated tools that simplify tedious tasks such as filling out tax returns, 
-        editing images, bioinformatics tools, and more.
+        Use automated tools that simplify tedious tasks.
     </div>
-    <a class="more" href="{{  url_for('useful_tools.index')  }}"><b>Learn More</b></a>
+    <div class="link-list">
+        <a class="link" href="#">Flask</a>
+        <a class="link" href="#">Git</a>
+        <a class="link" href="#">Other</a>
+    </div>
 </div>
 {% endblock %}

@@ -126,9 +126,17 @@
 
         <!--Contains All Content Tiles-->
         <div class="content">
-            {% block sidenav %}{% endblock %}
+            <!-- Side navigation content -->
+            <div class="side-nav">
+                {% block sidenav %}{% endblock %}
+            </div>
+            <!-- Main content section -->
             <div class="topics">
                 {% block content %}{% endblock %}
+            </div>
+            <!-- Extra content section-->
+            <div class="extras">
+                {% block extras %}{% endblock %}
             </div>
         </div>
 
