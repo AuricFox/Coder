@@ -15,6 +15,6 @@ def init_app():
 
     with app.app_context():
         # NOTE: Include routes and custom modules here
-        from . import routes
+        from .main import routes
 
     return app
