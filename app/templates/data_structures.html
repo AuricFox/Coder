@@ -10,7 +10,13 @@
         each element is attached to elements before and after it. These structures 
         can both be static (fixed memory size) or dynamic (memory size can change).
     </div>
-    <a class="link" href="{{  url_for('data_structures.index')  }}">Learn More</a>
+    <div class="link-list">
+        <a class="link" href="{{  url_for('data_structures.datastructure_route', pagename='arrays')  }}">Array</a>
+        <a class="link" href="{{  url_for('data_structures.datastructure_route', pagename='linked_lists')  }}">Linked List</a>
+        <a class="link" href="{{  url_for('data_structures.datastructure_route', pagename='queues')  }}">Queue</a>
+        <a class="link" href="{{  url_for('data_structures.datastructure_route', pagename='stacks')  }}">Stack</a>
+        <a class="link" href="{{  url_for('data_structures.datastructure_route', pagename='hash_tables')  }}">Hash Table</a>
+    </div>
 </div>
 
 <div class="topic">
@@ -20,7 +26,12 @@
         Unlike linear structures, trees can have multiple branches (children) and only 
         one previous element (parent).
     </div>
-    <a class="link" href="{{  url_for('data_structures.index')  }}">Learn More</a>
+    <div class="link-list">
+        <a class="link" href="#">Binary Search Tree</a>
+        <a class="link" href="#">B-Tree</a>
+        <a class="link" href="#">Red-Black Tree</a>
+        <a class="link" href="#">AVL Tree</a>
+    </div>
 </div>
 
 <div class="topic">
@@ -30,6 +41,10 @@
         and child elements. These connections can also form cycles where the pathways will 
         lead back to the original or starting element.
     </div>
-    <a class="link" href="{{  url_for('data_structures.index')  }}">Learn More</a>
+    <div class="link-list">
+        <a class="link" href="#">Undirected Graph</a>
+        <a class="link" href="#">Directed Graph</a>
+        <a class="link" href="#">Weighted Graph</a>
+    </div>
 </div>
 {% endblock %}
