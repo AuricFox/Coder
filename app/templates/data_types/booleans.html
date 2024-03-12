@@ -1,12 +1,110 @@
-{% extends "base.html" %}
+{% extends "data_types/code_base.html" %}
 
 {% block title %}Boolean{% endblock %}
 
-{% block content %}
+{% block topic %}
 <div class="topic" id="data-type">
     <div class="title">Boolean</div>
     <div class="description">
-        Logical data type used for true or false values.
+        a boolean is a data type that represents one of two possible values: true or false. Booleans are commonly used for logical 
+        operations and decisions in programming. They're fundamental for controlling the flow of execution in programs through 
+        conditional statements like if-else and while loops. Booleans can also be combined using logical operators such as AND, 
+        OR, and NOT to perform more complex decision-making.
     </div>
 </div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Python</div>
+<div class="sel-code" id="ex-2">C</div>
+<div class="sel-code" id="ex-3">C++</div>
+<div class="sel-code" id="ex-4">C#</div>
+<div class="sel-code" id="ex-5">Java</div>
+<div class="sel-code" id="ex-6">JavaScript</div>
+{% endblock %}
+
+{% block code %}
+<!-- Python code example -->
+<pre class="code" id="ex-1-code"><code class="language-py">
+# Booleans in Python
+
+a = True
+b = False
+
+if True:
+    print('True')
+else:
+    print('False')
+</code></pre>
+
+<!-- C code example -->
+<pre class="code" id="ex-2-code"><code class="language-c">
+// Booleans in C
+#include &#60;stdbool.h&#62;
+
+bool a = true;
+bool b = false;
+
+if (true) {
+    print("True");
+} else {
+    print("False");
+}
+</code></pre>
+
+<!-- C++ code example -->
+<pre class="code" id="ex-3-code"><code class="language-cpp">
+// Booleans in C++
+
+bool a = true;
+bool b = false;
+
+if (true) {
+    cout &#60;&#60; "True";
+} else {
+    cout &#60;&#60; "False";
+}
+</code></pre>
+
+<!-- C# code example -->
+<pre class="code" id="ex-4-code"><code class="language-cs">
+// Booleans in C#
+
+bool a = true;
+bool b = false;
+
+if (true) {
+    Console.WriteLine("True");
+} else {
+    Console.WriteLine("False");
+}
+</code></pre>
+
+<!-- Java code example -->
+<pre class="code" id="ex-5-code"><code class="language-java">
+// Booleans in Java
+
+boolean a = true;
+boolean b = false;
+
+if (true) {
+    System.out.println("True");
+} else {
+    System.out.println("False");
+}
+</code></pre>
+
+<!-- JavaScript code example -->
+<pre class="code" id="ex-6-code"><code class="language-js">
+// Booleans in JavaScript
+
+let a = true;
+let b = false;
+
+if (true) {
+    print("True");
+} else {
+    print("False");
+}
+</code></pre>
 {% endblock %}

@@ -1,12 +1,71 @@
-{% extends "base.html" %}
+{% extends "data_types/code_base.html" %}
 
 {% block title %}NULL{% endblock %}
 
-{% block content %}
+{% block topic %}
 <div class="topic" id="data-type">
     <div class="title">NULL</div>
     <div class="description">
-        Data type containing no value.
+        A "null" typically refers to a special value that indicates the absence of a meaningful value. It's used to represent the
+        absence of an object or a reference to a memory location.
     </div>
 </div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Python</div>
+<div class="sel-code" id="ex-2">C</div>
+<div class="sel-code" id="ex-3">C++</div>
+<div class="sel-code" id="ex-4">C#</div>
+<div class="sel-code" id="ex-5">Java</div>
+<div class="sel-code" id="ex-6">JavaScript</div>
+{% endblock %}
+
+{% block code %}
+<!-- Python code example -->
+<pre class="code" id="ex-1-code"><code class="language-py">
+# Nulls in Python
+
+a = None
+</code></pre>
+
+<!-- C code example -->
+<pre class="code" id="ex-2-code"><code class="language-c">
+// Nulls in C
+#include &#60;stdio.h&#62;
+#include &#60;stddef.h&#62;
+
+int *a = NULL;
+</code></pre>
+
+<!-- C++ code example -->
+<pre class="code" id="ex-3-code"><code class="language-cpp">
+// Nulls in C++
+// Null pointer
+
+int* a = nullptr;
+char* strPtr = nullptr;
+</code></pre>
+
+<!-- C# code example -->
+<pre class="code" id="ex-4-code"><code class="language-cs">
+// Nulls in C#
+
+string a = null;
+int? b = null;
+</code></pre>
+
+<!-- Java code example -->
+<pre class="code" id="ex-5-code"><code class="language-java">
+// Nulls in Java
+
+String a = null;
+</code></pre>
+
+<!-- JavaScript code example -->
+<pre class="code" id="ex-6-code"><code class="language-js">
+// Nulls in JavaScript
+
+let a = null;
+</code></pre>
 {% endblock %}
