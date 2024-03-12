@@ -18,7 +18,6 @@ def c():
 
 @bp.route('/c/<path:pagename>')
 def c_route(pagename):
-    print(pagename)
     if pagename == 'Main':
         return render_template('languages/c/c.html', nav_id="lang-page")
     elif pagename == 'Setup':
@@ -113,7 +112,6 @@ def python():
 
 @bp.route('/python/<path:pagename>')
 def python_route(pagename):
-    print(pagename)
     if pagename == 'Main':
         return render_template('languages/python/python.html', nav_id="lang-page")
     elif pagename == 'Setup':
