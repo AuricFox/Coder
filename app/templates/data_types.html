@@ -3,60 +3,62 @@
 {% block title %}Data Types{% endblock %}
 
 {% block content %}
-<div class="topic">
-    <div class="title">Integer</div>
-    <div class="description">
-        Numerical data types composed of whole numbers. They contain no fractions
-        or decimals.
+<div class="topic-tile-list">
+    <div class="topic-tile">
+        <div class="title">Integer</div>
+        <div class="description">
+            Numerical data types composed of whole numbers. They contain no fractions
+            or decimals.
+        </div>
+        <a class="link" href="{{  url_for('data_types.datatypes_route', pagename='integers')  }}">Learn More</a>
     </div>
-    <a class="link" href="{{  url_for('data_types.datatypes_route', pagename='integers')  }}">MORE</a>
-</div>
 
-<div class="topic">
-    <div class="title">Float</div>
-    <div class="description">
-        Numerical data types composed of fractions or decimals.
+    <div class="topic-tile">
+        <div class="title">Float</div>
+        <div class="description">
+            Numerical data types composed of fractions or decimals.
+        </div>
+        <a class="link" href="{{  url_for('data_types.datatypes_route', pagename='floats')  }}">Learn More</a>
     </div>
-    <a class="link" href="{{  url_for('data_types.datatypes_route', pagename='floats')  }}">MORE</a>
-</div>
 
-<div class="topic">
-    <div class="title">Date</div>
-    <div class="description">
-        Data type that stores a calendar date as YYYY-MM-DD format.
+    <div class="topic-tile">
+        <div class="title">Date</div>
+        <div class="description">
+            Data type that stores a calendar date as YYYY-MM-DD format.
+        </div>
+        <a class="link" href="{{  url_for('data_types.datatypes_route', pagename='dates')  }}">Learn More</a>
     </div>
-    <a class="link" href="{{  url_for('data_types.datatypes_route', pagename='dates')  }}">MORE</a>
-</div>
 
-<div class="topic">
-    <div class="title">Character</div>
-    <div class="description">
-        Data type that stores a single letter, number, or special symbol.
+    <div class="topic-tile">
+        <div class="title">Character</div>
+        <div class="description">
+            Data type that stores a single letter, number, or special symbol.
+        </div>
+        <a class="link" href="{{  url_for('data_types.datatypes_route', pagename='characters')  }}">Learn More</a>
     </div>
-    <a class="link" href="{{  url_for('data_types.datatypes_route', pagename='characters')  }}">MORE</a>
-</div>
 
-<div class="topic">
-    <div class="title">String</div>
-    <div class="description">
-        Data type that stores a sequence of characters, numbers, or symbols.
+    <div class="topic-tile">
+        <div class="title">String</div>
+        <div class="description">
+            Data type that stores a sequence of characters, numbers, or symbols.
+        </div>
+        <a class="link" href="{{  url_for('data_types.datatypes_route', pagename='strings')  }}">Learn More</a>
     </div>
-    <a class="link" href="{{  url_for('data_types.datatypes_route', pagename='strings')  }}">MORE</a>
-</div>
 
-<div class="topic">
-    <div class="title">Boolean</div>
-    <div class="description">
-        Logical data type used for true or false values.
+    <div class="topic-tile">
+        <div class="title">Boolean</div>
+        <div class="description">
+            Logical data type used for true or false values.
+        </div>
+        <a class="link" href="{{  url_for('data_types.datatypes_route', pagename='booleans')  }}">Learn More</a>
     </div>
-    <a class="link" href="{{  url_for('data_types.datatypes_route', pagename='booleans')  }}">MORE</a>
-</div>
 
-<div class="topic">
-    <div class="title">NULL</div>
-    <div class="description">
-        Data type containing no value.
+    <div class="topic-tile center-tile">
+        <div class="title">NULL</div>
+        <div class="description">
+            Data type containing no value.
+        </div>
+        <a class="link" href="{{  url_for('data_types.datatypes_route', pagename='nulls')  }}">Learn More</a>
     </div>
-    <a class="link" href="{{  url_for('data_types.datatypes_route', pagename='nulls')  }}">MORE</a>
 </div>
 {% endblock %}
