@@ -133,6 +133,16 @@
             <!-- Main content section -->
             <div class="topics">
                 {% block content %}{% endblock %}
+
+                <div class="footer-tile">
+                    <!--
+                    <footer class="footer" id="foot">
+                        <div class="info" id="about">About</div>
+                        <div class="info" id="contact">Contact</div>
+                        <div class="info" id="resources">Resources</div>
+                    </footer>
+                    -->
+                </div>
             </div>
             <!-- Extra content section-->
             <div class="extras">
@@ -140,15 +150,6 @@
             </div>
         </div>
 
-        <div class="footer-tile">
-            <!--
-            <footer class="footer" id="foot">
-                <div class="info" id="about">About</div>
-                <div class="info" id="contact">Contact</div>
-                <div class="info" id="resources">Resources</div>
-            </footer>
-            -->
-        </div>
         <script src="{{ url_for('static', filename='js/prism.js') }}"></script>
     </body>
 </html>
