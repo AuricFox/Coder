@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import logging, os
 
 PATH = os.path.dirname(os.path.abspath(__file__))
@@ -25,6 +25,10 @@ def init_app():
     # Configured for development
     app.config.from_object('config.DevConfig')
 
+    # Custom page not found
+    def page_not_found(error):
+        return render_template('404.html'), 404
+
     with app.app_context():
         # Import routes and custom modules
         from app.main import bp as main_bp
@@ -39,5 +43,7 @@ def init_app():
         app.register_blueprint(data_types_bp, url_prefix='/data_types')
         app.register_blueprint(languages_bp, url_prefix='/languages')
         app.register_blueprint(useful_tools_bp, url_prefix='/useful_tools')
+
+        app.register_error_handler(404, page_not_found)
 
     return app
