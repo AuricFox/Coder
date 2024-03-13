@@ -288,8 +288,9 @@ button[type="submit"]:hover {
 
 .topic-tile {
     box-shadow: 1px 1px 5px 3px #000;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 1fr;
     justify-content: center;
     align-items: center;
     padding: 0.5rem;
@@ -300,6 +301,8 @@ button[type="submit"]:hover {
 .center-tile {
     grid-column: 2;
 }
+
+/* ========== topic parts ========== */
 
 .title {
     color:rgb(255, 255, 255);
@@ -315,7 +318,7 @@ button[type="submit"]:hover {
 .description {
     color: #FFFFFF;
     font-family: Arial, sans-serif;
-    padding: 1rem;
+    padding: 0 1rem;
     line-height: 2rem;
     text-align: center;
 }
