@@ -88,16 +88,16 @@ var exampleDisplay = {
 
 // Default to example 1 code when loaded
 $('.code').not($('#ex-1-code')).not($('#ex-1-output')).hide();
-$('#ex-1').css({ backgroundColor: "#272822" }).show();
+$('#ex-1').css({ backgroundColor: "#5ba95e" }).show();
 
 $('.sel-code').click(function() {
-    var id = $(this).attr('id');                                        // Get id of clicked element
-    $('.sel-code').css({ backgroundColor: "transparent" }).show();      // Remove background
-    $('#' + id).css({ backgroundColor: "#272822" }).show();   // Highlight element backgroun
+    var id = $(this).attr('id');                                // Get id of clicked element
+    $('.sel-code').css({ backgroundColor: "#317233" }).show();  // Remove background
+    $('#' + id).css({ backgroundColor: "#5ba95e" }).show();     // Highlight element backgroun
     
     var code = '#' + id + '-code';
     var output = '#' + id + '-output';
-    $('.code').not($(code)).not($(output)).hide();                      // Hide other examples
-    $(code).css(exampleDisplay).show();                                 // Style code
-    $(output).css(exampleDisplay).show();                               // Style output
+    $('.code').not($(code)).not($(output)).hide();              // Hide other examples
+    $(code).css(exampleDisplay).show();                         // Style code
+    $(output).css(exampleDisplay).show();                       // Style output
 });
