@@ -14,15 +14,56 @@
     </head>
     <body>
 
-        <div class="nav-tile" id="{{ nav_id }}">
+        <div>
             <!--Main Navigation Tile-->
             <div id="nav-bar">
                 <ul class="nav">
-                    <li><a href="{{  url_for('main.index')  }}" class="{% if nav_id == 'home-page' %}active{% endif %}">Home</a></li>
-                    <li><div id="data-pages" class="{% if nav_id == 'data-page' %}active{% endif %}">Data Types</div></li>
-                    <li><div id="struct-pages" class="{% if nav_id == 'struct-page' %}active{% endif %}">Data Structures</div></li>
-                    <li><div id="lang-pages" class="{% if nav_id == 'lang-page' %}active{% endif %}">Programming Languages</div></li>
-                    <li><div id="tools-pages" class="{% if nav_id == 'tools-page' %}active{% endif %}">Useful Tools</div></li>
+                    <li><a href="{{  url_for('main.index')  }}" class="dropbtn nav-tile {% if nav_id == 'home-page' %}active{% endif %}">Home</a></li>
+                    <li><div class="{% if nav_id == 'data-page' %}active{% endif %}">
+                        <!--Data Types Sub Navigation-->
+                        <div class="dropbtn nav-tile">Data Types</div>
+                        <div class="dropdown-element" style="display: none;">
+                            <a class="drop-link" href="{{  url_for('data_types.floats')  }}">Floats</a>
+                            <a class="drop-link" href="{{  url_for('data_types.integers')  }}">Integers</a>
+                            <a class="drop-link" href="{{  url_for('data_types.dates')  }}">Dates</a>
+                            <a class="drop-link" href="{{  url_for('data_types.characters')  }}">Characters</a>
+                            <a class="drop-link" href="{{  url_for('data_types.strings')  }}">Strings</a>
+                            <a class="drop-link" href="{{  url_for('data_types.booleans')  }}">Booleans</a>
+                            <a class="drop-link" href="{{  url_for('data_types.nulls')  }}">Nulls</a>
+                        </div>
+                    </div></li>
+                    <li><div class="{% if nav_id == 'struct-page' %}active{% endif %}">
+                        <div class="dropbtn nav-tile">Data Structures</div>
+                        <div class="dropdown-element" style="display: none;">
+                            <div class="nav-tile">Linear Structures</div>
+                            <div class="nav-tile">Trees</div>
+                            <div class="nav-tile">Graphs</div>
+                        </div>
+                    </div></li>
+                    <li><div class="{% if nav_id == 'lang-page' %}active{% endif %}">
+                        <!--Programming Languages Sub Navigation-->
+                        <div class="dropbtn nav-tile">Programming Languages</div>
+                        <div class="dropdown-element" style="display: none;">
+                            <a class="drop-link" href="{{  url_for('languages.python')  }}">Python</a>
+                            <a class="drop-link" href="{{  url_for('languages.c')  }}">C</a>
+                            <a class="drop-link" href="{{  url_for('languages.cpp')  }}">C++</a>
+                            <a class="drop-link" href="{{  url_for('languages.cs')  }}">C#</a>
+                            <a class="drop-link" href="{{  url_for('languages.java')  }}">Java</a>
+                            <a class="drop-link" href="{{  url_for('languages.javascript')  }}">JavaScript</a>
+                            <a class="drop-link" href="{{  url_for('languages.html')  }}">HTML</a>
+                            <a class="drop-link" href="{{  url_for('languages.css')  }}">CSS</a>
+                            <a class="drop-link" href="{{  url_for('languages.sql')  }}">SQL</a>
+                        </div>
+                    </div></li>
+                    <li><div class="{% if nav_id == 'tools-page' %}active{% endif %}">
+                        <div class="dropbtn nav-tile">Useful Tools</div>
+                        <div class="dropdown-element" style="display: none;">
+                            <div class="nav-tile">Frameworks</div>
+                            <div class="nav-tile">Version Control</div>
+                            <div class="nav-tile">Testing</div>
+                            <div class="nav-tile">Other</div>
+                        </div>
+                    </div></li>
                 </ul>
                 <!--
                 <form id="search-tile">
@@ -34,23 +75,6 @@
 
             <!--Sub Navigation Tile-->
             <div id="sub-nav-bar">
-                <!--Data Types Sub Navigation Tile-->
-                <div id="data-nav" class="sub-nav">
-                    <a class="sn-main-title" href="{{  url_for('data_types.index')  }}">Data Types</a>
-                    <div class="sub-nav-topics">
-                        <div class="sn-contents-row">
-                            <a href="{{  url_for('data_types.integers')  }}">Integers</a>
-                            <a href="{{  url_for('data_types.floats')  }}">Floats</a>
-                            <a href="{{  url_for('data_types.dates')  }}">Dates</a>
-                            <a href="{{  url_for('data_types.characters')  }}">Characters</a>
-                            <a href="{{  url_for('data_types.strings')  }}">Strings</a>
-                            <a href="{{  url_for('data_types.booleans')  }}">Booleans</a>
-                            <a href="{{  url_for('data_types.nulls')  }}">Nulls</a>
-                        </div>
-                    </div>
-
-                </div>
-
                 <!--Data Structures Sub Navigation Tile-->
                 <div id="struct-nav" class="sub-nav">
                     <a class="sn-main-title" href="{{  url_for('data_structures.index')  }}">Data Structures</a>
@@ -77,24 +101,7 @@
                             <a href="{{  url_for('data_structures.index')  }}">Weighted Graph</a>
                         </div>
                     </div>
-                </div>
-                <!--Programming Languages Sub Navigation Tile-->
-                <div id="lang-nav" class="sub-nav">
-                    <a class="sn-main-title" href="{{  url_for('languages.index')  }}">Programming Languages</a>
-                    <div class="sub-nav-topics">
-                        <div class="sn-contents-row">
-                            <a href="{{  url_for('languages.python')  }}">Python</a>
-                            <a href="{{  url_for('languages.c')  }}">C</a>
-                            <a href="{{  url_for('languages.cpp')  }}">C++</a>
-                            <a href="{{  url_for('languages.cs')  }}">C#</a>
-                            <a href="{{  url_for('languages.java')  }}">Java</a>
-                            <a href="{{  url_for('languages.javascript')  }}">JavaScript</a>
-                            <a href="{{  url_for('languages.html')  }}">HTML</a>
-                            <a href="{{  url_for('languages.css')  }}">CSS</a>
-                            <a href="{{  url_for('languages.sql')  }}">SQL</a>
-                        </div>
-                    </div>
-                </div>            
+                </div>      
 
                 <!--Useful Tools Sub Navigation Tile-->
                 <div id="tools-nav" class="sub-nav">
