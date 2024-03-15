@@ -13,7 +13,6 @@
         {% block head %}{% endblock %}
     </head>
     <body>
-
         <div>
             <!--Main Navigation Tile-->
             <div id="nav-bar">
@@ -35,9 +34,27 @@
                     <li><div class="{% if nav_id == 'struct-page' %}active{% endif %}">
                         <div class="dropbtn nav-tile">Data Structures</div>
                         <div class="dropdown-element" style="display: none;">
-                            <div class="nav-tile">Linear Structures</div>
-                            <div class="nav-tile">Trees</div>
-                            <div class="nav-tile">Graphs</div>
+                            <div class="drop-element-list">
+                                <div class="drop-link-main">Linear Structures</div>
+                                <a class="drop-link" href="{{  url_for('data_structures.arrays')  }}">Arrays</a>
+                                <a class="drop-link" href="{{  url_for('data_structures.linked_lists')  }}">Linked List</a>
+                                <a class="drop-link" href="{{  url_for('data_structures.queues')  }}">Queue</a>
+                                <a class="drop-link" href="{{  url_for('data_structures.stacks')  }}">Stack</a>
+                                <a class="drop-link" href="{{  url_for('data_structures.hash_tables')  }}">Hash Tables</a>
+                            </div>
+                            <div class="drop-element-list">
+                                <div class="drop-link-main">Trees</div>
+                                <a class="drop-link" href="{{  url_for('data_structures.index')  }}">Binary Search Tree</a>
+                                <a class="drop-link" href="{{  url_for('data_structures.index')  }}">B-Tree</a>
+                                <a class="drop-link" href="{{  url_for('data_structures.index')  }}">Red-Black Tree</a>
+                                <a class="drop-link" href="{{  url_for('data_structures.index')  }}">AVL Tree</a>
+                            </div>
+                            <div class="drop-element-list">
+                                <div class="drop-link-main">Graphs</div>
+                                <a class="drop-link" href="{{  url_for('data_structures.index')  }}">Undirected Graph</a>
+                                <a class="drop-link" href="{{  url_for('data_structures.index')  }}">Directed Graph</a>
+                                <a class="drop-link" href="{{  url_for('data_structures.index')  }}">Weighted Graph</a>
+                            </div>
                         </div>
                     </div></li>
                     <li><div class="{% if nav_id == 'lang-page' %}active{% endif %}">
@@ -58,10 +75,22 @@
                     <li><div class="{% if nav_id == 'tools-page' %}active{% endif %}">
                         <div class="dropbtn nav-tile">Useful Tools</div>
                         <div class="dropdown-element" style="display: none;">
-                            <div class="nav-tile">Frameworks</div>
-                            <div class="nav-tile">Version Control</div>
-                            <div class="nav-tile">Testing</div>
-                            <div class="nav-tile">Other</div>
+                            <div class="drop-element-list">
+                                <div class="drop-link-main">Frameworks</div>
+                                <a class="drop-link" href="{{  url_for('useful_tools.index')  }}">Flask</a>
+                            </div>
+                            <div class="drop-element-list">
+                                <div class="drop-link-main">Version Control</div>
+                                <a class="drop-link" href="{{  url_for('useful_tools.index')  }}">Git</a>
+                            </div>
+                            <div class="drop-element-list">
+                                <div class="drop-link-main">Testing</div>
+                                <a class="drop-link" href="{{  url_for('useful_tools.index')  }}">Docker</a>
+                            </div>
+                            <div class="drop-element-list">
+                                <div class="drop-link-main">Other</div>
+                                <a class="drop-link" href="{{  url_for('useful_tools.index')  }}">Stuff</a>
+                            </div>
                         </div>
                     </div></li>
                 </ul>
@@ -71,63 +100,6 @@
                     <button type="submit">Search</button>
                 </form>
                 -->
-            </div>
-
-            <!--Sub Navigation Tile-->
-            <div id="sub-nav-bar">
-                <!--Data Structures Sub Navigation Tile-->
-                <div id="struct-nav" class="sub-nav">
-                    <a class="sn-main-title" href="{{  url_for('data_structures.index')  }}">Data Structures</a>
-                    <div class="sub-nav-topics">
-                        <div class="sn-contents">
-                            <a class="sn-title" href="{{  url_for('data_structures.index')  }}">Linear Structures</a>
-                            <a href="{{  url_for('data_structures.arrays')  }}">Arrays</a>
-                            <a href="{{  url_for('data_structures.linked_lists')  }}">Linked List</a>
-                            <a href="{{  url_for('data_structures.queues')  }}">Queue</a>
-                            <a href="{{  url_for('data_structures.stacks')  }}">Stack</a>
-                            <a href="{{  url_for('data_structures.hash_tables')  }}">Hash Tables</a>
-                        </div>
-                        <div class="sn-contents">
-                            <a class="sn-title" href="{{  url_for('data_structures.index')  }}">Trees</a>
-                            <a href="{{  url_for('data_structures.index')  }}">Binary Search Tree</a>
-                            <a href="{{  url_for('data_structures.index')  }}">B-Tree</a>
-                            <a href="{{  url_for('data_structures.index')  }}">Red-Black Tree</a>
-                            <a href="{{  url_for('data_structures.index')  }}">AVL Tree</a>
-                        </div>
-                        <div class="sn-contents">
-                            <a class="sn-title" href="{{  url_for('data_structures.index')  }}">Graphs</a>
-                            <a href="{{  url_for('data_structures.index')  }}">Undirected Graph</a>
-                            <a href="{{  url_for('data_structures.index')  }}">Directed Graph</a>
-                            <a href="{{  url_for('data_structures.index')  }}">Weighted Graph</a>
-                        </div>
-                    </div>
-                </div>      
-
-                <!--Useful Tools Sub Navigation Tile-->
-                <div id="tools-nav" class="sub-nav">
-                    <a class="sn-main-title" href="{{  url_for('useful_tools.index')  }}">Useful Tools</a>
-                    <div class="sub-nav-topics">
-                        <div class="sn-contents">
-                            <a class="sn-title" href="{{  url_for('useful_tools.index')  }}">Frameworks</a>
-                            <a href="{{  url_for('useful_tools.index')  }}">Flask</a>
-                        </div>
-                        
-                        <div class="sn-contents">
-                            <a class="sn-title" href="{{  url_for('useful_tools.index')  }}">Version Control Software</a>
-                            <a href="{{  url_for('useful_tools.index')  }}">Git</a>
-                        </div>
-                        
-                        <div class="sn-contents">
-                            <a class="sn-title" href="{{  url_for('useful_tools.index')  }}">Testing Software</a>
-                            <a href="{{  url_for('useful_tools.index')  }}">Docker</a>
-                        </div>
-                    
-                        <div class="sn-contents">
-                            <a class="sn-title" href="{{  url_for('useful_tools.index')  }}">Other Tools</a>
-                            <a href="{{  url_for('useful_tools.index')  }}">Stuff</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
