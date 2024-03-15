@@ -1,26 +1,37 @@
 // ===================================================================
 // Toggles display of sub navigation elements
 // ===================================================================
-// Display first level of dropdown elements
-$('.dropbtn').hover(function () {
-    // Hide all dropdown elements
-    $('.dropdown-element').hide();
-    // Get current highlighted element
-    const menu = $(this).next('.dropdown-element');
-    menu.show();
+var navDisplay = {
+    display: 'flex',
+    flexDirection: 'row'
+};
 
-    // Hide the dropdown when the mouse leaves the dropdown or the button
-    menu.on('mouseleave', function () {
+$('.dropbtn').click(function (event) {
+    event.stopPropagation();        // Prevent the click event from propagating to the document
+
+    const menu = $(this).next('.dropdown-element'); // Get display element
+    $('.dropdown-element').not(menu).hide();        // Hide any other elements displaying
+    
+    // Toggle the display when clicked
+    if(menu.is(':visible')) {
         menu.hide();
+    } else {
+        menu.css(navDisplay).show();
+    }
+
+    // Add an event listener to hide the dropdown when clicking outside
+    $(document).on('click', function (event) {
+        // Check if the click is inside the dropdown or on the button
+        if (!menu.is(event.target) && menu.has(event.target).length === 0 && !$(event.target).hasClass('dropbtn')) {
+            menu.hide();
+            $(document).off('click'); // Remove the event listener after hiding the dropdown
+        }
     });
 });
-
-// Display second level of dropdown elements
 
 // ===================================================================
 // Toggles display for different coding languages [Data Types]
 // ===================================================================
-
 var codeDisplay = {
     backgroundColor: "#272822",
     paddingLeft: "1rem"
@@ -39,11 +50,9 @@ $('.sel-code').click(function() {
     $(id + '-code').css(codeDisplay).show();
 });
 
-
 // ===================================================================
 // Toggles display for different coding examples [Languages]
 // ===================================================================
-
 var exampleDisplay = {
     backgroundColor: "#272822",
     padding: "1rem"
