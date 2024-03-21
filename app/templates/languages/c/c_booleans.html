@@ -1,0 +1,69 @@
+{% extends "languages/c/c_base.html" %}
+
+{% block title %}C Booleans{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title center-txt">Booleans</div>
+    <div class="description left-txt">
+        <p>
+            In C programming, a boolean is a data type that represents true or false values. However, C does not have a built-in
+            boolean type like some other programming languages such as Python or Java. Instead, boolean values are typically
+            represented using integers, where 0 represents false and any non-zero value represents true.
+        </p>
+        <p>
+            You can define boolean values using the standard C library, &#60;stdbool.h&#62;, which provides the bool type and two constants,
+            true and false.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Example 1</div>
+<div class="sel-code" id="ex-2">Example 2</div>
+{% endblock %}
+
+{% block code %}
+<pre class="code" id="ex-1-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+int main() {
+    bool myBool = 0;
+
+    if (myBool) {
+        printf("The boolean value is true!\n");
+    } else {
+        printf("The boolean value is false!\n");
+    }
+
+    return 0;
+}
+</code></pre>
+
+<pre class="code" id="ex-2-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+#include &#60;stdbool.h&#62;
+
+int main() {
+    bool myBool = true;
+
+    if (myBool) {
+        printf("The boolean value is true!\n");
+    } else {
+        printf("The boolean value is false!\n");
+    }
+
+    return 0;
+}
+</code></pre>
+{% endblock %}
+
+{% block output %}
+<pre class="code" id="ex-1-output"><code class="language-c">
+The boolean value is false!
+</code></pre>
+<pre class="code" id="ex-2-output"><code class="language-c">
+The boolean value is true!
+</code></pre>
+{% endblock %}

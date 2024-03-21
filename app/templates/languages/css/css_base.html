@@ -3,7 +3,7 @@
 <!--{% block title %}CSS{% endblock %}-->
 
 {% block sidenav %}
-<div class="sidebar">
+<div class="sidebar left-txt">
     <Span>CSS Tutorial</Span>
     <a href="{{  url_for('languages.css')  }}">Setup</a>
     <a href="{{  url_for('languages.css')  }}">Comments</a>
@@ -32,7 +32,7 @@
 {% block topic %}{% endblock %}
 
 <div class="topic">
-    <div class="title">Code Example</div>
+    <div class="title center-txt">Code Example</div>
     <div class="code-select">
         {% block examples %}{% endblock %}
     </div>
@@ -41,7 +41,7 @@
         {% block code %}{% endblock %}
     </div>
 
-    <div class="title">Output</div>
+    <div class="title center-txt">Output</div>
     <div class="code-examples">
         {% block output %}{% endblock %}
     </div>

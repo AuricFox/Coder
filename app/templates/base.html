@@ -20,76 +20,76 @@
                     <li><a href="{{  url_for('main.index')  }}" class="dropbtn nav-tile {% if nav_id == 'home-page' %}active{% endif %}">Home</a></li>
                     <li><div class="{% if nav_id == 'data-page' %}active{% endif %}">
                         <!--Data Types Sub Navigation-->
-                        <div class="dropbtn nav-tile">Data Types</div>
+                        <div class="dropbtn nav-tile center-txt">Data Types</div>
                         <div class="dropdown-element" style="display: none;">
-                            <a class="drop-link" href="{{  url_for('data_types.floats')  }}">Floats</a>
-                            <a class="drop-link" href="{{  url_for('data_types.integers')  }}">Integers</a>
-                            <a class="drop-link" href="{{  url_for('data_types.dates')  }}">Dates</a>
-                            <a class="drop-link" href="{{  url_for('data_types.characters')  }}">Characters</a>
-                            <a class="drop-link" href="{{  url_for('data_types.strings')  }}">Strings</a>
-                            <a class="drop-link" href="{{  url_for('data_types.booleans')  }}">Booleans</a>
-                            <a class="drop-link" href="{{  url_for('data_types.nulls')  }}">Nulls</a>
+                            <a class="drop-link center-txt" href="{{  url_for('data_types.floats')  }}">Floats</a>
+                            <a class="drop-link center-txt" href="{{  url_for('data_types.integers')  }}">Integers</a>
+                            <a class="drop-link center-txt" href="{{  url_for('data_types.dates')  }}">Dates</a>
+                            <a class="drop-link center-txt" href="{{  url_for('data_types.characters')  }}">Characters</a>
+                            <a class="drop-link center-txt" href="{{  url_for('data_types.strings')  }}">Strings</a>
+                            <a class="drop-link center-txt" href="{{  url_for('data_types.booleans')  }}">Booleans</a>
+                            <a class="drop-link center-txt" href="{{  url_for('data_types.nulls')  }}">Nulls</a>
                         </div>
                     </div></li>
                     <li><div class="{% if nav_id == 'struct-page' %}active{% endif %}">
-                        <div class="dropbtn nav-tile">Data Structures</div>
+                        <div class="dropbtn nav-tile center-txt">Data Structures</div>
                         <div class="dropdown-element" style="display: none;">
                             <div class="drop-element-list">
-                                <div class="drop-link-main">Linear Structures</div>
-                                <a class="drop-link" href="{{  url_for('data_structures.arrays')  }}">Arrays</a>
-                                <a class="drop-link" href="{{  url_for('data_structures.linked_lists')  }}">Linked List</a>
-                                <a class="drop-link" href="{{  url_for('data_structures.queues')  }}">Queue</a>
-                                <a class="drop-link" href="{{  url_for('data_structures.stacks')  }}">Stack</a>
-                                <a class="drop-link" href="{{  url_for('data_structures.hash_tables')  }}">Hash Tables</a>
+                                <div class="drop-link-main center-txt">Linear Structures</div>
+                                <a class="drop-link center-txt" href="{{  url_for('data_structures.arrays')  }}">Arrays</a>
+                                <a class="drop-link center-txt" href="{{  url_for('data_structures.linked_lists')  }}">Linked List</a>
+                                <a class="drop-link center-txt" href="{{  url_for('data_structures.queues')  }}">Queue</a>
+                                <a class="drop-link center-txt" href="{{  url_for('data_structures.stacks')  }}">Stack</a>
+                                <a class="drop-link center-txt" href="{{  url_for('data_structures.hash_tables')  }}">Hash Tables</a>
                             </div>
                             <div class="drop-element-list">
-                                <div class="drop-link-main">Trees</div>
-                                <a class="drop-link" href="{{  url_for('data_structures.index')  }}">Binary Search Tree</a>
-                                <a class="drop-link" href="{{  url_for('data_structures.index')  }}">B-Tree</a>
-                                <a class="drop-link" href="{{  url_for('data_structures.index')  }}">Red-Black Tree</a>
-                                <a class="drop-link" href="{{  url_for('data_structures.index')  }}">AVL Tree</a>
+                                <div class="drop-link-main center-txt center-txt">Trees</div>
+                                <a class="drop-link center-txt" href="{{  url_for('data_structures.index')  }}">Binary Search Tree</a>
+                                <a class="drop-link center-txt" href="{{  url_for('data_structures.index')  }}">B-Tree</a>
+                                <a class="drop-link center-txt" href="{{  url_for('data_structures.index')  }}">Red-Black Tree</a>
+                                <a class="drop-link center-txt" href="{{  url_for('data_structures.index')  }}">AVL Tree</a>
                             </div>
                             <div class="drop-element-list">
-                                <div class="drop-link-main">Graphs</div>
-                                <a class="drop-link" href="{{  url_for('data_structures.index')  }}">Undirected Graph</a>
-                                <a class="drop-link" href="{{  url_for('data_structures.index')  }}">Directed Graph</a>
-                                <a class="drop-link" href="{{  url_for('data_structures.index')  }}">Weighted Graph</a>
+                                <div class="drop-link-main center-txt center-txt">Graphs</div>
+                                <a class="drop-link center-txt" href="{{  url_for('data_structures.index')  }}">Undirected Graph</a>
+                                <a class="drop-link center-txt" href="{{  url_for('data_structures.index')  }}">Directed Graph</a>
+                                <a class="drop-link center-txt" href="{{  url_for('data_structures.index')  }}">Weighted Graph</a>
                             </div>
                         </div>
                     </div></li>
                     <li><div class="{% if nav_id == 'lang-page' %}active{% endif %}">
                         <!--Programming Languages Sub Navigation-->
-                        <div class="dropbtn nav-tile">Programming Languages</div>
+                        <div class="dropbtn nav-tile center-txt">Programming Languages</div>
                         <div class="dropdown-element" style="display: none;">
-                            <a class="drop-link" href="{{  url_for('languages.python')  }}">Python</a>
-                            <a class="drop-link" href="{{  url_for('languages.c')  }}">C</a>
-                            <a class="drop-link" href="{{  url_for('languages.cpp')  }}">C++</a>
-                            <a class="drop-link" href="{{  url_for('languages.cs')  }}">C#</a>
-                            <a class="drop-link" href="{{  url_for('languages.java')  }}">Java</a>
-                            <a class="drop-link" href="{{  url_for('languages.javascript')  }}">JavaScript</a>
-                            <a class="drop-link" href="{{  url_for('languages.html')  }}">HTML</a>
-                            <a class="drop-link" href="{{  url_for('languages.css')  }}">CSS</a>
-                            <a class="drop-link" href="{{  url_for('languages.sql')  }}">SQL</a>
+                            <a class="drop-link center-txt" href="{{  url_for('languages.python')  }}">Python</a>
+                            <a class="drop-link center-txt" href="{{  url_for('languages.c')  }}">C</a>
+                            <a class="drop-link center-txt" href="{{  url_for('languages.cpp')  }}">C++</a>
+                            <a class="drop-link center-txt" href="{{  url_for('languages.cs')  }}">C#</a>
+                            <a class="drop-link center-txt" href="{{  url_for('languages.java')  }}">Java</a>
+                            <a class="drop-link center-txt" href="{{  url_for('languages.javascript')  }}">JavaScript</a>
+                            <a class="drop-link center-txt" href="{{  url_for('languages.html')  }}">HTML</a>
+                            <a class="drop-link center-txt" href="{{  url_for('languages.css')  }}">CSS</a>
+                            <a class="drop-link center-txt" href="{{  url_for('languages.sql')  }}">SQL</a>
                         </div>
                     </div></li>
                     <li><div class="{% if nav_id == 'tools-page' %}active{% endif %}">
-                        <div class="dropbtn nav-tile">Useful Tools</div>
+                        <div class="dropbtn nav-tile center-txt">Useful Tools</div>
                         <div class="dropdown-element" style="display: none;">
                             <div class="drop-element-list">
-                                <div class="drop-link-main">Frameworks</div>
-                                <a class="drop-link" href="{{  url_for('useful_tools.index')  }}">Flask</a>
+                                <div class="drop-link-main center-txt">Frameworks</div>
+                                <a class="drop-link center-txt" href="{{  url_for('useful_tools.index')  }}">Flask</a>
                             </div>
                             <div class="drop-element-list">
-                                <div class="drop-link-main">Version Control</div>
-                                <a class="drop-link" href="{{  url_for('useful_tools.index')  }}">Git</a>
+                                <div class="drop-link-main center-txt">Version Control</div>
+                                <a class="drop-link center-txt" href="{{  url_for('useful_tools.index')  }}">Git</a>
                             </div>
                             <div class="drop-element-list">
-                                <div class="drop-link-main">Testing</div>
-                                <a class="drop-link" href="{{  url_for('useful_tools.index')  }}">Docker</a>
+                                <div class="drop-link-main center-txt">Testing</div>
+                                <a class="drop-link center-txt" href="{{  url_for('useful_tools.index')  }}">Docker</a>
                             </div>
                             <div class="drop-element-list">
-                                <div class="drop-link-main">Other</div>
-                                <a class="drop-link" href="{{  url_for('useful_tools.index')  }}">Stuff</a>
+                                <div class="drop-link-main center-txt">Other</div>
+                                <a class="drop-link center-txt" href="{{  url_for('useful_tools.index')  }}">Stuff</a>
                             </div>
                         </div>
                     </div></li>

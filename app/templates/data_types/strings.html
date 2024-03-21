@@ -4,13 +4,41 @@
 
 {% block topic %}
 <div class="topic" id="data-type">
-    <div class="title">String</div>
-    <div class="description">
+    <div class="title center-txt">String</div>
+    <div class="description center-txt">
         A string is a sequence of characters, typically used to represent text. Characters in a string can include letters,
         numbers, punctuation marks, and special symbols. Strings are a fundamental data type in most programming languages, and
         they can be manipulated and processed using various operations like concatenation, splitting, searching, and replacing.
         They're essential for tasks involving text processing, such as parsing data, manipulating user input, and formatting
         output.
+    </div>
+    <div class="examples">
+        <table class="terms-table center-txt">
+            <thead>
+                <tr>
+                    <th>String</th>
+                    <th>Not a String</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>'-1,004,567'</td>
+                    <td>-1,004,567.01</td>
+                </tr>
+                <tr>
+                    <td>"1"</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>""</td>
+                    <td>NULL</td>
+                </tr>
+                <tr>
+                    <td>'Fifty Six'</td>
+                    <td>56</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 {% endblock %}
