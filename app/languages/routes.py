@@ -34,6 +34,10 @@ def c_constants():
 def c_operators():
     return render_template('languages/c/c_operators.html', nav_id="lang-page")
 
+@bp.route('/c/booleans')
+def c_booleans():
+    return render_template('languages/c/c_booleans.html', nav_id="lang-page")
+
 # ====================================================================
 # Subpages of C++ [Programming Languages]
 # ====================================================================
