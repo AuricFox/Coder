@@ -30,10 +30,12 @@ class Config:
     '''
     Base config
     '''
-    SECRET_KEY = environ.get('SECRET_KEY')
-    SESSION_COOKIE_NAME = environ.get('SESSION_COOKIE_NAME')
+    SECRET_KEY = 'u\x9dp/j\x8dl\x96R\xe3\xfcf\xcaDe\xe5\xc2V\xa9g\x90\xf2_\xc7'
     STATIC_FOLDER = 'static'
     TEMPLATES_FOLDER = 'templates'
+
+    # Sessions
+    #SESSION_COOKIE_NAME = environ.get('SESSION_COOKIE_NAME')
 
     # Database
     #SQLALCHEMY_DATABASE_URI = environ.get('SQLALCHEMY_DATABASE_URI')
