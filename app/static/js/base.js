@@ -73,3 +73,14 @@ $('.sel-code').click(function() {
     $(code).css(exampleDisplay).show();                         // Style code
     $(output).css(exampleDisplay).show();                       // Style output
 });
+
+// ===================================================================
+// Used to find the height of certain elements
+// ===================================================================
+/*
+window.addEventListener('DOMContentLoaded', function () {
+    var sourceElement = document.getElementsByClassName('nav-bar')[0];
+    var sourceHeight = window.getComputedStyle(sourceElement).height;
+    console.log(sourceHeight);
+});
+*/
