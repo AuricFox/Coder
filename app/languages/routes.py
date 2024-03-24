@@ -42,6 +42,10 @@ def c_booleans():
 def c_conditionals():
     return render_template('languages/c/c_conditionals.html', nav_id="lang-page")
 
+@bp.route('/c/switch_case')
+def c_switch_case():
+    return render_template('languages/c/c_switch_case.html', nav_id="lang-page")
+
 # ====================================================================
 # Subpages of C++ [Programming Languages]
 # ====================================================================
