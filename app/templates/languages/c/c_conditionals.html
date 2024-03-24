@@ -13,15 +13,34 @@
         </p>
     </div>
     <div class="title center-txt">Syntax</div>
-    <pre><code class="language-c">
-        if (condition) {
-            // Code Block
-        } else if (condition) {
-            // Code Block
-        } else {
-            // Code Block
-        }
-    </code></pre>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            if (condition1) {
+                // Code Block
+            } else if (condition2) {
+                // Code Block
+            } else {
+                // Code Block
+            }
+        </code></pre>
+    </div>
+    <div class="description left-txt">
+        <p>
+            <b>if Statement:</b> The if statement allows you to execute a block of code if a specified condition is true. If the condition 
+            inside the parentheses evaluates to true, the code block enclosed within curly braces is executed. If the condition is 
+            false, the code block is skipped.
+        </p>
+        <p>
+            <b>else if Statement:</b> The else if statement allows you to specify additional conditions to test if the preceding if
+            condition is false. If condition1 is false, condition2 is evaluated. If condition2 is true, the corresponding code block 
+            is executed. You can have multiple else if blocks to test multiple conditions sequentially.
+        </p>
+        <p>
+            <b>else Statement:</b> The else statement is used to specify a block of code that should be executed if none of the preceding
+            conditions are true. It is optional and always comes after the if or else if blocks. If none of the conditions specified 
+            in the if or else if statements are true, the code block following the else statement is executed.
+        </p>
+    </div>
 </div>
 {% endblock %}
 

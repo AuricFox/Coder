@@ -313,7 +313,7 @@ button[type="submit"]:hover {
     font-family: Arial, sans-serif;
     font-style: italic;
     font-weight: bold;
-    padding: 5px;
+    padding: 1rem;
     width: 100%;
 }
 
@@ -406,6 +406,11 @@ button[type="submit"]:hover {
     margin-bottom: 1rem;
     padding: 10px;
     border-radius: 4px;
+}
+
+.code-syntax {
+    width: 100%;
+    padding: 1rem;
 }
 
 .res-link {
