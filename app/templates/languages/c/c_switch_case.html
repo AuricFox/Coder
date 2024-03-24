@@ -1,0 +1,124 @@
+{% extends "languages/c/c_base.html" %}
+
+{% block title %}C Switch Case{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title center-txt">Switch Case</div>
+    <div class="description left-txt">
+        <p>
+            In C, the switch statement provides another way to perform conditional branching based on the value of an expression. It
+            allows you to execute different blocks of code depending on the value of a variable or an expression.
+        </p>
+    </div>
+    <div class="title center-txt">Syntax</div>
+    <pre><code class="language-c">
+        switch (expression) {
+            case x:
+                // Code Block
+            case y:
+                // Code Block
+            case z:
+                // Code Block
+            default:
+                // Code BlocK
+        }
+    </code></pre>
+    <div class="description left-txt">
+        <p>
+            <b>Expression:</b> The expression inside the switch statement is evaluated, and the value is compared with the constants
+            specified in the case labels.
+        </p>
+        <p>
+            <b>Case Labels:</b> Each case label specifies a constant value that the expression is compared against. If the value of the
+            expression matches a case label, the corresponding block of code is executed.
+        </p>
+        <p>
+            <b>Break Statement:</b> After executing the code for a particular case, it's important to include a break statement to exit the
+            switch statement. Without a break statement, control will fall through to the next case, leading to unintended behavior.
+        </p>
+        <p>
+            <b>Default Case:</b> The default case is optional and is executed when the value of the expression doesn't match any of the
+            specified cases. It's typically used as a catch-all case.
+        </p>
+        <p>
+            <b>Fall-through Behavior:</b> Unlike some other programming languages, C does not automatically exit the switch statement after
+            a case is executed. If a break statement is not included after a case, control will continue to the next case, leading
+            to a "fall-through" behavior. This can be intentionally used in some cases but should be used judiciously to avoid
+            unintended behavior.
+        </p>
+        <p>
+            <b>Supported Data Types:</b> The expression inside a switch statement can be of integral types (int, char, short, long, etc.)
+            or an enumeration type (enum). It does not support floating-point types or strings.
+        </p>
+        <p>
+            <b>Nested Switch Statements:</b> You can nest switch statements within other switch statements to handle more complex
+            scenarios, but it's important to keep the code readable and maintainable.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Example 1</div>
+<div class="sel-code" id="ex-2">Example 2</div>
+{% endblock %}
+
+{% block code %}
+<pre class="code" id="ex-1-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+int main() {
+    int choice = 2;
+
+    switch (choice) {
+        case 1:
+            printf("You chose option 1.\n");
+            break;
+        case 2:
+            printf("You chose option 2.\n");
+            break;
+        case 3:
+            printf("You chose option 3.\n");
+            break;
+        default:
+            printf("Invalid choice.\n");
+    }
+
+    return 0;
+}
+</code></pre>
+
+<pre class="code" id="ex-2-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+int main() {
+    int choice = 2;
+
+    switch (choice) {
+        case 1:
+            printf("You chose option 1.\n");
+            break;
+        case 2:
+            printf("You chose option 2.\n");
+            break;
+        case 3:
+            printf("You chose option 3.\n");
+            break;
+        default:
+            printf("Invalid choice.\n");
+    }
+
+    return 0;
+}
+</code></pre>
+{% endblock %}
+
+{% block output %}
+<pre class="code" id="ex-1-output"><code class="language-c">
+You chose option 2.
+</code></pre>
+<pre class="code" id="ex-2-output"><code class="language-c">
+You chose option 2.
+</code></pre>
+{% endblock %}
