@@ -46,6 +46,10 @@ def c_conditionals():
 def c_switch_case():
     return render_template('languages/c/c_switch_case.html', nav_id="lang-page")
 
+@bp.route('/c/loops')
+def c_loops():
+    return render_template('languages/c/c_loops.html', nav_id="lang-page")
+
 # ====================================================================
 # Subpages of C++ [Programming Languages]
 # ====================================================================
