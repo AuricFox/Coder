@@ -50,6 +50,10 @@ def c_switch_case():
 def c_loops():
     return render_template('languages/c/c_loops.html', nav_id="lang-page")
 
+@bp.route('/c/arrays')
+def c_arrays():
+    return render_template('languages/c/c_arrays.html', nav_id="lang-page")
+
 # ====================================================================
 # Subpages of C++ [Programming Languages]
 # ====================================================================
