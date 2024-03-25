@@ -54,6 +54,10 @@ def c_loops():
 def c_arrays():
     return render_template('languages/c/c_arrays.html', nav_id="lang-page")
 
+@bp.route('/c/pointers')
+def c_pointers():
+    return render_template('languages/c/c_pointers.html', nav_id="lang-page")
+
 # ====================================================================
 # Subpages of C++ [Programming Languages]
 # ====================================================================

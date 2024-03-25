@@ -1,0 +1,169 @@
+{% extends "languages/c/c_base.html" %}
+
+{% block title %}C Pointers{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title center-txt">Pointers</div>
+    <div class="description left-txt">
+        <p>
+            Pointers are a fundamental concept in the C programming language (and other languages like C++), allowing you to work
+            with memory addresses directly. Understanding pointers is crucial for advanced memory management, data structures, and
+            low-level programming. A pointer is a variable that stores the memory address of another variable. Instead of storing 
+            actual data, a pointer holds the location of where the data is stored in memory. The syntax is:
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            dataType *variableName;
+        </code></pre>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Declaring Pointers</div>
+    <div class="description left-txt">
+        <p>
+            Pointers are declared by specifying the data type they point to, followed by an asterisk (*), and then the pointer
+            variable name. For example:
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            int *ptr; // Declares a pointer to an integer
+        </code></pre>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Initializing Pointers</div>
+    <div class="description left-txt">
+        <p>
+            Pointers can be initialized by assigning the address of another variable to them using the address-of operator (&). For
+            example:
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            int x = 10;
+            int *ptr = &x; // Initializes ptr with the address of variable x
+        </code></pre>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Dereferencing Pointers</div>
+    <div class="description left-txt">
+        <p>
+            Dereferencing a pointer means accessing the value stored at the memory address it points to. 
+            This is done using the dereference operator (*). For example:
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            int x = 10;
+            int *ptr = &x;      // Initializes ptr with the address of variable x
+            printf("%d", *ptr); // Prints the value stored at the memory address pointed to by ptr
+        </code></pre>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Pointer Arithmetic</div>
+    <div class="description left-txt">
+        <p>
+            Pointers can be manipulated using arithmetic operations such as addition (+) and subtraction (-). 
+            This allows you to navigate through memory locations.
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            int x = 10;
+            int *ptr = &x;  // Initializes ptr with the address of variable x
+            ptr++;          // Moves the pointer to the next memory location
+        </code></pre>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Null Pointers</div>
+    <div class="description left-txt">
+        <p>
+            A null pointer is a pointer that does not point to any memory location. It is typically represented by the value NULL or
+            0. Null pointers are useful for indicating that a pointer does not currently point to valid data.
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Passing Pointers to Functions</div>
+    <div class="description left-txt">
+        <p>
+            Passing pointers to functions is a common practice in C and is used when you need a function to modify the value of a
+            variable in the calling code or when you want to avoid unnecessary copying of large data structures. To pass a pointer 
+            to a function, you declare the function parameter as a pointer type. The function receives the address of the variable 
+            passed as an argument, allowing it to access and modify the original variable.
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+                dataType functionName(dataType *ptr){
+                    // Code Block
+                }
+            </code></pre>
+    </div>
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Example 1</div>
+<div class="sel-code" id="ex-2">Example 2</div>
+{% endblock %}
+
+{% block code %}
+<pre class="code" id="ex-1-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+// Function definition
+void modifyValue(int *ptr) {
+    // Dereferencing the pointer to modify the value
+    *ptr = 20;
+}
+
+int main() {
+    int x = 10;
+    printf("Before calling the function: %d\n", x);
+    
+    // Passing the address of x to the function
+    modifyValue(&x);
+    
+    printf("After calling the function: %d\n", x);
+    return 0;
+}
+</code></pre>
+
+<pre class="code" id="ex-2-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+void printArray(int *arr, int size) {
+    for (int i = 0; i &#60; size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int numbers[] = {1, 2, 3, 4, 5};
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+
+    // Passing the array and its size to the function
+    printArray(numbers, size);
+
+    return 0;
+}
+</code></pre>
+{% endblock %}
+
+{% block output %}
+<pre class="code" id="ex-1-output"><code class="language-c">
+Before calling the function: 10
+After calling the function: 20
+</code></pre>
+<pre class="code" id="ex-2-output"><code class="language-c">
+1 2 3 4 5
+</code></pre>
+{% endblock %}
