@@ -1,0 +1,159 @@
+{% extends "languages/c/c_base.html" %}
+
+{% block title %}C Functions{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title center-txt">Functions</div>
+    <div class="description left-txt">
+        <p>
+            Functions are a fundamental concept in programming that allow you to encapsulate a set of instructions into a reusable
+            block of code.
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            returnType functionName(parameter1Type parameter1, parameter2Type parameter2, ...) {
+                // Function body
+            }
+        </code></pre>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Function Call</div>
+    <div class="description left-txt">
+        <p>
+            To use a function, you call it by its name, providing arguments if necessary.
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            // Just call function
+            fuctionName(argument1, argument2, ...);
+
+            // Get return result from function call
+            dataType variableName = fuctionName(argument1, argument2, ...);
+        </code></pre>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Return Statement</div>
+    <div class="description left-txt">
+        <p>
+            The return statement is used inside a function to return a value to the caller. It 
+            specifies the value to be returned (if any) and ends the function's execution.
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            return expression;
+        </code></pre>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Return Type</div>
+    <div class="description left-txt">
+        <p>
+            The return type of a function specifies the type of value that the function returns to the caller. It 
+            can be any valid C data type, including built-in types (int, float, char, etc.) or user-defined types (structs,
+            enums). If a function does not return any value, its return type is 'void'.
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            // Return an integer sum of a and b
+            int add(int a, int b) {
+                return a + b;
+            }
+        </code></pre>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Parameters</div>
+    <div class="description left-txt">
+        <p>
+            Parameters are variables declared in the function's parameter list. They receive values from the caller when the 
+            function is called. Inside the function, parameters act as local variables, initialized with the values passed from 
+            the caller.
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            // Return the sum of the parameters a and b
+            int add(int a, int b) {
+                return a + b;
+            }
+        </code></pre>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Arguments</div>
+    <div class="description left-txt">
+        <p>
+            Arguments are the values passed to a function when it is called. They correspond to the parameters declared in the 
+            function's parameter list.
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            // Add the arguments 7 and 8 to get the sum
+            int sum = add(7, 8);
+        </code></pre>
+    </div>
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Example 1</div>
+<div class="sel-code" id="ex-2">Example 2</div>
+{% endblock %}
+
+{% block code %}
+<pre class="code" id="ex-1-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+// Function definition
+void modifyValue(int *ptr) {
+    // Dereferencing the pointer to modify the value
+    *ptr = 20;
+}
+
+int main() {
+    int x = 10;
+    printf("Before calling the function: %d\n", x);
+    
+    // Passing the address of x to the function
+    modifyValue(&x);
+    
+    printf("After calling the function: %d\n", x);
+    return 0;
+}
+</code></pre>
+
+<pre class="code" id="ex-2-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int a = 2;
+    int b = 4;
+
+    printf("%d plus %d equals %d\n", a, b, add(a,b));
+
+    return 0;
+}
+</code></pre>
+{% endblock %}
+
+{% block output %}
+<pre class="code" id="ex-1-output"><code class="language-c">
+Before calling the function: 10
+After calling the function: 20
+</code></pre>
+<pre class="code" id="ex-2-output"><code class="language-c">
+2 plus 4 equals 6
+</code></pre>
+{% endblock %}
