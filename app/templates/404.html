@@ -2,10 +2,29 @@
 
 {% block title %}Page Not Found{% endblock %}
 
-{% block content %}
-<div class="error-404">
-    <div>OPPS!</div>
-    <div>Page Not Found.</div>
-</div>
+{% block head %}
+<style>
+    body{
+        height: 100vh;
+    }
+    .side-nav,
+    .extras {
+        display: none;
+    }
+    .topics {
+        width: 100%;
+    }
+    .topic {
+        background-color: inherit;
+    }
+</style>
+{% endblock %}
 
+{% block content %}
+<div class="topic">
+    <div class="title center-txt">Sorry, Page Not Found!</div>
+    <div class="link-list">
+        <a class="link center-txt" href="{{  url_for('main.index')  }}">Return Home</a>
+    </div>
+</div>
 {% endblock %}
