@@ -66,6 +66,10 @@ def c_functions():
 def c_structures():
     return render_template('languages/c/c_structures.html', nav_id="lang-page")
 
+@bp.route('/c/enums')
+def c_enums():
+    return render_template('languages/c/c_enums.html', nav_id="lang-page")
+
 # ====================================================================
 # Subpages of C++ [Programming Languages]
 # ====================================================================

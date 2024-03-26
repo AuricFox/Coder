@@ -1,0 +1,130 @@
+{% extends "languages/c/c_base.html" %}
+
+{% block title %}C Enum{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title center-txt">Enum</div>
+    <div class="description left-txt">
+        <p>
+            Enums, short for enumerations, are a way to create named constant values in C. They allow you to define a set of related
+            named integer constants, making the code more readable and maintainable. Here's how enums work in C:
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            enum enumName {
+                constant1,
+                constant2,
+                // Additional constants...
+            };
+        </code></pre>
+    </div>
+    <div class="description left-txt">
+        <p>
+            <b>enum:</b> This keyword is used to define an enumeration type.
+        </p>
+        <p>
+            <b>enumName:</b> This is the name of the enumeration type.
+        </p>
+        <p>
+            <b>constant1, constant2, etc.:</b> These are the named constant values of the enumeration. Each constant is assigned an integer
+            value automatically, starting from 0 for the first constant and incrementing by 1 for each subsequent constant. However,
+            you can explicitly assign integer values to constants if desired.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Example 1</div>
+<div class="sel-code" id="ex-2">Example 2</div>
+<div class="sel-code" id="ex-3">Example 3</div>
+{% endblock %}
+
+{% block code %}
+<pre class="code" id="ex-1-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+// Define an enumeration named "Weekday" with named constants for days of the week
+enum Weekday {
+    SUNDAY,
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY
+};
+
+int main() {
+    // Declare variables of type "Weekday"
+    enum Weekday today, tomorrow;
+
+    // Assign values to variables
+    today = MONDAY;
+    tomorrow = TUESDAY;
+
+    // Print the values of variables
+    printf("Today is %d\n", today);
+    printf("Tomorrow is %d\n", tomorrow);
+
+    return 0;
+}
+</code></pre>
+<pre class="code" id="ex-2-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+enum Level {
+  LOW = 25,
+  MEDIUM = 50,
+  HIGH = 75
+};
+
+int main() {
+    enum Level myLevel = LOW;
+    printf("My level is %d\n", myLevel);
+
+    return 0;
+}
+</code></pre>
+<pre class="code" id="ex-3-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+enum Age {
+  TEN = 10,
+  ELEVEN,   // Now 11
+  TWELVE,   // Now 12
+  THIRTEEN  // Now 13
+};
+
+int main() {
+    enum Age myAge, sisterAge, brotherAge;
+
+    myAge = ELEVEN;
+    sisterAge = THIRTEEN;
+    brotherAge = TEN;
+
+    printf("I a %d years old\n", myAge);
+    printf("My sister is %d years old\n", sisterAge);
+    printf("My brother is %d years old\n", brotherAge);
+
+    return 0;
+}
+</code></pre>
+{% endblock %}
+
+{% block output %}
+<pre class="code" id="ex-1-output"><code class="language-c">
+Today is 1
+Tomorrow is 2
+</code></pre>
+<pre class="code" id="ex-2-output"><code class="language-c">
+My level is 25
+</code></pre>
+<pre class="code" id="ex-3-output"><code class="language-c">
+I am 11 years old
+My sister is 13 years old
+My brother is 10 years old
+</code></pre>
+{% endblock %}
