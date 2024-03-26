@@ -62,6 +62,10 @@ def c_pointers():
 def c_functions():
     return render_template('languages/c/c_functions.html', nav_id="lang-page")
 
+@bp.route('/c/structures')
+def c_structures():
+    return render_template('languages/c/c_structures.html', nav_id="lang-page")
+
 # ====================================================================
 # Subpages of C++ [Programming Languages]
 # ====================================================================

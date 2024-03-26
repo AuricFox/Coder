@@ -1,0 +1,240 @@
+{% extends "languages/c/c_base.html" %}
+
+{% block title %}C Structures{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title center-txt">Structures</div>
+    <div class="description left-txt">
+        <p>
+            Structures in C allow you to define a custom data type that groups together variables of different types under a single
+            name. Each variable within a structure is called a member or a field. Structures are useful for representing real-world
+            entities with multiple attributes. 
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            struct structName {
+                dataType member1;
+                dataType member2;
+                // Additional members...
+            };
+        </code></pre>
+    </div>
+    <div class="description left-txt">
+        <p>
+            Anonymous structures are structures without a tag name. They are typically used when you need to define a structure type
+            inline without giving it a specific name.
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+                struct {
+                    dataType member1;
+                    dataType member2;
+                    // Additional members...
+                } variableName;
+            </code></pre>
+    </div>
+    <div class="description left-txt">
+        <p>
+            The keyword typedef in C allows you to create aliases or alternative names for existing data types, including structures. It is
+            particularly useful for making code more readable and manageable, especially when dealing with complex data types or
+            when you want to abstract implementation details.
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            typedef struct structName {
+                dataType member1;
+                dataType member2;
+                // Additional members...
+            } StructType;
+        </code></pre>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Accessing and Modifying Struct Members (Without Pointers)</div>
+    <div class="description left-txt">
+        <p>
+            Structure members are accessed using the (.) operater and assigned using an assignment (=) operator for non-string variables and 
+            the strcpy function for string variables.
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            struct Person {
+                char name[50];
+                int age;
+            };
+            
+            int main() {
+                // Declare a variable of type "Person"
+                struct Person person1;
+                
+                // Accessing and assigning values to structure members
+                strcpy(person1.name, "John");
+                person1.age = 30;
+                
+                // Printing structure members
+                printf("Name: %s\n", person1.name);
+                printf("Age: %d\n", person1.age);
+                
+                return 0;
+            }
+        </code></pre>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Accessing and Modifying Struct Members (With Pointers)</div>
+    <div class="description left-txt">
+        <p>
+            Structure members are accessed using the (->) operater when working with pointers to structures. They are still assigned 
+            a value the same way when working with the (.) operater.
+        </p>
+    </div>
+    <div class="code-syntax">
+        <pre><code class="language-c">
+            struct Person {
+                char name[50];
+                int age;
+            };
+            
+            int main() {
+                // Declare a pointer to a structure of type "Person"
+                struct Person *ptrPerson;
+                
+                // Allocate memory for the structure using dynamic memory allocation
+                ptrPerson = (struct Person *)malloc(sizeof(struct Person));
+                
+                // Check if memory allocation is successful
+                if (ptrPerson == NULL) {
+                    printf("Memory allocation failed\n");
+                    return 1; // Exit the program with an error code
+                }
+                
+                // Accessing and assigning values to structure members using '->'
+                strcpy(ptrPerson->name, "John");
+                ptrPerson->age = 30;
+                
+                // Printing structure members
+                printf("Name: %s\n", ptrPerson->name);
+                printf("Age: %d\n", ptrPerson->age);
+                
+                // Free dynamically allocated memory
+                free(ptrPerson);
+                
+                return 0;
+            }
+        </code></pre>
+    </div>
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Example 1</div>
+<div class="sel-code" id="ex-2">Example 2</div>
+<div class="sel-code" id="ex-3">Example 3</div>
+{% endblock %}
+
+{% block code %}
+<pre class="code" id="ex-1-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+struct Person {
+    char name[50];
+    int age;
+};
+
+int main() {
+    // Declare a variable of type "Person"
+    struct Person person1;
+
+    // Accessing and assigning values to structure members
+    strcpy(person1.name, "John");
+    person1.age = 20;
+
+    // Printing structure members
+    printf("Name: %s\n", person1.name);
+    printf("Age: %d\n", person1.age);
+
+    return 0;
+}
+</code></pre>
+
+<pre class="code" id="ex-2-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+struct Person {
+    char name[50];
+    int age;
+};
+
+int main() {
+    // Declare a pointer to a structure of type "Person"
+    struct Person *ptrPerson;
+
+    // Allocate memory for the structure using dynamic memory allocation
+    ptrPerson = (struct Person *)malloc(sizeof(struct Person));
+
+    // Check if memory allocation is successful
+    if (ptrPerson == NULL) {
+        printf("Memory allocation failed\n");
+        return 1; // Exit the program with an error code
+    }
+
+    // Accessing and assigning values to structure members using '->'
+    strcpy(ptrPerson->name, "Steve");
+    ptrPerson->age = 30;
+
+    // Printing structure members
+    printf("Name: %s\n", ptrPerson->name);
+    printf("Age: %d\n", ptrPerson->age);
+
+    // Free dynamically allocated memory
+    free(ptrPerson);
+
+    return 0;
+}
+</code></pre>
+
+<pre class="code" id="ex-3-code"><code class="language-c">
+#include &#60;stdio.h&#62;
+
+// Define a structure named Person with members int and char
+typedef struct Person {
+    char name[50];
+    int age;
+} Person;
+
+int main() {
+    // Declare a variable of type "Person"
+    Person person;
+
+    // Accessing and assigning values to structure members
+    strcpy(person.name, "Alyssa");
+    person1.age = 56;
+
+    // Printing structure members
+    printf("Name: %s\n", person.name);
+    printf("Age: %d\n", person.age);
+
+    return 0;
+}
+</code></pre>
+{% endblock %}
+
+{% block output %}
+<pre class="code" id="ex-1-output"><code class="language-c">
+Name: John
+Age: 20
+</code></pre>
+<pre class="code" id="ex-2-output"><code class="language-c">
+Name: Steve
+Age: 30
+</code></pre>
+<pre class="code" id="ex-3-output"><code class="language-c">
+Name: Alyssa
+Age: 56
+</code></pre>
+{% endblock %}
