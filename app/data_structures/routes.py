@@ -13,20 +13,20 @@ def index():
 
 @bp.route('/arrays')
 def arrays():
-    return render_template('data_structures/arrays.html', nav_id="struct-page")
+    return render_template('data_structures/linear/arrays.html', nav_id="struct-page")
 
 @bp.route('/linked_lists')
 def linked_lists():
-    return render_template('data_structures/linked_lists.html', nav_id="struct-page")
+    return render_template('data_structures/linear/linked_lists.html', nav_id="struct-page")
 
 @bp.route('/queues')
 def queues():
-    return render_template('data_structures/queues.html', nav_id="struct-page")
+    return render_template('data_structures/linear/queues.html', nav_id="struct-page")
 
 @bp.route('/stacks')
 def stacks():
-    return render_template('data_structures/stacks.html', nav_id="struct-page")
+    return render_template('data_structures/linear/stacks.html', nav_id="struct-page")
 
 @bp.route('/hash_tables')
 def hash_tables():
-    return render_template('data_structures/hash_tables.html', nav_id="struct-page")
+    return render_template('data_structures/linear/hash_tables.html', nav_id="struct-page")

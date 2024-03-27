@@ -9,7 +9,7 @@ from app.main import bp
 @bp.route("/")
 @bp.route("/home")
 def index():
-    return render_template('home.html', nav_id="home-page")
+    return render_template('index.html', nav_id="home-page")
 
 # Accessing useful_tools Page
 @bp.route("/data_types")
