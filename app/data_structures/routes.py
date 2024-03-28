@@ -8,9 +8,8 @@ def index():
     return render_template('data_structures.html', nav_id="struct-page")
 
 # ====================================================================
-# Subpages of Data Structures
+# Subpages of Linear Data Structures
 # ====================================================================
-
 @bp.route('/arrays')
 def arrays():
     return render_template('data_structures/linear/arrays.html', nav_id="struct-page")
@@ -30,3 +29,14 @@ def stacks():
 @bp.route('/hash_tables')
 def hash_tables():
     return render_template('data_structures/linear/hash_tables.html', nav_id="struct-page")
+
+# ====================================================================
+# Subpages of Tree Data Structures
+# ====================================================================
+@bp.route('/binary_search_tree')
+def binary_search_tree():
+    return render_template('data_structures/trees/binary_search_tree.html', nav_id="struct-page")
+
+# ====================================================================
+# Subpages of Graph Data Structures
+# ====================================================================

@@ -7,10 +7,57 @@
     <div class="title center-txt">Binary Search Tree</div>
     <div class="description left-txt">
         <p>
-            
+            A Binary Search Tree (BST) is a binary tree data structure where each node has at most two children, referred to as the
+            left child and the right child. The key property of a BST is that for every node all elements in the left subtree are 
+            smaller than the node's value and All elements in the right subtree are greater than the node's value. This property 
+            enables efficient searching, insertion, and deletion operations especialling when the tree is balanced. However, 
+            unbalanced trees may lead to performance degradation, prompting the use of self-balancing BST variants like AVL
+            trees or Red-Black trees.
         </p>
     </div>
-
+</div>
+<div class="topic">
+    <div class="title center-txt">Searching</div>
+    <div class="description left-txt">
+        <p>
+            To search for a value in a BST start at the root node. Compare the value you are searching for with the value of the 
+            current node. If the value matches, you have found the node. If the value is less than the current node's value, continue 
+            searching in the left subtree. If the value is greater than the current node's value, continue searching in the right subtree.
+        </p>
+        <p>
+            Repeat the process recursively until you find the node containing the desired value or reach a leaf node (where the
+            value is not found).
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Insertion</div>
+    <div class="description left-txt">
+        <p>
+            To insert a new value into a BST start at the root node. Compare the value you are searching for with the value of 
+            the current node. If the value is less than the current node's value, move to the left child. If the value is greater 
+            than the current node's value, move to the right child. If you encounter a null child (leaf node), insert the new value 
+            there.
+        </p>
+        <p>
+            Repeat the process recursively until you find an appropriate position to insert the new node.
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Deletion</div>
+    <div class="description left-txt">
+        <p>
+            Deleting a node from a BST involves three cases. If the node to be deleted has no children simply remove the node from 
+            the tree. Replace the node with its child if the node to be deleted has one child. If the node to be deleted has two 
+            children then find the inorder successor (the smallest node in the right subtree) or the inorder predecessor (the largest 
+            node in the left subtree). Replace the node to be deleted with the inorder successor/predecessor. Delete the inorder 
+            successor/predecessor from its original position.
+        </p>
+        <p>
+            After deletion, ensure that the BST property is maintained by adjusting the tree structure if necessary.
+        </p>
+    </div>
 </div>
 {% endblock %}
 
@@ -26,12 +73,12 @@
 {% block code %}
 <!-- Python code example -->
 <pre class="code language-python" id="ex-1-code"><code class="language-py">
-<!--{% include "data_structures/trees/code/binary_search_tree/py_binary_search_tree.html" %}-->
+
 </code></pre>
 
 <!-- C code example -->
 <pre class="code" id="ex-2-code"><code class="language-c">
-<!--{% include "data_structures/trees/code/binary_search_tree/c_binary_search_tree.html" %}-->
+
 </code></pre>
 
 <!-- C++ code example -->
