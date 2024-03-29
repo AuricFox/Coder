@@ -40,6 +40,10 @@ def binary_search_tree():
 @bp.route('/b_tree')
 def b_tree():
     return render_template('data_structures/trees/b_tree.html', nav_id="struct-page")
+
+@bp.route('/red_black_tree')
+def red_black_tree():
+    return render_template('data_structures/trees/red_black_tree.html', nav_id="struct-page")
 # ====================================================================
 # Subpages of Graph Data Structures
 # ====================================================================

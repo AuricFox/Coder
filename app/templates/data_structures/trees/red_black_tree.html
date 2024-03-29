@@ -7,10 +7,80 @@
     <div class="title center-txt">Red-Black Tree</div>
     <div class="description left-txt">
         <p>
-
+            A Red-Black Tree is a type of self-balancing binary search tree (BST) named for the color properties assigned to each
+            node. It ensures that the tree remains balanced by enforcing additional constraints on top of the basic binary search
+            tree properties. The properties of a Red-Black tree include:
+        </p>
+        <p>
+            <b>Binary Search Tree Properties:</b> Like regular binary search trees, Red-Black Trees maintains each node has at most two 
+            children (left and right). The keys in the left subtree of a node are less than the key of the node. The keys in the 
+            right subtree of a node are greater than the key of the node.
+        </p>
+        <p>
+            <b>Coloring:</b> Each node in a Red-Black Tree is assigned one of two colors: red or black.
+        </p>
+        <p>
+            <b>Red-Black Properties:</b> The root is always black. Red nodes cannot have red children. (i.e., no two red nodes can appear 
+            consecutively on any path from the root to a leaf). Every path from a node to its descendant leaves must have the same number 
+            of black nodes. This is sometimes called "black-height."
+        </p>
+        <p>
+            Some advantages of a Red-Black tree include a guarantee balanced height, ensuring that operations like insertion, deletion, and 
+            search have a time complexity of O(logn) in the worst case. They are simpler to implement compared to AVL trees, another type of 
+            self-balancing binary search tree. Red-Black Trees are widely used in implementations of associative arrays (like sets and maps) 
+            and in various programming language libraries for their efficient performance.
         </p>
     </div>
-
+</div>
+<div class="topic">
+    <div class="title center-txt">Searching</div>
+    <div class="description left-txt">
+        <p>
+            Searching in a Red-Black Tree follows the same principles as searching in a standard binary search tree (BST) since a
+            Red-Black Tree maintains the binary search tree properties.
+        </p>
+        <p>
+            To search for a value in a Red-Black Tree start at the root node. Compare the value you are searching for with the value of the
+            current node. If the value matches, you have found the node. If the value is less than the current node's value, continue searching 
+            in the left subtree. If the value is greater than the current node's value, continue searching in the right subtree.
+        </p>
+        <p>
+            Repeat the process recursively until you find the node containing the desired value or reach a leaf node (where the
+            value is not found).
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Insertion</div>
+    <div class="description left-txt">
+        <p>
+            After inserting a new node into a Red-Black Tree, the tree may become unbalanced with respect to the Red-Black
+            properties. To restore balance, the following cases may need to be handled:
+        </p>
+        <p>
+            <b>Case 1:</b> If the new node is the root, color it black.
+        </p>
+        <p>
+            <b>Case 2:</b> If the parent of the new node is black, no violations occur.
+        </p>
+        <p>
+            <b>Case 3:</b> If the parent of the new node is red and the uncle (sibling of the parent's parent) is also red, recolor the
+            parent, uncle, and grandparent, and recursively fix any violations upward.
+        </p>
+        <p>
+            <b>Case 4:</b> If the parent of the new node is red but the uncle is black (or non-existent), perform appropriate rotations and
+            recoloring to restore balance.
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Deletion</div>
+    <div class="description left-txt">
+        <p>
+            Deletion from a Red-Black Tree can also cause violations of the Red-Black properties. The cases are more complex and involve a 
+            combination of rotations and recoloring to restore balance while ensuring that Red-Black Properties are maintained.
+        </p>
+    </div>
 </div>
 {% endblock %}
 
