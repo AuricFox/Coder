@@ -44,6 +44,10 @@ def b_tree():
 @bp.route('/red_black_tree')
 def red_black_tree():
     return render_template('data_structures/trees/red_black_tree.html', nav_id="struct-page")
+
+@bp.route('/avl_tree')
+def avl_tree():
+    return render_template('data_structures/trees/avl_tree.html', nav_id="struct-page")
 # ====================================================================
 # Subpages of Graph Data Structures
 # ====================================================================

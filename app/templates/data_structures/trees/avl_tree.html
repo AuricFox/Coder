@@ -7,10 +7,89 @@
     <div class="title center-txt">AVL Tree</div>
     <div class="description left-txt">
         <p>
-
+            AVL trees are self-balancing binary search trees (BSTs) named after their inventors, Adelson-Velsky and Landis. They
+            maintain their balance by ensuring that the height difference between the left and right subtrees (also known as the
+            balance factor) of any node is at most 1. Some key properties of AVL trees include:
+        </p>
+        <p>
+            <b>Binary Search Tree Properties:</b> Like standard binary search trees, AVL trees maintain that each node has at most two 
+            children (left and right). The keys in the left subtree of a node are less than the key of the node. The keys in the 
+            right subtree of a node are greater than the key of the node.
+        </p>
+        <p>
+            <b>Balancing Factor:</b> Every node in an AVL tree stores an additional piece of information called the balance factor. The
+            balance factor of a node is defined as the height of its right subtree minus the height of its left subtree. The balance
+            factor can be one of {-1, 0, 1} to maintain balance.
+        </p>
+        <p>
+            <b>Balance Maintenance:</b> In an AVL tree, after insertion or deletion, if the balance factor of any node becomes greater than
+            1 or less than -1, the tree is rebalanced using rotations.
+        </p>
+        <p>
+            Some advantages of AVL trees are that AVL trees guarantee that the height of the tree remains logarithmic relative to the number 
+            of nodes, ensuring efficient operations like search, insertion, and deletion with a time complexity of O(log n). Furtthermore, 
+            AVL trees are suitable for scenarios where frequent insertions and deletions occur and maintaining a balanced tree is
+            essential.
         </p>
     </div>
-
+</div>
+<div class="topic">
+    <div class="title center-txt">Searching</div>
+    <div class="description left-txt">
+        <p>
+            Searching in an AVL Tree follows the same principles as searching in a standard binary search tree (BST) since
+            a AVL Tree maintains the binary search tree properties.
+        </p>
+        <p>
+            To search for a value in an AVL Tree start at the root node. Compare the value you are searching for with the
+            value of the current node. If the value matches, you have found the node. If the value is less than the current node's 
+            value, continue searching in the left subtree. If the value is greater than the current node's value, continue searching 
+            in the right subtree.
+        </p>
+        <p>
+            Repeat the process recursively until you find the node containing the desired value or reach a leaf node (where the
+            value is not found).
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Insertion</div>
+    <div class="description left-txt">
+        <p>
+            When a new node is inserted into an AVL tree, it may cause an imbalance in the tree. The AVL tree insertion algorithm
+            ensures that the balance factor of every node along the insertion path remains within the {-1, 0, 1} range. After
+            insertion, if a node becomes unbalanced, one or more rotations are performed to restore balance.
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Deletion</div>
+    <div class="description left-txt">
+        <p>
+            Deleting a node from an AVL tree may also result in an imbalance. Similar to insertion, deletion in an AVL tree is
+            followed by rebalancing operations to maintain the AVL tree properties.
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Rotations</div>
+    <div class="description left-txt">
+        <p>
+            AVL trees use rotations to restore balance after insertions or deletions. There are four types of rotations:
+        </p>
+        <p>
+            <b>Left Rotation:</b> Rebalances the tree by rotating a node to the left.
+        </p>
+        <p>
+            <b>Right Rotation:</b> Rebalances the tree by rotating a node to the right.
+        </p>
+        <p>
+            <b>Left-Right Rotation:</b> Combines a left rotation followed by a right rotation.
+        </p>
+        <p>
+            <b>Right-Left Rotation:</b> Combines a right rotation followed by a left rotation.
+        </p>
+    </div>
 </div>
 {% endblock %}
 
