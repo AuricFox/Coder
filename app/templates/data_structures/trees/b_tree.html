@@ -7,10 +7,62 @@
     <div class="title center-txt">B-Tree</div>
     <div class="description left-txt">
         <p>
-            
+            A B-tree is a self-balancing tree data structure that is commonly used for organizing and storing large datasets,
+            particularly on secondary storage devices like hard drives. It is optimized for systems that access data in blocks or
+            pages rather than individual elements. Characteristics of a B-tree include:
+        </p>
+        <p>
+            <b>Multiple Children:</b> Unlike binary trees, B-trees can have multiple children per node. The number of children per node is
+            typically referred to as the order of the B-tree.
+        </p>
+        <p>
+            <b>Balanced Structure:</b> B-trees are balanced trees, meaning all leaf nodes are at the same level. This balance is maintained
+            through operations like insertion and deletion, which may involve splitting or merging nodes to ensure balance.
+        </p>
+        <p>
+            <b>Node Structure:</b> Each node in a B-tree contains a varying number of keys and corresponding pointers to child nodes. The
+            number of keys in a node depends on the order of the B-tree. Typically, a node in a B-tree contains M - 1 keys, where M is the 
+            order of the B-tree (M pointers to child nodes).
+        </p>
+        <p>
+            <b>Sorted Keys:</b> The keys within each node are sorted in ascending order. This allows for efficient search operations using
+            techniques like binary search.
+        </p>
+        <p>
+            <b>Fan-out:</b> B-trees have a high fan-out (number of child nodes per parent node), which reduces the height of the tree and
+            improves search performance.
         </p>
     </div>
-
+</div>
+<div class="topic">
+    <div class="title center-txt">Search</div>
+    <div class="description left-txt">
+        <p>
+            Searching in a B-tree is similar to searching in a binary search tree. Starting from the root node, the search follows
+            the appropriate child node based on the comparison of the search key with the keys in the node until it reaches a leaf
+            node.
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Insertion</div>
+    <div class="description left-txt">
+        <p>
+            To insert a new key into a B-tree search for the appropriate leaf node where the key should be inserted. If the leaf 
+            node has space, insert the key into the node while maintaining the sorted order. If the leaf node is full, split the 
+            node into two and promote the median key to the parent node. Adjust pointers accordingly to maintain the tree structure.
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Deletion</div>
+    <div class="description left-txt">
+        <p>
+            Deleting a key from a B-tree involves various cases. If the key to be deleted is in a leaf node, simply remove it. If the 
+            key to be deleted is in an internal node replace it with the predecessor or successor key from the appropriate child subtree. 
+            If necessary, recursively adjust the tree structure to maintain balance.
+        </p>
+    </div>
 </div>
 {% endblock %}
 
@@ -26,12 +78,12 @@
 {% block code %}
 <!-- Python code example -->
 <pre class="code language-python" id="ex-1-code"><code class="language-py">
-<!--{% include "data_structures/trees/code/binary_search_tree/py_binary_search_tree.html" %}-->
+
 </code></pre>
 
 <!-- C code example -->
 <pre class="code" id="ex-2-code"><code class="language-c">
-<!--{% include "data_structures/trees/code/binary_search_tree/c_binary_search_tree.html" %}-->
+
 </code></pre>
 
 <!-- C++ code example -->

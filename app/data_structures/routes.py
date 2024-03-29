@@ -37,6 +37,9 @@ def hash_tables():
 def binary_search_tree():
     return render_template('data_structures/trees/binary_search_tree.html', nav_id="struct-page")
 
+@bp.route('/b_tree')
+def b_tree():
+    return render_template('data_structures/trees/b_tree.html', nav_id="struct-page")
 # ====================================================================
 # Subpages of Graph Data Structures
 # ====================================================================
