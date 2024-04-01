@@ -105,7 +105,7 @@
 {% block code %}
 <!-- Python code example -->
 <pre class="code language-python" id="ex-1-code"><code class="language-py">
-
+{% include "data_structures/trees/code/avl_tree/py_avl_tree.html" %}
 </code></pre>
 
 <!-- C code example -->
@@ -137,7 +137,14 @@
 {% block output %}
 <!-- Python code example output -->
 <pre class="code" id="ex-1-output"><code class="language-python">
+Inorder Traversal after insertion:
+10 20 25 30 40 50
 
+Search for key 30:
+Key 30 found in the AVL tree.
+
+Inorder Traversal after deletion:
+10 25 30 40 50
 </code></pre>
 
 <!-- C code example output -->
