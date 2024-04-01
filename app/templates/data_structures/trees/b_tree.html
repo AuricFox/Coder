@@ -78,7 +78,7 @@
 {% block code %}
 <!-- Python code example -->
 <pre class="code language-python" id="ex-1-code"><code class="language-py">
-
+{% include "data_structures/trees/code/b_tree/py_b_tree.html" %}
 </code></pre>
 
 <!-- C code example -->
@@ -110,7 +110,10 @@
 {% block output %}
 <!-- Python code example output -->
 <pre class="code" id="ex-1-output"><code class="language-python">
-
+Inorder traversal of the B-tree:
+3 5 6 7 10 12 17 20 30
+After deleting key 10:
+3 5 6 7 30 12 17 20 30
 </code></pre>
 
 <!-- C code example output -->
