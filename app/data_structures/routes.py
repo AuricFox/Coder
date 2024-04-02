@@ -59,3 +59,7 @@ def undirected_graph():
 @bp.route('/directed_graph')
 def directed_graph():
     return render_template('data_structures/graphs/directed_graph.html', nav_id="struct-page")
+
+@bp.route('/weighted_graph')
+def weighted_graph():
+    return render_template('data_structures/graphs/weighted_graph.html', nav_id="struct-page")
