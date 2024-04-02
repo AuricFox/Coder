@@ -1,0 +1,118 @@
+{% extends "data_structures/code_base.html" %}
+
+{% block title %}Directed Graph{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title center-txt">Directed Graph</div>
+    <div class="description left-txt">
+        <p>
+            A directed graph, also known as a digraph, is similar to an undirected graph, but with one key distinction: edges have a
+            direction associated with them. This means that the relationship between vertices is asymmetrical; an edge connecting
+            vertex A to vertex B does not necessarily imply a connection from B to A.
+        </p>
+        <p>
+            Here are the main components and characteristics of directed graphs:
+        </p>
+        <p>
+            <b>Vertices (Nodes):</b> These are the fundamental units of the graph. Each vertex typically represents some
+            entity or object, and they are connected by edges.
+        </p>
+        <p>
+            <b>Edges:</b> Edges in a directed graph have a direction associated with them. An edge from vertex A to vertex B indicates a directed
+            connection from A to B. This means you can traverse the edge only in the specified direction.
+        </p>
+        <p>
+            <b>Adjacency:</b> In directed graphs, adjacency is directional. If there is an edge from vertex A to vertex B, vertex A is said to be
+            adjacent to vertex B, but not necessarily vice versa. This is a crucial distinction from undirected graphs.
+        </p>
+        <p>
+            <b>In-degree and Out-degree:</b> In-degree of a vertex in a directed graph is the number of edges directed into that vertex, while out-degree is the
+            number of edges directed out from that vertex.
+        </p>
+        <p>
+            <b>Connectivity:</b> Connectivity in directed graphs refers to the existence of directed paths between vertices. A directed graph may have
+            different types of connectivity properties compared to undirected graphs due to the directional nature of the edges.
+        </p>
+        <p>
+            Directed graphs are widely used in various domains such as computer science (e.g., modeling internet traffic,
+            representing dependencies in software systems), social network analysis (e.g., modeling follower relationships in social
+            media), transportation networks (e.g., representing one-way streets in a city), and more. They provide a powerful tool
+            for representing and analyzing relationships with directional dependencies between entities.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Python</div>
+<div class="sel-code" id="ex-2">C</div>
+<div class="sel-code" id="ex-3">C++</div>
+<div class="sel-code" id="ex-4">C#</div>
+<div class="sel-code" id="ex-5">Java</div>
+<div class="sel-code" id="ex-6">JavaScript</div>
+{% endblock %}
+
+{% block code %}
+<!-- Python code example -->
+<pre class="code language-python" id="ex-1-code"><code class="language-py">
+
+</code></pre>
+
+<!-- C code example -->
+<pre class="code" id="ex-2-code"><code class="language-c">
+
+</code></pre>
+
+<!-- C++ code example -->
+<pre class="code" id="ex-3-code"><code class="language-cpp">
+
+</code></pre>
+
+<!-- C# code example -->
+<pre class="code" id="ex-4-code"><code class="language-cs">
+
+</code></pre>
+
+<!-- Java code example -->
+<pre class="code" id="ex-5-code"><code class="language-java">
+
+</code></pre>
+
+<!-- JavaScript code example -->
+<pre class="code" id="ex-6-code"><code class="language-js-templates">
+
+</code></pre>
+{% endblock %}
+
+{% block output %}
+<!-- Python code example output -->
+<pre class="code" id="ex-1-output"><code class="language-python">
+
+</code></pre>
+
+<!-- C code example output -->
+<pre class="code" id="ex-2-output"><code class="language-c">
+
+</code></pre>
+
+<!-- C++ code example output -->
+<pre class="code" id="ex-3-output"><code class="language-cpp">
+
+</code></pre>
+
+<!-- C# code example output -->
+<pre class="code" id="ex-4-output"><code class="language-cs">
+
+</code></pre>
+
+<!-- Java code example output -->
+<pre class="code" id="ex-5-output"><code class="language-java">
+
+</code></pre>
+
+<!-- JavaScript code example output -->
+<pre class="code" id="ex-6-output"><code class="language-js">
+
+</code></pre>
+{% endblock %}

@@ -55,3 +55,7 @@ def avl_tree():
 @bp.route('/undirected_graph')
 def undirected_graph():
     return render_template('data_structures/graphs/undirected_graph.html', nav_id="struct-page")
+
+@bp.route('/directed_graph')
+def directed_graph():
+    return render_template('data_structures/graphs/directed_graph.html', nav_id="struct-page")
