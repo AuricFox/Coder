@@ -48,6 +48,10 @@ def red_black_tree():
 @bp.route('/avl_tree')
 def avl_tree():
     return render_template('data_structures/trees/avl_tree.html', nav_id="struct-page")
+
 # ====================================================================
 # Subpages of Graph Data Structures
 # ====================================================================
+@bp.route('/undirected_graph')
+def undirected_graph():
+    return render_template('data_structures/graphs/undirected_graph.html', nav_id="struct-page")
