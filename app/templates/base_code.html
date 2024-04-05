@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block sidenav %}{% endblock %}
+
+{% block content %}
+
+    {% block topic %}{% endblock %}
+    
+    <div class="topic">
+        <div class="title center-txt">Code Example</div>
+        <div class="code-select">
+            {% block examples %}{% endblock %}
+        </div>
+    
+        <div class="code-examples">
+            {% block code %}{% endblock %}
+        </div>
+    
+        <div class="title center-txt">Output</div>
+        <div class="code-examples">
+            {% block output %}{% endblock %}
+        </div>
+    </div>
+
+    {% code_breakdown topic %}{% endblock %}
+
+{% endblock %}
