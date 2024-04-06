@@ -145,3 +145,7 @@ def sql():
 @bp.route("/sql_comments")
 def sql_comments():
     return render_template('languages/sql/sql_comments.html', nav_id="lang-page")
+
+@bp.route("/sql_create_table")
+def sql_create_table():
+    return render_template('languages/sql/sql_create_table.html', nav_id="lang-page")

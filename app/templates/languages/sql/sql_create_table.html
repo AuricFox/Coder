@@ -1,0 +1,139 @@
+{% extends "languages/sql/sql_base.html" %}
+
+{% block title %}SQL Create Table{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title center-txt">Create Table</div>
+    <div class="description left-txt">
+        <p>
+            Creating tables in SQL is one of the fundamental operations for database management. Tables are used to store structured
+            data in a relational database. Here's an explanation of how to create tables in SQL:
+        </p>
+        <p>
+            SQL syntax for creating a table typically follows this pattern:
+        </p>
+        <div class="code-syntax">
+            <pre><code class="language-sql">
+                CREATE TABLE table_name (
+                    column1 datatype constraints,
+                    column2 datatype constraints,
+                    ...
+                    columnN datatype constraints
+                );
+            </code></pre>
+        </div>
+        <p>
+            <b>CREATE TABLE:</b> This is the SQL statement used to create a new table.
+        </p>
+        <p>
+            <b>table_name:</b> This is the name of the table you want to create. It should be unique within the database and follow the
+            naming conventions of the database system you are using.
+        </p>
+        <p>
+            <b>(column1, column2, ..., columnN):</b> These are the columns that you want to include in your table. Each column is separated
+            by a comma. You need to specify at least one column, but you can define as many columns as needed.
+        </p>
+        <p>
+            <b>column_name:</b> This is the name of the column. It should be unique within the table.
+        </p>
+        <p>
+            <b>constraints:</b> These are optional specifications that enforce rules or restrictions on the data in the column. Common
+            constraints include PRIMARY KEY, NOT NULL, UNIQUE, DEFAULT, CHECK, and FOREIGN KEY. Constraints help maintain data
+            integrity and enforce business rules.
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Constraints</div>
+    <div class="description left-txt">
+        <p>
+            Constraints in SQL are rules and restrictions applied to columns or tables to enforce data integrity and maintain
+            consistency in a database. Constraints define certain conditions that the data stored in the database must meet. They
+            help ensure that the data remains accurate, valid, and consistent over time. Here are some common types of constraints
+            in SQL:
+        </p>
+        <p>
+            <b>Primary Key Constraint:</b> Ensures that each row in a table is uniquely identified by a specific column or combination of columns. 
+            The primary key constraint uniquely identifies each record in a table and does not allow null values.
+        </p>
+        <div class="code-syntax">
+            <pre><code class="language-sql">
+                PRIMARY KEY (column_name)
+            </code></pre>
+        </div>
+        <p>
+            <b>Unique Constraint:</b> Ensures that all values in a column or a group of columns are unique, i.e., no duplicate values are allowed.
+            Unlike primary keys, unique constraints can contain null values.
+        </p>
+        <div class="code-syntax">
+            <pre><code class="language-sql">
+                UNIQUE (column_name)
+            </code></pre>
+        </div>
+        <p>
+            <b>Foreign Key Constraint:</b> Establishes a relationship between two tables by enforcing referential integrity, ensuring that values 
+            in one table's column match values in another table's column. The foreign key constraint in a child table references the primary 
+            key in a parent table. Helps maintain consistency and prevent orphaned records.
+        </p>
+        <div class="code-syntax">
+            <pre><code class="language-sql">
+                FOREIGN KEY (column_name) REFERENCES parent_table(column_name)
+            </code></pre>
+        </div>
+        <p>
+            <b>Not Null Constraint:</b> Ensures that a column does not contain any null values. Requires each value in the column to be non-null.
+        </p>
+        <div class="code-syntax">
+            <pre><code class="language-sql">
+                column_name NOT NULL
+            </code></pre>
+        </div>
+        <p>
+            <b>Check Constraint:</b> Specifies a condition that must be satisfied for the data in a column. Allows you to define custom conditions 
+            that data must meet when inserted or updated in a table.
+        </p>
+        <div class="code-syntax">
+            <pre><code class="language-sql">
+                CHECK (condition)
+            </code></pre>
+        </div>
+        <p>
+            <b>Default Constraint:</b> Specifies a default value for a column when no value is explicitly provided during insertion.
+            Automatically assigns the default value if no other value is specified.
+        </p>
+        <div class="code-syntax">
+            <pre><code class="language-sql">
+                DEFAULT default_value
+            </code></pre>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Example 1</div>
+<div class="sel-code" id="ex-2">Example 2</div>
+{% endblock %}
+
+{% block code %}
+<pre class="code" id="ex-1-code"><code class="language-sql">
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    age INT
+);
+</code></pre>
+<pre class="code" id="ex-2-code"><code class="language-sql">
+CREATE TABLE CONTRIBUTOR(
+    ID INT,
+    Fname VARCHAR(20) NOT NULL,
+    MInit CHAR,
+    Lname VARCHAR(20) NOT NULL,
+    Contact VARCHAR(40) NOT NULL,
+    PRIMARY KEY(ID)
+    UNIQUE(Contact)
+);
+</code></pre>
+{% endblock %}
