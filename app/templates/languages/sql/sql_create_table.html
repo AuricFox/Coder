@@ -108,7 +108,32 @@
             </code></pre>
         </div>
     </div>
-    
+</div>
+<div class="topic">
+    <div class="title center-txt">Auto-Increment</div>
+    <div class="description left-txt">
+        <p>
+            Autoincrement is a feature commonly used in SQL databases to automatically generate unique, sequential numerical values 
+            for a column. This feature is typically applied to integer columns and is often used in conjunction with primary key columns 
+            to ensure each row in a table has a unique identifier.
+        </p>
+        <p>
+            SQL syntax for AUTO_INCREMENT:
+        </p>
+        <div class="code-syntax">
+            <pre><code class="language-sql">
+                id INT AUTO_INCREMENT PRIMARY KEY
+            </code></pre>
+        </div>
+        <p>
+            You can also use the INDETITY property which the syntax follows:
+        </p>
+        <div class="code-syntax">
+            <pre><code class="language-sql">
+                id INT IDENTITY(start, increment) PRIMARY KEY
+            </code></pre>
+        </div>
+    </div>
 </div>
 {% endblock %}
 
@@ -120,14 +145,14 @@
 {% block code %}
 <pre class="code" id="ex-1-code"><code class="language-sql">
 CREATE TABLE employees (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
     age INT
 );
 </code></pre>
 <pre class="code" id="ex-2-code"><code class="language-sql">
 CREATE TABLE CONTRIBUTOR(
-    ID INT,
+    ID INT IDENTITY(1,1),
     Fname VARCHAR(20) NOT NULL,
     MInit CHAR,
     Lname VARCHAR(20) NOT NULL,
