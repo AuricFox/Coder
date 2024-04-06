@@ -146,6 +146,10 @@ def sql():
 def sql_comments():
     return render_template('languages/sql/sql_comments.html', nav_id="lang-page")
 
+@bp.route("/sql_data_types")
+def sql_data_types():
+    return render_template('languages/sql/sql_data_types.html', nav_id="lang-page")
+
 @bp.route("/sql_create_table")
 def sql_create_table():
     return render_template('languages/sql/sql_create_table.html', nav_id="lang-page")

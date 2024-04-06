@@ -1,0 +1,144 @@
+{% extends "languages/sql/sql_base.html" %}
+
+{% block title %}SQL Data Types{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title center-txt">Data Types</div>
+    <div class="description left-txt">
+        <p>
+            In SQL, data types (also known as variable types or simply types) define the type of data that can be stored in a column
+            of a table or a variable in a stored procedure or function. Different database management systems (DBMS) support
+            different data types, but there are common types that are widely supported across most SQL implementations.
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Integer Types</div>
+    <div class="description left-txt">
+        <p>
+            <b>INT, INTEGER:</b> A whole number without a fractional component.
+        </p>
+        <p>
+            <b>SMALLINT:</b> A small integer, typically with a smaller range of values than INT.
+        </p>
+        <p>
+            <b>BIGINT:</b> A large integer, capable of storing larger values than INT.
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Numeric Types</div>
+    <div class="description left-txt">
+        <p>
+            <b>DECIMAL(precision, scale), NUMERIC(precision, scale):</b> Exact numeric data type with a fixed precision and scale.
+        </p>
+        <p>
+            <b>FLOAT, REAL, DOUBLE:</b> Approximate numeric data types with floating-point precision.
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Character and String Types</div>
+    <div class="description left-txt">
+        <p>
+            <b>CHAR(n):</b> Fixed-length character string with a specified length n.
+        </p>
+        <p>
+            <b>VARCHAR(n), VARCHAR2(n):</b> Variable-length character string with a maximum length n.
+        </p>
+        <p>
+            <b>TEXT:</b> Variable-length character string with no specified maximum length.
+        </p>
+        <p>
+            <b>NCHAR(n):</b> Fixed-length Unicode character string.
+        </p>
+        <p>
+            <b>NVARCHAR(n):</b> Variable-length Unicode character string with a maximum length n.
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Date and Time Types</div>
+    <div class="description left-txt">
+        <p>
+            <b>DATE:</b> Date without a time component (YYYY-MM-DD).
+        </p>
+        <p>
+            <b>TIME:</b> Time without a date component (HH:MM:SS).
+        </p>
+        <p>
+            <b>DATETIME, TIMESTAMP:</b> Date and time combined (YYYY-MM-DD HH:MM:SS).
+        </p>
+        <p>
+            <b>INTERVAL:</b> Time interval.
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Boolean Type</div>
+    <div class="description left-txt">
+        <p>
+            <b>BOOLEAN, BOOL:</b> Boolean values representing true or false.
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Binary Types</div>
+    <div class="description left-txt">
+        <p>
+            <b>BINARY(n):</b> Fixed-length binary data with a specified length n.
+        </p>
+        <p>
+            <b>VARBINARY(n):</b> Variable-length binary data with a maximum length n.
+        </p>
+        <p>
+            <b>BLOB:</b> Binary large object for storing large binary data.
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Other Types</div>
+    <div class="description left-txt">
+        <p>
+            <b>ARRAY:</b> Collection of values of the same type.
+        </p>
+        <p>
+            <b>JSON:</b> Stores JSON data.
+        </p>
+        <p>
+            <b>XML:</b> Stores XML data.
+        </p>
+        <p>
+            <b>UUID:</b> Universally unique identifier.
+        </p>
+        <p>
+            <b>GEOMETRY, GEOGRAPHY:</b> Spatial data types for storing geometric and geographical data.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Example 1</div>
+<div class="sel-code" id="ex-2">Example 2</div>
+{% endblock %}
+
+{% block code %}
+<pre class="code" id="ex-1-code"><code class="language-sql">
+CREATE TABLE Person (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    height DECIMAL(5, 2),
+    DOB DATE
+);
+</code></pre>
+<pre class="code" id="ex-2-code"><code class="language-sql">
+CREATE TABLE Code (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    BINARY(32),
+    updated DATETIME
+);
+</code></pre>
+{% endblock %}
