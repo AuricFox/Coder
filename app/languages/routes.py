@@ -141,3 +141,7 @@ def css():
 @bp.route("/sql")
 def sql():
     return render_template('languages/sql/sql.html', nav_id="lang-page")
+
+@bp.route("/sql_comments")
+def sql_comments():
+    return render_template('languages/sql/sql_comments.html', nav_id="lang-page")

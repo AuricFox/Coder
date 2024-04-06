@@ -1,0 +1,47 @@
+{% extends "languages/sql/sql_base.html" %}
+
+{% block title %}SQL Comments{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title center-txt">Comments</div>
+    <div class="description left-txt">
+        <p>
+            In SQL, comments are used to annotate the SQL code for various purposes such as providing explanations, documenting code, or
+            temporarily disabling certain portions of code. There are two types of comments in SQL:
+        </p>
+        <p>
+            <b>Single-Line Comments:</b> Single-line comments are used to comment out a single line of SQL code. In most SQL dialects, 
+            single-line comments begin with a double hyphen (--) and continue until the end of the line. Some SQL dialects, such as MySQL, 
+            also support single-line comments that begin with a hash symbol (#).
+        </p>
+        <p>
+            <b>Multi-line comments:</b> Multi-line comments are used to comment out multiple lines of SQL code. In most SQL dialects, 
+            multi-line comments begin with /* and end with */. Anything between /* and */ is treated as a comment.
+        </p>
+        <p>
+            Comments are ignored by the SQL engine when executing queries, so they do not affect the behavior or performance of the
+            SQL code. However, they are useful for enhancing code readability, maintainability, and collaboration among developers.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Example 1</div>
+<div class="sel-code" id="ex-2">Example 2</div>
+{% endblock %}
+
+{% block code %}
+<pre class="code" id="ex-1-code"><code class="language-sql">
+-- This is a one-line comment in SQL
+-- This is another one-liner
+</code></pre>
+<pre class="code" id="ex-2-code"><code class="language-sql">
+/*
+This is a multi-line comment in SQL
+
+I Can write a whole story in here
+*/
+</code></pre>
+{% endblock %}
