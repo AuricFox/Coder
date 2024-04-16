@@ -17,9 +17,9 @@
         <div class="nav-bar">
             <ul class="nav">
                 <li><a href="{{  url_for('main.index')  }}" class="dropbtn nav-tile {% if nav_id == 'home-page' %}active{% endif %}">Home</a></li>
-                <li><div class="{% if nav_id == 'data-page' %}active{% endif %}">
+                <li><div>
                     <!--Data Types Sub Navigation-->
-                    <div class="dropbtn nav-tile center-txt">Data Types</div>
+                    <div class="dropbtn nav-tile {% if nav_id == 'data-page' %}active{% endif %}">Data Types</div>
                     <div class="dropdown-element" style="display: none;">
                         <a class="drop-link center-txt" href="{{  url_for('data_types.floats')  }}">Floats</a>
                         <a class="drop-link center-txt" href="{{  url_for('data_types.integers')  }}">Integers</a>
@@ -30,8 +30,8 @@
                         <a class="drop-link center-txt" href="{{  url_for('data_types.nulls')  }}">Nulls</a>
                     </div>
                 </div></li>
-                <li><div class="{% if nav_id == 'struct-page' %}active{% endif %}">
-                    <div class="dropbtn nav-tile center-txt">Data Structures</div>
+                <li><div>
+                    <div class="dropbtn nav-tile {% if nav_id == 'struct-page' %}active{% endif %}">Data Structures</div>
                     <div class="dropdown-element" style="display: none;">
                         <div class="drop-element-list">
                             <div class="drop-link-main center-txt">Linear Structures</div>
@@ -56,9 +56,9 @@
                         </div>
                     </div>
                 </div></li>
-                <li><div class="{% if nav_id == 'lang-page' %}active{% endif %}">
+                <li><div>
                     <!--Programming Languages Sub Navigation-->
-                    <div class="dropbtn nav-tile center-txt">Programming Languages</div>
+                    <div class="dropbtn nav-tile {% if nav_id == 'lang-page' %}active{% endif %}">Programming Languages</div>
                     <div class="dropdown-element" style="display: none;">
                         <a class="drop-link center-txt" href="{{  url_for('languages.python')  }}">Python</a>
                         <a class="drop-link center-txt" href="{{  url_for('languages.c')  }}">C</a>
@@ -71,8 +71,8 @@
                         <a class="drop-link center-txt" href="{{  url_for('languages.sql')  }}">SQL</a>
                     </div>
                 </div></li>
-                <li><div class="{% if nav_id == 'tools-page' %}active{% endif %}">
-                    <div class="dropbtn nav-tile center-txt">Useful Tools</div>
+                <li><div>
+                    <div class="dropbtn nav-tile {% if nav_id == 'tools-page' %}active{% endif %}">Useful Tools</div>
                     <div class="dropdown-element" style="display: none;">
                         <div class="drop-element-list">
                             <div class="drop-link-main center-txt">Frameworks</div>

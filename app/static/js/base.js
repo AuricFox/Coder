@@ -30,27 +30,6 @@ $('.dropbtn').click(function (event) {
 });
 
 // ===================================================================
-// Toggles display for different coding languages [Data Types]
-// ===================================================================
-var codeDisplay = {
-    backgroundColor: "#272822",
-    paddingLeft: "1rem"
-}
-
-// Default to Python code example when loaded
-$('.code-example').not($('#sel-py-code')).not($('#code')).hide();
-$('#sel-py').css({ backgroundColor: "#272822" }).show();
-
-$('.sel-code').click(function() {
-    var id = '#' + $(this).attr('id');
-
-    $('.code-example').not($(id + '-code')).hide();
-    $('.sel-code').css({ backgroundColor: "transparent" }).show();
-    $(id).css({ backgroundColor: "#272822" }).show();
-    $(id + '-code').css(codeDisplay).show();
-});
-
-// ===================================================================
 // Toggles display for different coding examples [Languages]
 // ===================================================================
 var exampleDisplay = {
@@ -60,12 +39,12 @@ var exampleDisplay = {
 
 // Default to example 1 code when loaded
 $('.code').not($('#ex-1-code')).not($('#ex-1-output')).hide();
-$('#ex-1').css({ backgroundColor: "#5ba95e" }).show();
+$('#ex-1').css({ backgroundColor: "#8b73c2" }).show();
 
 $('.sel-code').click(function() {
     var id = $(this).attr('id');                                // Get id of clicked element
-    $('.sel-code').css({ backgroundColor: "#317233" }).show();  // Remove background
-    $('#' + id).css({ backgroundColor: "#5ba95e" }).show();     // Highlight element backgroun
+    $('.sel-code').css({ backgroundColor: "#512da8" }).show();  // Remove background
+    $('#' + id).css({ backgroundColor: "#8b73c2" }).show();     // Highlight element backgroun
     
     var code = '#' + id + '-code';
     var output = '#' + id + '-output';
