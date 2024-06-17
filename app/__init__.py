@@ -2,10 +2,12 @@ from flask import Flask, render_template
 import logging, os
 
 PATH = os.path.dirname(os.path.abspath(__file__))
+LOG_FOLDER = os.path.join(PATH, '../logs')
+os.makedirs(LOG_FOLDER, exist_ok=True)
 
 # Configure the logging object
 logging.basicConfig(
-    filename=os.path.join(PATH, '../logs/app.log'),
+    filename=os.path.join(LOG_FOLDER, 'app.log'),
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s]: %(message)s'
 )
