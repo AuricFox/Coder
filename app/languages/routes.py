@@ -92,6 +92,10 @@ def cs():
 def cs_setup():
     return render_template('languages/cs/cs_setup.html', nav_id="lang-page")
 
+@bp.route('/cs/comments')
+def cs_comments():
+    return render_template('languages/cs/cs_comments.html', nav_id="lang-page")
+
 # ====================================================================
 # Subpages of Java [Programming Languages]
 # ====================================================================

@@ -1,0 +1,53 @@
+{% extends "languages/cs/cs_base.html" %}
+
+{% block title %}C# Comments{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title center-txt">Comments</div>
+    <div class="description left-txt">
+        <p>
+            In the C# programming language, comments are used to add explanatory notes or annotations within the code to make it 
+            more readable. These comments are ignored and do not affect the execution of the program.
+        </p>
+        <p>
+            C# supports two types of comments:
+        </p>
+        <p>
+            <b>Single-line comments:</b> A single-line comment begins with two forward slashes (//) and continues until
+            the end of the line. Anything written after // on the same line is considered a comment.
+        </p>
+        <p>
+            <b>Multi-line comments:</b> A multi-line comment, also known as a block comment, allows you to write
+            comments that span multiple lines. It starts with a forward slash followed by an asterisk (/*) and ends with an asterisk
+            followed by a forward slash (*/). Everything written between /* and */ is treated as a comment.
+        </p>
+        <p>
+            Comments are useful for various purposes, such as explaining the purpose of code, providing documentation,
+            disabling certain lines temporarily, or leaving notes for yourself or other programmers working on the code. They can
+            greatly enhance code readability and maintainability.
+        </p>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Example 1</div>
+{% endblock %}
+
+{% block code %}
+<pre class="code" id="ex-1-code"><code class="language-c">
+// This is a one-line comment
+
+/*
+This is a multi-line comment
+*/
+</code></pre>
+{% endblock %}
+
+{% block output %}
+<pre class="code" id="ex-1-output"><code class="language-c">
+None
+</code></pre>
+{% endblock %}
