@@ -65,6 +65,7 @@ img {
     width: 100%;
     height: 46px;
     z-index: 1;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
 }
 
 .nav-tile {
@@ -109,8 +110,8 @@ img {
 .dropdown-element {
     display: none;
     justify-content: space-around;
-    background-color: #FFFFFF;
-    box-shadow: 4px 4px 8px #000;
+    background-color: #8b73c2;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
     width: 100%;
     position: absolute;
     left: 0;
@@ -121,25 +122,25 @@ img {
 }
 
 .drop-link-main {
-    color: #000;
+    color: #FFFFFF;
     padding: 12px 16px;
     font-size: 16px;
     font-family: Arial, sans-serif;
     font-weight: bold;
     display: block;
     text-decoration: none;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #FFFFFF;
 }
 
 .drop-link {
     float: none;
-    color: #000;
+    color: #FFFFFF;
     padding: 12px 16px;
     text-decoration: none;
     font-size: 15px;
     display: block;
-    border-radius: 4px;
-    text-decoration: none;
+    border-radius: 15px;
+    text-decoration: none;margin: 5px 0;
 }
 
 .drop-link:hover {
@@ -404,7 +405,7 @@ button[type="submit"]:hover {
 /* ========== Other Elements ========== */
 
 .code-snippet {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #8b73c2;
     color: #FFFFFF;
     font-family: monospace;
     margin-top: 1rem;
@@ -419,7 +420,7 @@ button[type="submit"]:hover {
 }
 
 .res-link {
-    color: white;
+    color: #000;
     text-decoration: none;
     margin: 10px;
 }
