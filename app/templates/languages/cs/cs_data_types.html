@@ -1,0 +1,242 @@
+{% extends "languages/cs/cs_base.html" %}
+
+{% block title %}C# Data Types{% endblock %}
+
+{% block topic %}
+<div class="topic">
+    <div class="title center-txt">Data Types</div>
+    <div class="description left-txt">
+        <p>
+            In C#, data types are used to specify the type of data that variables can hold. The choice of
+            data type depends on the nature of the data and the operations that need to be performed on it. C# provides several
+            built-in data types, which can be broadly classified into the following categories:
+        </p>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Integers</div>
+    <div class="description left-txt">
+        <p>
+            Integer types represent whole numbers (positive, negative, or zero) without any fractional or decimal
+            part. The size of integer types can vary across different systems. Common integer types in C# include:
+        </p>
+    </div>
+    <div class="examples">
+        <table class="terms-table center-txt">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Dscription</th>
+                    <th>Range</th>
+                    <th>Suffix</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>byte</td>
+                    <td>8-bit unsigned integer</td>
+                    <td>0 to 255</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>sbyte</td>
+                    <td>8-bit signed integer</td>
+                    <td>-128 to 127</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>ushort</td>
+                    <td>16-bit unsigned integer</td>
+                    <td>0 to 65,535</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>short</td>
+                    <td>16-bit signed integer</td>
+                    <td>-32,768 to 32,767</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>32-bit signed integer</td>
+                    <td>-2,147,483,648 to 2,147,483,647</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>uint</td>
+                    <td>32-bit unsigned integer</td>
+                    <td>0 to 4,294,967,295</td>
+                    <td>u</td>
+                </tr>
+                <tr>
+                    <td>long</td>
+                    <td>64-bit signed integer</td>
+                    <td>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+                    <td>l</td>
+                </tr>
+                <tr>
+                    <td>ulong</td>
+                    <td>64-bit unsigned integer</td>
+                    <td>0 to 18,446,744,073,709,551,615</td>
+                    <td>ul</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Floats</div>
+    <div class="description left-txt">
+        <p>    
+            Floating-point types are used to represent real numbers with fractional parts. They can represent
+            both positive and negative values. Common floating-point types in C# include:
+        </p>
+    </div>
+    <div class="examples">
+        <table class="terms-table center-txt">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Dscription</th>
+                    <th>Range</th>
+                    <th>Suffix</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>float</td>
+                    <td>32-bit single-precision floating point</td>
+                    <td>&plusmn;1.5e-45 to &plusmn;3.4e38</td>
+                    <td>f</td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>64-bit double-precision floating point</td>
+                    <td>&plusmn;5.0e-324 to &plusmn;1.7e308</td>
+                    <td>d</td>
+                </tr>
+                <tr>
+                    <td>decimal</td>
+                    <td>128-bit decimal type</td>
+                    <td>&plusmn;1.0e-28 to &plusmn;7.9228e28</td>
+                    <td>m</td>
+                </tr>               
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Characters and Strings</div>
+    <div class="description left-txt">
+        <p>
+            Character (char) types represent individual characters and are enclosed in single quotes (''). String types are used to 
+            store a sequence of characters and are encloed with double quotes ("").
+        </p>
+    </div>
+    <div class="examples">
+        <table class="terms-table center-txt">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Dscription</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>char</td>
+                    <td>16-bit single unicode character</td>
+                </tr>
+                <tr>
+                    <td>string</td>
+                    <td>a sequence of unicode characters</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="topic">
+    <div class="title center-txt">Void and Null</div>
+    <div class="description left-txt">
+        <p>
+            Void is a keyword that represents the absence of a value. It is used to specify that a method in C# does not return a value. 
+            Null is a literal the specifies a null reference, one that does not refer to any object. It is the default value of 
+            referance-type variables.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+{% block examples %}
+<div class="sel-code" id="ex-1">Integers</div>
+<div class="sel-code" id="ex-2">Floats</div>
+<div class="sel-code" id="ex-3">Chars and Strings</div>
+<div class="sel-code" id="ex-4">Void</div>
+{% endblock %}
+
+{% block code %}
+<pre class="code" id="ex-1-code"><code class="language-cs">
+int num = 5;
+short shortNum = -1500;
+long longNum = 15000000000L;
+
+Console.WriteLine("Integer: " + num);
+Console.WriteLine("Short number: " + shortNum);
+Console.WriteLine("Long number: " + longNum);
+</code></pre>
+
+<pre class="code" id="ex-2-code"><code class="language-cs">
+float floatNum = 5.99F;
+double doubleNum = 19.98D;
+
+Console.WriteLine("Floating Point:" + floatNum);
+Console.WriteLine("Double Floating Point: " + doubleNum);
+</code></pre>
+
+<pre class="code" id="ex-3-code"><code class="language-cs">
+char grade = 'B';
+string greeting = "Hello World!";
+
+Console.WriteLine("Char: " + grade);
+Console.WriteLine("String: " + greeting);
+</code></pre>
+
+<pre class="code" id="ex-4-code"><code class="language-cs">
+class Program
+{
+    class Myclass
+    {
+        public void MyMethod() {}
+    }
+    
+    static void Main()
+    {
+        Myclass mc;
+        mc = null;
+
+        Console.WriteLine("Testing void and null!")
+    }
+}
+</code></pre>
+{% endblock %}
+
+{% block output %}
+<pre class="code" id="ex-1-output"><code class="language-cs">
+Integer: 5
+Short number: -1500
+Long number: 15000000000
+</code></pre>
+
+<pre class="code" id="ex-2-output"><code class="language-cs">
+Floating Point: 5.990000
+Double Floating Point: 19.980000
+</code></pre>
+
+<pre class="code" id="ex-3-output"><code class="language-cs">
+Char: B
+String: Hello World!
+</code></pre>
+
+<pre class="code" id="ex-4-output"><code class="language-cs">
+Testing void and null!
+</code></pre>
+{% endblock %}
